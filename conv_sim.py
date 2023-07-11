@@ -9,14 +9,15 @@ import os, sys, yaml
 from multiprocessing import Pool
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from numpy import savetxt
-from functinoals import conv_sim
+from functionals.functionals import conv2D
+from models.simple_cnn import SimpleCNN
+
+
 
 config = yaml.load(open('kt_qy_imc.yaml', 'r'), Loader=yaml.FullLoader)
 print(config)
 
 
-x = torch.load('x.pt',map_location='cuda:0').cpu()
-weight =  torch.load('w.pt',map_location='cuda:0').cpu()
 bias = torch.load('bias.pt')
 stride = torch.load('stride.pt')
 padding = torch.load('padding.pt')
@@ -28,7 +29,7 @@ I_NL = pd.read_excel('data_I-nonlinearity.xlsx').to_numpy()[:, 1]
 
 I_NL = dict(enumerate(I_NL.flatten(), 0))
 
-# print(I_NL[0])
+
 x = torch.load('x.pt',map_location='cuda:0').cpu().numpy()
 weight =  torch.load('w.pt',map_location='cuda:0').cpu().numpy()
 stride = stride[0]
@@ -43,7 +44,7 @@ feature_size = int(x.shape[2]/stride)
 ks = weight.shape[2]
 kernel_num = weight.shape[0]
 round = int(np.ceil(ch/acc_length))
-
+print(f"shape of x:{x.shape} shape of weight:{weight.shape}")
 nl_err = 0
 if ch < acc_length:
     ch = ch
@@ -61,9 +62,13 @@ elif ks ==3:
 #  *********************** single thread ***********************
 output_features = np.zeros((batch, kernel_num, feature_size, feature_size))
 
-output_features = conv_sim(x, weight, bias, stride, padding, dilation, groups, acc_length)
 
 
+
+output_features, layer_total_latency, layer_total_energy\
+  = conv2D(x, weight, bias, stride, padding, dilation, groups, config)
+
+print(f"***** number of total latency :{layer_total_latency} *****")
 # savetxt('feat_debug.csv', output_features2[0,0], delimiter=',')
 # print(output_features2[0,0])
 
@@ -86,7 +91,7 @@ of_shape = output_features.shape
 # print(np.argwhere((output_features1 == output_features2)==False))
 
 # output_features = 1
-error = np.array(output[0].cpu() -output_features[0])
+# error = np.array(output[0].cpu() -output_features[0])
 
 
 

@@ -1,0 +1,34 @@
+{
+  'basic_paras':
+  {
+  'num_banks': 1,
+  'num_row_per_chunk': 8,
+  'num_chunks': 32,
+  'bits_per_weight': 4,
+  'bits_per_activation': 5,
+  'bits_mac_output': 8,
+  },
+
+  'latency':
+  {
+    'unit': 'ms',
+    'per_bank_mac_latency': 0,
+    'per_bit_weight_io_latency': 1,
+    'per_bit_activation_io_latency': 0,
+  },
+
+  'energy':
+  {
+    'unit': 'pj',
+    'per_bank_mac_energy': 1,
+    'per_bit_weight_io_energy': 1,
+    'per_bit_activation_io_energy': 1,
+  },
+
+  'logging_control':
+  {
+    'log_energy': True,
+    'log_latency': True,
+    'consider_analog_value_dependency': False,
+  },
+}
