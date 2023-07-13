@@ -5,14 +5,12 @@ from tqdm import tqdm
 from NL_gen import mac_64, mac_64_kernel, mac_64_multi_kernel
 
 
-class Conv2D:
-    def __init__(self, weight, bias, stride, padding, dilation, groups, config):
+class Conv2D():
+    def __init__(self, weight, bias, stride, padding, config):
         self.weight = weight
         self.bias = bias
         self.stride = stride
         self.padding = padding
-        self.dilation = dilation
-        self.groups = groups
         self.config = config
         self.acc_length = config['basic_paras']['num_row_per_chunk']
 
@@ -23,20 +21,21 @@ class Conv2D:
         else:
             x = x.cpu().numpy()
         
-        if isinstance(weight, tuple):
-            weight = np.zeros(weight)
+        if isinstance(self.weight, tuple):
+            self.weight = np.zeros(self.weight)
         else:
-            weight = weight.cpu().numpy()
+            self.weight = self.weight.cpu().numpy()
         
-        if isinstance(bias, tuple):
-            bias = np.zeros(bias)
+        if isinstance(self.bias, tuple):
+            self.bias = np.zeros(self.bias)
         else:
-            bias = bias.cpu().numpy()
+            self.bias = self.bias.cpu().numpy()
 
         batch = x.shape[0]
-        feature_size = int(x.shape[2] / self.stride)
-        ks = weight.shape[2]
-        kernel_num = weight.shape[0]
+        ch = x.shape[1]
+        feature_size = int(x.shape[2] / self.stride[0])
+        ks = self.weight.shape[2]
+        kernel_num = self.weight.shape[0]
 
         ch = ch if ch < self.acc_length else self.acc_length
         self.round = int(np.ceil(ch / self.acc_length))
@@ -72,7 +71,7 @@ class Conv2D:
                                     # if energy cost is modelled as dependent on the analog values
                                     if self.config['logging_control']['consider_analog_value_dependency']:
                                         aa = x[i, (ch * s): (ch * s + ch), h * self.stride + kh, w * self.stride + kw]
-                                        ww = weight[kn, (ch * s): (ch * s + ch), kh, kw]
+                                        ww = self.weight[kn, (ch * s): (ch * s + ch), kh, kw]
                                         if aa.size ==3:
                                             psum = psum + np.dot(aa, ww)
                                         else:
@@ -89,6 +88,15 @@ class Conv2D:
                         output_features[i, kn, h, w] = psum
         output_features = torch.from_numpy(output_features).cuda()
         return output_features, layer_total_latency, layer_total_energy
+
+
+# class FC():
+#     def __init__(self, weight, bias, config):
+#         self.weight = weight
+#         self.bias = bias
+
+#     def forward(self, x):
+
 
 
 # def conv2D(x, weight, bias, stride, padding, dilation, groups, config):

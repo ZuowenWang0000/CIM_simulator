@@ -9,7 +9,7 @@ import os, sys, yaml
 from multiprocessing import Pool
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from numpy import savetxt
-from functionals.functionals import conv2D
+from functionals.functionals import Conv2D
 from models.simple_cnn import SimpleCNN
 
 
@@ -23,7 +23,6 @@ stride = torch.load('stride.pt')
 padding = torch.load('padding.pt')
 groups = torch.load('groups.pt')
 dilation = torch.load('dilation.pt')
-output = F.conv2d(x, weight,  bias,  stride,  padding, dilation,  groups)
 
 I_NL = pd.read_excel('data_I-nonlinearity.xlsx').to_numpy()[:, 1]
 
@@ -63,16 +62,21 @@ elif ks ==3:
 output_features = np.zeros((batch, kernel_num, feature_size, feature_size))
 
 
+model = SimpleCNN(config)
+output_features1, layer_total_latency, layer_total_energy = model.forward((3, 32, 32, 3))
 
+print(f"output feature size:{output_features1.shape}")
 
-output_features, layer_total_latency, layer_total_energy\
-  = conv2D(x, weight, bias, stride, padding, dilation, groups, config)
+# output_features, layer_total_latency, layer_total_energy\
+#   = conv2D(x, weight, bias, stride, padding, dilation, groups, config)
 
-print(f"***** number of total latency :{layer_total_latency} *****")
+# model = SimpleCNN()
+
+# print(f"***** number of total latency :{layer_total_latency} *****")
 # savetxt('feat_debug.csv', output_features2[0,0], delimiter=',')
 # print(output_features2[0,0])
 
-of_shape = output_features.shape
+# of_shape = output_features.shape
 # identical = True
 # print(f"shape is :{of_shape}")
 # for i in range(of_shape[0]):
