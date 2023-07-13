@@ -8,9 +8,9 @@ class SimpleCNN():
         self.total_latency = 0
         self.total_energy = 0
 
-        self.conv1 = Conv2D(weight=(3,3,7), bias=(7,), stride=(1,1), 
+        self.conv1 = Conv2D(weight=(3,3,3), bias=(3,), stride=(2,2), 
                             padding=(0,0), config=config)
-        self.conv2 = Conv2D(weight=(3,3,13), bias=(7,), stride=(1,1),
+        self.conv2 = Conv2D(weight=(3,3,4), bias=(4,), stride=(2,2),
                             padding=(0,0), config=config)
 
 

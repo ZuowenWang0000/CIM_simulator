@@ -13,6 +13,7 @@ class Conv2D():
         self.padding = padding
         self.config = config
         self.acc_length = config['basic_paras']['num_row_per_chunk']
+        self.allowed_max_analog_macs = config['basic_paras']['num_chunks'] * config['basic_paras']['num_row_per_chunk']
 
     def forward(self, x):
         # is no real input x, weight, bias given, then create a zero tensor
@@ -38,8 +39,8 @@ class Conv2D():
         kernel_num = self.weight.shape[0]
 
         ch = ch if ch < self.acc_length else self.acc_length
-        self.round = int(np.ceil(ch / self.acc_length))
-
+        round = int(np.ceil(ch / self.acc_length))
+        output_features = np.zeros((batch, kernel_num, feature_size, feature_size))
         if ks == 3:
             x = np.pad(x, pad_width=((0, 0), (0, 0), (1, 1), (1, 1)), mode="constant", constant_values=0)
             # x=F.pad(x, (1, 1, 1, 1), "constant", 0)
@@ -79,13 +80,16 @@ class Conv2D():
                                     
                                     num_of_macs_this_kernel += self.acc_length
 
-                        if num_of_macs_this_kernel > (self.config['basic_paras']['num_chunks'] * self.config['basic_paras']['num_row_per_chunk']):
-                            raise Exception("kernel entries is larger than the number of analog values in the analog array! Not supported yet")
+
+                        if num_of_macs_this_kernel > self.allowed_max_analog_macs:
+                            raise Exception(f"kernel entries :{num_of_macs_this_kernel} is larger than the number of analog values {self.allowed_max_analog_macs} in the analog array! Not supported yet")
                         
                         layer_total_latency += self.config['latency']['per_bank_mac_latency']
                         layer_total_energy += self.config['energy']['per_bank_mac_energy']
 
-                        output_features[i, kn, h, w] = psum
+                        if self.config['logging_control']['consider_analog_value_dependency']:
+                            output_features[i, kn, h, w] = psum
+
         output_features = torch.from_numpy(output_features).cuda()
         return output_features, layer_total_latency, layer_total_energy
 

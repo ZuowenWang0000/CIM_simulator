@@ -63,7 +63,7 @@ output_features = np.zeros((batch, kernel_num, feature_size, feature_size))
 
 
 model = SimpleCNN(config)
-output_features1, layer_total_latency, layer_total_energy = model.forward((3, 32, 32, 3))
+output_features1, layer_total_latency, layer_total_energy = model.forward((1, 16, 16, 1))
 
 print(f"output feature size:{output_features1.shape}")
 
