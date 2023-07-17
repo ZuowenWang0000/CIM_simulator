@@ -4,6 +4,7 @@
   'num_banks': 1,
   'num_row_per_chunk': 8,
   'num_chunks': 32,
+  'num_columns': 30,
   'bits_per_weight': 4,
   'bits_per_activation': 5,
   'bits_mac_output': 8,
@@ -11,9 +12,9 @@
 
   'latency':
   {
-    'unit': 'ms',
-    'per_bank_mac_latency': 0,
-    'per_bit_weight_io_latency': 1,
+    'unit': 'us',
+    'per_bank_mac_latency': 40,
+    'per_bit_weight_io_latency': 0,
     'per_bit_activation_io_latency': 0,
   },
 
@@ -23,6 +24,8 @@
     'per_bank_mac_energy': 1,
     'per_bit_weight_io_energy': 1,
     'per_bit_activation_io_energy': 1,
+    'peak_energy_efficient': 50,
+    'peak_energy_efficient_unit': 'TOPS/W',
   },
 
   'logging_control':

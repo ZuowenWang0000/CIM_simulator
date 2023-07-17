@@ -70,8 +70,19 @@ output_features, layer_total_latency, layer_total_energy, total_ops = model.forw
 print(f"input feature size:{input_shape}")
 print(f"output feature size:{output_features.shape}")
 
-print(f"total latency (ms):{model.total_latency/1000}")
-print(f"total ops :{format_large_number(model.total_ops)}")
+
+simple_column_eval = True
+if simple_column_eval:
+    print(f"total latency (ms):{model.total_latency/1000/config['basic_paras']['num_columns']}")
+    print(f"total ops :{format_large_number(model.total_ops)}")
+
+    ops_per_second = model.total_ops/(model.total_latency*1e-6)*config['basic_paras']['num_columns']
+    print(f"ops per second:{format_large_number(ops_per_second)}")
+    # print(f"ops per second:{ops_per_second}")
+
+    print(f"IMC power consumption (W):{ops_per_second/(config['energy']['peak_energy_efficient']*1.0e12)}")
+
+
 # print(f"total energy:{model.total_energy}")
 
 # output_features, layer_total_latency, layer_total_energy\

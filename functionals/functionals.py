@@ -42,10 +42,10 @@ class Conv2D():
         feature_size = int(x.shape[2] / self.stride[0])
         kernel_num, ks = self.weight.shape[0], self.weight.shape[2]
         ch = ch if ch < self.acc_length else self.acc_length
-        round = int(np.ceil(ch / self.acc_length))
-
+        round = int(np.ceil(x.shape[1] / self.acc_length))
+        # print(f"channel is {x.shape[1]} round is {round}")
         # calculate the number of bits of weight for this kernel
-        bits_of_weight_this_kernel = ch * ks * ks * self.config['basic_paras']['bits_per_weight']
+        bits_of_weight_this_kernel = x.shape[1] * ks * ks * self.config['basic_paras']['bits_per_weight']
 
         output_features = np.zeros((batch, kernel_num, feature_size, feature_size))
         if ks == 3:
@@ -54,6 +54,7 @@ class Conv2D():
 
         layer_total_latency = 0
         layer_total_energy = 0
+        layer_total_ops = 0
 
         for i in range(0, batch):
             for kn in tqdm(range(0, kernel_num)):
@@ -90,6 +91,10 @@ class Conv2D():
                         if num_of_macs_this_kernel > self.allowed_max_analog_macs:
                             raise Exception(f"kernel entries :{num_of_macs_this_kernel} is larger than the number of analog values {self.allowed_max_analog_macs} in the analog array! Not supported yet")
                         
+                        print(f"kernel entries :{num_of_macs_this_kernel} {self.allowed_max_analog_macs} in the analog array")
+                        # calculate the total ops 
+                        layer_total_ops += (num_of_macs_this_kernel*2)
+
                         layer_total_latency += self.config['latency']['per_bank_mac_latency']
                         layer_total_energy += self.config['energy']['per_bank_mac_energy']
 
@@ -97,7 +102,7 @@ class Conv2D():
                             output_features[i, kn, h, w] = psum
 
         output_features = torch.from_numpy(output_features).cuda()
-        return output_features, layer_total_latency, layer_total_energy
+        return output_features, layer_total_latency, layer_total_energy, layer_total_ops
 
 
 class BatchNorm2D():
