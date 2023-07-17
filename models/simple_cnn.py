@@ -50,47 +50,18 @@ class SimpleNVPCNN():
                     padding=(1,1), config=config)
 
     def forward(self, x):
-        x, layer_latency, layer_energy, layer_ops = self.conv1.forward(x)
-        self.accumu_laten_energy(layer_latency, layer_energy, layer_ops)
+        for first_stage_layer in [self.conv1, self.conv2, self.conv3, self.conv4]:
+            x, layer_latency, layer_energy, layer_ops = first_stage_layer.forward(x)
+            self.accumu_laten_energy(layer_latency, layer_energy, layer_ops)
 
-        x, layer_latency, layer_energy, layer_ops = self.conv2.forward(x)
-        self.accumu_laten_energy(layer_latency, layer_energy, layer_ops)
+        for residual_layers in [self.conv5_a, self.conv5_b, self.conv6_a, self.conv6_b,
+                                self.conv7_a, self.conv7_b, self.conv8_a, self.conv8_b]:
+            x, layer_latency, layer_energy, layer_ops = residual_layers.forward(x)
+            self.accumu_laten_energy(layer_latency, layer_energy, layer_ops)
 
-        x, layer_latency, layer_energy, layer_ops = self.conv3.forward(x)
-        self.accumu_laten_energy(layer_latency, layer_energy, layer_ops)
-
-        x, layer_latency, layer_energy, layer_ops = self.conv4.forward(x)
-        self.accumu_laten_energy(layer_latency, layer_energy, layer_ops)
-
-        x, layer_latency, layer_energy, layer_ops = self.conv5_a.forward(x)
-        self.accumu_laten_energy(layer_latency, layer_energy, layer_ops)
-
-        x, layer_latency, layer_energy, layer_ops = self.conv5_b.forward(x)
-        self.accumu_laten_energy(layer_latency, layer_energy, layer_ops)
-
-        x, layer_latency, layer_energy, layer_ops = self.conv6_a.forward(x)
-        self.accumu_laten_energy(layer_latency, layer_energy, layer_ops)
-
-        x, layer_latency, layer_energy, layer_ops = self.conv6_b.forward(x)
-        self.accumu_laten_energy(layer_latency, layer_energy, layer_ops)
-
-        x, layer_latency, layer_energy, layer_ops = self.conv7_a.forward(x)
-        self.accumu_laten_energy(layer_latency, layer_energy, layer_ops)
-
-        x, layer_latency, layer_energy, layer_ops = self.conv7_b.forward(x)
-        self.accumu_laten_energy(layer_latency, layer_energy, layer_ops)
-
-        x, layer_latency, layer_energy, layer_ops = self.conv8_a.forward(x)
-        self.accumu_laten_energy(layer_latency, layer_energy, layer_ops)
-
-        x, layer_latency, layer_energy, layer_ops = self.conv8_b.forward(x)
-        self.accumu_laten_energy(layer_latency, layer_energy, layer_ops)
-
-        x, layer_latency, layer_energy, layer_ops = self.conv9.forward(x)
-        self.accumu_laten_energy(layer_latency, layer_energy, layer_ops)
-
-        x, layer_latency, layer_energy, layer_ops = self.conv10.forward(x)
-        self.accumu_laten_energy(layer_latency, layer_energy, layer_ops)
+        for last_stage_layer in [self.conv9, self.conv10]:
+            x, layer_latency, layer_energy, layer_ops = last_stage_layer.forward(x)
+            self.accumu_laten_energy(layer_latency, layer_energy, layer_ops)
 
         return x, self.total_latency, self.total_energy, self.total_ops
     

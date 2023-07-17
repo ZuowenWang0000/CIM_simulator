@@ -10,7 +10,7 @@ from multiprocessing import Pool
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from numpy import savetxt
 from functionals.functionals import Conv2D
-from functionals.util import format_large_number
+from functionals.util import format_large_number, format_small_number
 from models.simple_cnn import SimpleNVPCNN
 
 
@@ -73,14 +73,16 @@ print(f"output feature size:{output_features.shape}")
 
 simple_column_eval = True
 if simple_column_eval:
-    print(f"total latency (ms):{model.total_latency/1000/config['basic_paras']['num_columns']}")
+    total_latency = (model.total_latency/1.0e6)/config['basic_paras']['num_columns']
+    print(f"total latency :{format_large_number(total_latency)}s")
     print(f"total ops :{format_large_number(model.total_ops)}")
 
     ops_per_second = model.total_ops/(model.total_latency*1e-6)*config['basic_paras']['num_columns']
     print(f"ops per second:{format_large_number(ops_per_second)}")
     # print(f"ops per second:{ops_per_second}")
 
-    print(f"IMC power consumption (W):{ops_per_second/(config['energy']['peak_energy_efficient']*1.0e12)}")
+    print(f"IMC power consumption:\
+          {format_small_number(ops_per_second/(config['energy']['peak_energy_efficient']*1.0e12))}W")
 
 
 # print(f"total energy:{model.total_energy}")
