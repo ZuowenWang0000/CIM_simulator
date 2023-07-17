@@ -10,6 +10,7 @@ from multiprocessing import Pool
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from numpy import savetxt
 from functionals.functionals import Conv2D
+from functionals.util import format_large_number
 from models.simple_cnn import SimpleNVPCNN
 
 
@@ -64,10 +65,14 @@ output_features = np.zeros((batch, kernel_num, feature_size, feature_size))
 
 input_shape = (1,3,128,128)
 model = SimpleNVPCNN(config)
-output_features, layer_total_latency, layer_total_energy = model.forward(input_shape)
+output_features, layer_total_latency, layer_total_energy, total_ops = model.forward(input_shape)
 
 print(f"input feature size:{input_shape}")
 print(f"output feature size:{output_features.shape}")
+
+print(f"total latency (ms):{model.total_latency/1000}")
+print(f"total ops :{format_large_number(model.total_ops)}")
+# print(f"total energy:{model.total_energy}")
 
 # output_features, layer_total_latency, layer_total_energy\
 #   = conv2D(x, weight, bias, stride, padding, dilation, groups, config)
