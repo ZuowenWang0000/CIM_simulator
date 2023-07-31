@@ -44,6 +44,11 @@ class Conv2D():
         ch = ch if ch < self.acc_length else self.acc_length
         round = int(np.ceil(x.shape[1] / self.acc_length))
         # print(f"channel is {x.shape[1]} round is {round}")
+
+        if x.shape[1] * ks * ks > self.allowed_max_analog_macs:
+            raise Exception(f"kernel entries :{x.shape[1] * ks * ks} is larger than the number of analog values {self.allowed_max_analog_macs} in the analog array! Not supported yet")
+            
+
         # calculate the number of bits of weight for this kernel
         bits_of_weight_this_kernel = x.shape[1] * ks * ks * self.config['basic_paras']['bits_per_weight']
 
@@ -88,10 +93,10 @@ class Conv2D():
                                     
                                     num_of_macs_this_kernel += self.acc_length
 
-                        if num_of_macs_this_kernel > self.allowed_max_analog_macs:
-                            raise Exception(f"kernel entries :{num_of_macs_this_kernel} is larger than the number of analog values {self.allowed_max_analog_macs} in the analog array! Not supported yet")
+                        # if num_of_macs_this_kernel > self.allowed_max_analog_macs:
+                        #     raise Exception(f"kernel entries :{num_of_macs_this_kernel} is larger than the number of analog values {self.allowed_max_analog_macs} in the analog array! Not supported yet")
                         
-                        print(f"kernel entries :{num_of_macs_this_kernel} {self.allowed_max_analog_macs} in the analog array")
+                        # print(f"kernel entries :{num_of_macs_this_kernel} {self.allowed_max_analog_macs} in the analog array")
                         # calculate the total ops 
                         layer_total_ops += (num_of_macs_this_kernel*2)
 

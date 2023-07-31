@@ -16,30 +16,30 @@ class SimpleNVPCNN():
                             padding=(1,1), config=config)
         self.conv2 = Conv2D(weight=(16,3,3), bias=(16,), stride=(1,1),
                             padding=(1,1), config=config)
-        self.conv3 = Conv2D(weight=(24,3,3), bias=(24,), stride=(2,2),
+        self.conv3 = Conv2D(weight=(28,3,3), bias=(28,), stride=(2,2),
                             padding=(1,1), config=config)
-        self.conv4 = Conv2D(weight=(24,3,3), bias=(24,), stride=(1,1),
+        self.conv4 = Conv2D(weight=(28,3,3), bias=(28,), stride=(1,1),
                             padding=(1,1), config=config)
 
         #  the 4 residual blocks, each has 2 conv layers
-        self.conv5_a = Conv2D(weight=(24,3,3), bias=(24,), stride=(1,1),
+        self.conv5_a = Conv2D(weight=(28,3,3), bias=(28,), stride=(1,1),
                             padding=(1,1), config=config)
-        self.conv5_b = Conv2D(weight=(24,3,3), bias=(24,), stride=(1,1),
+        self.conv5_b = Conv2D(weight=(28,3,3), bias=(28,), stride=(1,1),
                     padding=(1,1), config=config)
         
-        self.conv6_a = Conv2D(weight=(24,3,3), bias=(24,), stride=(1,1),
+        self.conv6_a = Conv2D(weight=(28,3,3), bias=(28,), stride=(1,1),
                             padding=(1,1), config=config)
-        self.conv6_b = Conv2D(weight=(24,3,3), bias=(24,), stride=(1,1),
+        self.conv6_b = Conv2D(weight=(28,3,3), bias=(28,), stride=(1,1),
                     padding=(1,1), config=config)
         
-        self.conv7_a = Conv2D(weight=(24,3,3), bias=(24,), stride=(1,1),
+        self.conv7_a = Conv2D(weight=(28,3,3), bias=(28,), stride=(1,1),
                             padding=(1,1), config=config)
-        self.conv7_b = Conv2D(weight=(24,3,3), bias=(24,), stride=(1,1),
+        self.conv7_b = Conv2D(weight=(28,3,3), bias=(28,), stride=(1,1),
                     padding=(1,1), config=config)
         
-        self.conv8_a = Conv2D(weight=(24,3,3), bias=(24,), stride=(1,1),
+        self.conv8_a = Conv2D(weight=(28,3,3), bias=(28,), stride=(1,1),
                             padding=(1,1), config=config)
-        self.conv8_b = Conv2D(weight=(24,3,3), bias=(24,), stride=(1,1),
+        self.conv8_b = Conv2D(weight=(28,3,3), bias=(28,), stride=(1,1),
                     padding=(1,1), config=config)
 
         # the final conv layers
