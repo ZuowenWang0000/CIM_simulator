@@ -1,0 +1,243 @@
+2022-09-19T13:17:00.70304100255-13:17:00 **** Incremental Build of configuration Debug for project accelerator_spi_app ****
+000-make all 
+000-make --no-print-directory pre-build
+000-a9-linaro-pre-build-step
+000- 
+000-make --no-print-directory main-build
+000-Building file: ../src/video_demo.c
+000-Invoking: ARM v7 gcc compiler
+000-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/media/hasan/HD_4TB/HD_4TB/vitis_2020_1_workspace/accelerator_spi/export/accelerator_spi/sw/accelerator_spi/standalone_domain/bspinclude/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+000-In file included from ../src/video_capture/../neural_net_layer.h:13,
+000-                 from ../src/video_capture/video_capture.h:79,
+000-                 from ../src/video_demo.h:32,
+000-                 from ../src/video_demo.c:39:
+000/accelerator_spi/export/accelerator_spi/sw/accelerator_spi/standalone_domain/bspinclude/include/xtime_l.h65-1-1#pragma message: For the sleep routines, Global timer is being used0-/media/hasan/HD_4TB/HD_4TB/vitis_2020_1_workspace/accelerator_spi/export/accelerator_spi/sw/accelerator_spi/standalone_domain/bspinclude/include/xtime_l.h:65:9: note: #pragma message: For the sleep routines, Global timer is being used
+000-   65 | #pragma message ("For the sleep routines, Global timer is being used")
+000-      |         ^~~~~~~
+000-../src/video_demo.c: In function 'spi_master_transfer':
+000/accelerator_spi_app/src/video_demo.c132-1-1passing argument 1 of 'memset' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]1-../src/video_demo.c:132:12: warning: passing argument 1 of 'memset' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+000-  132 |     memset(rx_buf, 0, msg_len);
+000-      |            ^~~~~~
+000-In file included from /media/hasan/HD_4TB/HD_4TB/vitis_2020_1_workspace/accelerator_spi/export/accelerator_spi/sw/accelerator_spi/standalone_domain/bspinclude/include/xil_printf.h:9,
+000-                 from /media/hasan/HD_4TB/HD_4TB/vitis_2020_1_workspace/accelerator_spi/export/accelerator_spi/sw/accelerator_spi/standalone_domain/bspinclude/include/xil_io.h:41,
+000-                 from /media/hasan/HD_4TB/HD_4TB/vitis_2020_1_workspace/accelerator_spi/export/accelerator_spi/sw/accelerator_spi/standalone_domain/bspinclude/include/xuartps_hw.h:49,
+000-                 from /media/hasan/HD_4TB/HD_4TB/vitis_2020_1_workspace/accelerator_spi/export/accelerator_spi/sw/accelerator_spi/standalone_domain/bspinclude/include/xuartps.h:167,
+000-                 from ../src/video_demo.c:28:
+000/accelerator_spi_app33-1-1expected 'void *' but argument is of type 'const unsigned char *'0-/opt/Xilinx/Vitis/2020.1/gnu/aarch32/lin/gcc-arm-none-eabi/aarch32-xilinx-eabi/usr/include/string.h:33:9: note: expected 'void *' but argument is of type 'const unsigned char *'
+000-   33 | void *  memset (void *, int, size_t);
+000-      |         ^~~~~~
+000/accelerator_spi_app/src/video_demo.c133-1-1passing argument 2 of 'XSpiPs_PolledTransfer' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]1-../src/video_demo.c:133:46: warning: passing argument 2 of 'XSpiPs_PolledTransfer' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+000-  133 |     int status = XSpiPs_PolledTransfer(&spi, tx_buf, rx_buf, msg_len);
+000-      |                                              ^~~~~~
+000-In file included from ../src/video_demo.c:44:
+000/accelerator_spi/export/accelerator_spi/sw/accelerator_spi/standalone_domain/bspinclude/include/xspips.h650-1-1expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'const unsigned char *'0-/media/hasan/HD_4TB/HD_4TB/vitis_2020_1_workspace/accelerator_spi/export/accelerator_spi/sw/accelerator_spi/standalone_domain/bspinclude/include/xspips.h:650:52: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'const unsigned char *'
+000-  650 | s32 XSpiPs_PolledTransfer(XSpiPs *InstancePtr, u8 *SendBufPtr,
+000-      |                                                ~~~~^~~~~~~~~~
+000/accelerator_spi_app/src/video_demo.c133-1-1passing argument 3 of 'XSpiPs_PolledTransfer' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]1-../src/video_demo.c:133:54: warning: passing argument 3 of 'XSpiPs_PolledTransfer' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+000-  133 |     int status = XSpiPs_PolledTransfer(&spi, tx_buf, rx_buf, msg_len);
+000-      |                                                      ^~~~~~
+000-In file included from ../src/video_demo.c:44:
+000/accelerator_spi/export/accelerator_spi/sw/accelerator_spi/standalone_domain/bspinclude/include/xspips.h651-1-1expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'const unsigned char *'0-/media/hasan/HD_4TB/HD_4TB/vitis_2020_1_workspace/accelerator_spi/export/accelerator_spi/sw/accelerator_spi/standalone_domain/bspinclude/include/xspips.h:651:9: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'const unsigned char *'
+000-  651 |     u8 *RecvBufPtr, u32 ByteCount);
+000-      |     ~~~~^~~~~~~~~~
+000/accelerator_spi_app/src/video_demo.c136-1-1passing argument 1 of 'free' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]1-../src/video_demo.c:136:10: warning: passing argument 1 of 'free' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+000-  136 |     free(rx_buf);
+000-      |          ^~~~~~
+000-In file included from ../src/video_demo.c:31:
+000/accelerator_spi_app94-1-1expected 'void *' but argument is of type 'const unsigned char *'0-/opt/Xilinx/Vitis/2020.1/gnu/aarch32/lin/gcc-arm-none-eabi/aarch32-xilinx-eabi/usr/include/stdlib.h:94:12: note: expected 'void *' but argument is of type 'const unsigned char *'
+000-   94 | void free (void *) _NOTHROW;
+000-      |            ^~~~~~
+000-../src/video_demo.c: In function 'spi_test':
+000/accelerator_spi_app/src/video_demo.c203-1-1pointer targets in initialization of 'unsigned char *' from 'char *' differ in signedness [-Wpointer-sign]1-../src/video_demo.c:203:27: warning: pointer targets in initialization of 'unsigned char *' from 'char *' differ in signedness [-Wpointer-sign]
+000-  203 |      unsigned char *msg = "Hello SPI!\n";
+000-      |                           ^~~~~~~~~~~~~~
+000-../src/video_demo.c: In function 'main':
+000/accelerator_spi_app/src/video_demo.c314-1-1'return' with no value, in function returning non-void [-Wreturn-type]1-../src/video_demo.c:314:3: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+000-  314 |   return;
+000-      |   ^~~~~~
+000/accelerator_spi_app/src/video_demo.c288-1-1declared here0-../src/video_demo.c:288:5: note: declared here
+000-  288 | int main(void)
+000-      |     ^~~~
+000/accelerator_spi_app/src/video_demo.c391-1-1initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[5]' {aka 'long unsigned int (*)[5]'} [-Wincompatible-pointer-types]1-../src/video_demo.c:391:26: warning: initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[5]' {aka 'long unsigned int (*)[5]'} [-Wincompatible-pointer-types]
+000-  391 |   .pre_reg            =  &layer_0_pre_reg,
+000-      |                          ^
+000/accelerator_spi_app/src/video_demo.c391-1-1(near initialization for 'layer_0.pre_reg')0-../src/video_demo.c:391:26: note: (near initialization for 'layer_0.pre_reg')
+000/accelerator_spi_app/src/video_demo.c392-1-1initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[320]' {aka 'long unsigned int (*)[320]'} [-Wincompatible-pointer-types]1-../src/video_demo.c:392:27: warning: initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[320]' {aka 'long unsigned int (*)[320]'} [-Wincompatible-pointer-types]
+000-  392 |   .intra_reg            = &layer_0_intra_reg,
+000-      |                           ^
+000/accelerator_spi_app/src/video_demo.c392-1-1(near initialization for 'layer_0.intra_reg')0-../src/video_demo.c:392:27: note: (near initialization for 'layer_0.intra_reg')
+000/accelerator_spi_app/src/video_demo.c419-1-1initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[5]' {aka 'long unsigned int (*)[5]'} [-Wincompatible-pointer-types]1-../src/video_demo.c:419:26: warning: initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[5]' {aka 'long unsigned int (*)[5]'} [-Wincompatible-pointer-types]
+000-  419 |   .pre_reg            =  &layer_1_pre_reg,
+000-      |                          ^
+000/accelerator_spi_app/src/video_demo.c419-1-1(near initialization for 'layer_1.pre_reg')0-../src/video_demo.c:419:26: note: (near initialization for 'layer_1.pre_reg')
+000/accelerator_spi_app/src/video_demo.c420-1-1initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[320]' {aka 'long unsigned int (*)[320]'} [-Wincompatible-pointer-types]1-../src/video_demo.c:420:27: warning: initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[320]' {aka 'long unsigned int (*)[320]'} [-Wincompatible-pointer-types]
+000-  420 |   .intra_reg            = &layer_1_intra_reg,
+000-      |                           ^
+000/accelerator_spi_app/src/video_demo.c420-1-1(near initialization for 'layer_1.intra_reg')0-../src/video_demo.c:420:27: note: (near initialization for 'layer_1.intra_reg')
+000/accelerator_spi_app/src/video_demo.c447-1-1initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[5]' {aka 'long unsigned int (*)[5]'} [-Wincompatible-pointer-types]1-../src/video_demo.c:447:26: warning: initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[5]' {aka 'long unsigned int (*)[5]'} [-Wincompatible-pointer-types]
+000-  447 |   .pre_reg            =  &layer_2_pre_reg,
+000-      |                          ^
+000/accelerator_spi_app/src/video_demo.c447-1-1(near initialization for 'layer_2.pre_reg')0-../src/video_demo.c:447:26: note: (near initialization for 'layer_2.pre_reg')
+000/accelerator_spi_app/src/video_demo.c448-1-1initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[160]' {aka 'long unsigned int (*)[160]'} [-Wincompatible-pointer-types]1-../src/video_demo.c:448:27: warning: initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[160]' {aka 'long unsigned int (*)[160]'} [-Wincompatible-pointer-types]
+000-  448 |   .intra_reg            = &layer_2_intra_reg,
+000-      |                           ^
+000/accelerator_spi_app/src/video_demo.c448-1-1(near initialization for 'layer_2.intra_reg')0-../src/video_demo.c:448:27: note: (near initialization for 'layer_2.intra_reg')
+000/accelerator_spi_app/src/video_demo.c475-1-1initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[5]' {aka 'long unsigned int (*)[5]'} [-Wincompatible-pointer-types]1-../src/video_demo.c:475:26: warning: initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[5]' {aka 'long unsigned int (*)[5]'} [-Wincompatible-pointer-types]
+000-  475 |   .pre_reg            =  &layer_3_pre_reg,
+000-      |                          ^
+000/accelerator_spi_app/src/video_demo.c475-1-1(near initialization for 'layer_3.pre_reg')0-../src/video_demo.c:475:26: note: (near initialization for 'layer_3.pre_reg')
+000/accelerator_spi_app/src/video_demo.c476-1-1initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[160]' {aka 'long unsigned int (*)[160]'} [-Wincompatible-pointer-types]1-../src/video_demo.c:476:27: warning: initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[160]' {aka 'long unsigned int (*)[160]'} [-Wincompatible-pointer-types]
+000-  476 |   .intra_reg            = &layer_3_intra_reg,
+000-      |                           ^
+000/accelerator_spi_app/src/video_demo.c476-1-1(near initialization for 'layer_3.intra_reg')0-../src/video_demo.c:476:27: note: (near initialization for 'layer_3.intra_reg')
+000/accelerator_spi_app/src/video_demo.c503-1-1initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[5]' {aka 'long unsigned int (*)[5]'} [-Wincompatible-pointer-types]1-../src/video_demo.c:503:26: warning: initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[5]' {aka 'long unsigned int (*)[5]'} [-Wincompatible-pointer-types]
+000-  503 |   .pre_reg            =  &layer_4_pre_reg,
+000-      |                          ^
+000/accelerator_spi_app/src/video_demo.c503-1-1(near initialization for 'layer_4.pre_reg')0-../src/video_demo.c:503:26: note: (near initialization for 'layer_4.pre_reg')
+000/accelerator_spi_app/src/video_demo.c504-1-1initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[160]' {aka 'long unsigned int (*)[160]'} [-Wincompatible-pointer-types]1-../src/video_demo.c:504:27: warning: initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[160]' {aka 'long unsigned int (*)[160]'} [-Wincompatible-pointer-types]
+000-  504 |   .intra_reg            = &layer_4_intra_reg,
+000-      |                           ^
+000/accelerator_spi_app/src/video_demo.c504-1-1(near initialization for 'layer_4.intra_reg')0-../src/video_demo.c:504:27: note: (near initialization for 'layer_4.intra_reg')
+000/accelerator_spi_app/src/video_demo.c531-1-1initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[5]' {aka 'long unsigned int (*)[5]'} [-Wincompatible-pointer-types]1-../src/video_demo.c:531:26: warning: initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[5]' {aka 'long unsigned int (*)[5]'} [-Wincompatible-pointer-types]
+000-  531 |   .pre_reg            =  &layer_5_pre_reg,
+000-      |                          ^
+000/accelerator_spi_app/src/video_demo.c531-1-1(near initialization for 'layer_5.pre_reg')0-../src/video_demo.c:531:26: note: (near initialization for 'layer_5.pre_reg')
+000/accelerator_spi_app/src/video_demo.c532-1-1initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[160]' {aka 'long unsigned int (*)[160]'} [-Wincompatible-pointer-types]1-../src/video_demo.c:532:27: warning: initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[160]' {aka 'long unsigned int (*)[160]'} [-Wincompatible-pointer-types]
+000-  532 |   .intra_reg            = &layer_5_intra_reg,
+000-      |                           ^
+000/accelerator_spi_app/src/video_demo.c532-1-1(near initialization for 'layer_5.intra_reg')0-../src/video_demo.c:532:27: note: (near initialization for 'layer_5.intra_reg')
+000/accelerator_spi_app/src/video_demo.c559-1-1initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[5]' {aka 'long unsigned int (*)[5]'} [-Wincompatible-pointer-types]1-../src/video_demo.c:559:26: warning: initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[5]' {aka 'long unsigned int (*)[5]'} [-Wincompatible-pointer-types]
+000-  559 |   .pre_reg            =  &layer_6_pre_reg,
+000-      |                          ^
+000/accelerator_spi_app/src/video_demo.c559-1-1(near initialization for 'layer_6.pre_reg')0-../src/video_demo.c:559:26: note: (near initialization for 'layer_6.pre_reg')
+000/accelerator_spi_app/src/video_demo.c560-1-1initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[160]' {aka 'long unsigned int (*)[160]'} [-Wincompatible-pointer-types]1-../src/video_demo.c:560:27: warning: initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[160]' {aka 'long unsigned int (*)[160]'} [-Wincompatible-pointer-types]
+000-  560 |   .intra_reg            = &layer_6_intra_reg,
+000-      |                           ^
+000/accelerator_spi_app/src/video_demo.c560-1-1(near initialization for 'layer_6.intra_reg')0-../src/video_demo.c:560:27: note: (near initialization for 'layer_6.intra_reg')
+000/accelerator_spi_app/src/video_demo.c587-1-1initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[5]' {aka 'long unsigned int (*)[5]'} [-Wincompatible-pointer-types]1-../src/video_demo.c:587:26: warning: initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[5]' {aka 'long unsigned int (*)[5]'} [-Wincompatible-pointer-types]
+000-  587 |   .pre_reg            =  &layer_7_pre_reg,
+000-      |                          ^
+000/accelerator_spi_app/src/video_demo.c587-1-1(near initialization for 'layer_7.pre_reg')0-../src/video_demo.c:587:26: note: (near initialization for 'layer_7.pre_reg')
+000/accelerator_spi_app/src/video_demo.c588-1-1initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[160]' {aka 'long unsigned int (*)[160]'} [-Wincompatible-pointer-types]1-../src/video_demo.c:588:27: warning: initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[160]' {aka 'long unsigned int (*)[160]'} [-Wincompatible-pointer-types]
+000-  588 |   .intra_reg            = &layer_7_intra_reg,
+000-      |                           ^
+000/accelerator_spi_app/src/video_demo.c588-1-1(near initialization for 'layer_7.intra_reg')0-../src/video_demo.c:588:27: note: (near initialization for 'layer_7.intra_reg')
+000/accelerator_spi_app/src/video_demo.c615-1-1initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[5]' {aka 'long unsigned int (*)[5]'} [-Wincompatible-pointer-types]1-../src/video_demo.c:615:26: warning: initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[5]' {aka 'long unsigned int (*)[5]'} [-Wincompatible-pointer-types]
+000-  615 |   .pre_reg            =  &layer_8_pre_reg,
+000-      |                          ^
+000/accelerator_spi_app/src/video_demo.c615-1-1(near initialization for 'layer_8.pre_reg')0-../src/video_demo.c:615:26: note: (near initialization for 'layer_8.pre_reg')
+000/accelerator_spi_app/src/video_demo.c616-1-1initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[160]' {aka 'long unsigned int (*)[160]'} [-Wincompatible-pointer-types]1-../src/video_demo.c:616:27: warning: initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[160]' {aka 'long unsigned int (*)[160]'} [-Wincompatible-pointer-types]
+000-  616 |   .intra_reg            = &layer_8_intra_reg,
+000-      |                           ^
+000/accelerator_spi_app/src/video_demo.c616-1-1(near initialization for 'layer_8.intra_reg')0-../src/video_demo.c:616:27: note: (near initialization for 'layer_8.intra_reg')
+000/accelerator_spi_app/src/video_demo.c643-1-1initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[5]' {aka 'long unsigned int (*)[5]'} [-Wincompatible-pointer-types]1-../src/video_demo.c:643:26: warning: initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[5]' {aka 'long unsigned int (*)[5]'} [-Wincompatible-pointer-types]
+000-  643 |   .pre_reg            =  &layer_9_pre_reg,
+000-      |                          ^
+000/accelerator_spi_app/src/video_demo.c643-1-1(near initialization for 'layer_9.pre_reg')0-../src/video_demo.c:643:26: note: (near initialization for 'layer_9.pre_reg')
+000/accelerator_spi_app/src/video_demo.c644-1-1initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[160]' {aka 'long unsigned int (*)[160]'} [-Wincompatible-pointer-types]1-../src/video_demo.c:644:27: warning: initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[160]' {aka 'long unsigned int (*)[160]'} [-Wincompatible-pointer-types]
+000-  644 |   .intra_reg            = &layer_9_intra_reg,
+000-      |                           ^
+000/accelerator_spi_app/src/video_demo.c644-1-1(near initialization for 'layer_9.intra_reg')0-../src/video_demo.c:644:27: note: (near initialization for 'layer_9.intra_reg')
+000/accelerator_spi_app/src/video_demo.c671-1-1initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[5]' {aka 'long unsigned int (*)[5]'} [-Wincompatible-pointer-types]1-../src/video_demo.c:671:26: warning: initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[5]' {aka 'long unsigned int (*)[5]'} [-Wincompatible-pointer-types]
+000-  671 |   .pre_reg            =  &layer_10_pre_reg,
+000-      |                          ^
+000/accelerator_spi_app/src/video_demo.c671-1-1(near initialization for 'layer_10.pre_reg')0-../src/video_demo.c:671:26: note: (near initialization for 'layer_10.pre_reg')
+000/accelerator_spi_app/src/video_demo.c672-1-1initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[160]' {aka 'long unsigned int (*)[160]'} [-Wincompatible-pointer-types]1-../src/video_demo.c:672:27: warning: initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[160]' {aka 'long unsigned int (*)[160]'} [-Wincompatible-pointer-types]
+000-  672 |   .intra_reg            = &layer_10_intra_reg,
+000-      |                           ^
+000/accelerator_spi_app/src/video_demo.c672-1-1(near initialization for 'layer_10.intra_reg')0-../src/video_demo.c:672:27: note: (near initialization for 'layer_10.intra_reg')
+000/accelerator_spi_app/src/video_demo.c699-1-1initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[5]' {aka 'long unsigned int (*)[5]'} [-Wincompatible-pointer-types]1-../src/video_demo.c:699:26: warning: initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[5]' {aka 'long unsigned int (*)[5]'} [-Wincompatible-pointer-types]
+000-  699 |   .pre_reg            =  &layer_11_pre_reg,
+000-      |                          ^
+000/accelerator_spi_app/src/video_demo.c699-1-1(near initialization for 'layer_11.pre_reg')0-../src/video_demo.c:699:26: note: (near initialization for 'layer_11.pre_reg')
+000/accelerator_spi_app/src/video_demo.c700-1-1initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[160]' {aka 'long unsigned int (*)[160]'} [-Wincompatible-pointer-types]1-../src/video_demo.c:700:27: warning: initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[160]' {aka 'long unsigned int (*)[160]'} [-Wincompatible-pointer-types]
+000-  700 |   .intra_reg            = &layer_11_intra_reg,
+000-      |                           ^
+000/accelerator_spi_app/src/video_demo.c700-1-1(near initialization for 'layer_11.intra_reg')0-../src/video_demo.c:700:27: note: (near initialization for 'layer_11.intra_reg')
+000/accelerator_spi_app/src/video_demo.c727-1-1initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[5]' {aka 'long unsigned int (*)[5]'} [-Wincompatible-pointer-types]1-../src/video_demo.c:727:26: warning: initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[5]' {aka 'long unsigned int (*)[5]'} [-Wincompatible-pointer-types]
+000-  727 |   .pre_reg            =  &layer_12_pre_reg,
+000-      |                          ^
+000/accelerator_spi_app/src/video_demo.c727-1-1(near initialization for 'layer_12.pre_reg')0-../src/video_demo.c:727:26: note: (near initialization for 'layer_12.pre_reg')
+000/accelerator_spi_app/src/video_demo.c728-1-1initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[160]' {aka 'long unsigned int (*)[160]'} [-Wincompatible-pointer-types]1-../src/video_demo.c:728:27: warning: initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[160]' {aka 'long unsigned int (*)[160]'} [-Wincompatible-pointer-types]
+000-  728 |   .intra_reg            = &layer_12_intra_reg,
+000-      |                           ^
+000/accelerator_spi_app/src/video_demo.c728-1-1(near initialization for 'layer_12.intra_reg')0-../src/video_demo.c:728:27: note: (near initialization for 'layer_12.intra_reg')
+000/accelerator_spi_app/src/video_demo.c755-1-1initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[5]' {aka 'long unsigned int (*)[5]'} [-Wincompatible-pointer-types]1-../src/video_demo.c:755:26: warning: initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[5]' {aka 'long unsigned int (*)[5]'} [-Wincompatible-pointer-types]
+000-  755 |   .pre_reg            =  &layer_13_pre_reg,
+000-      |                          ^
+000/accelerator_spi_app/src/video_demo.c755-1-1(near initialization for 'layer_13.pre_reg')0-../src/video_demo.c:755:26: note: (near initialization for 'layer_13.pre_reg')
+000/accelerator_spi_app/src/video_demo.c756-1-1initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[160]' {aka 'long unsigned int (*)[160]'} [-Wincompatible-pointer-types]1-../src/video_demo.c:756:27: warning: initialization of 'uint32_t *' {aka 'long unsigned int *'} from incompatible pointer type 'uint32_t (*)[160]' {aka 'long unsigned int (*)[160]'} [-Wincompatible-pointer-types]
+000-  756 |   .intra_reg            = &layer_13_intra_reg,
+000-      |                           ^
+000/accelerator_spi_app/src/video_demo.c756-1-1(near initialization for 'layer_13.intra_reg')0-../src/video_demo.c:756:27: note: (near initialization for 'layer_13.intra_reg')
+000/accelerator_spi_app/src/video_demo.c1032-1-1implicit declaration of function 'run_letters_demo' [-Wimplicit-function-declaration]1-../src/video_demo.c:1032:2: warning: implicit declaration of function 'run_letters_demo' [-Wimplicit-function-declaration]
+000- 1032 |  run_letters_demo(&NN);
+000-      |  ^~~~~~~~~~~~~~~~
+000/accelerator_spi_app/src/video_demo.c320-1-1unused variable 'verbose' [-Wunused-variable]1-../src/video_demo.c:320:11: warning: unused variable 'verbose' [-Wunused-variable]
+000-  320 |  uint16_t verbose = 0;
+000-      |           ^~~~~~~
+000-../src/video_demo.c: At top level:
+000/accelerator_spi_app/src/video_demo.c1135-1-1conflicting types for 'run_letters_demo'1run_letters_demo../src/video_demo.c:1135:6: warning: conflicting types for 'run_letters_demo'
+000- 1135 | void run_letters_demo(NN_config_t *NN)
+000-      |      ^~~~~~~~~~~~~~~~
+000/accelerator_spi_app/src/video_demo.c1032-1-1previous implicit declaration of 'run_letters_demo' was here0-../src/video_demo.c:1032:2: note: previous implicit declaration of 'run_letters_demo' was here
+000- 1032 |  run_letters_demo(&NN);
+000-      |  ^~~~~~~~~~~~~~~~
+000-../src/video_demo.c: In function 'run_letters_demo':
+000/accelerator_spi_app/src/video_demo.c1141-1-1implicit declaration of function 'DemoChangeRes_1080'; did you mean 'DemoChangeRes'? [-Wimplicit-function-declaration]1-../src/video_demo.c:1141:2: warning: implicit declaration of function 'DemoChangeRes_1080'; did you mean 'DemoChangeRes'? [-Wimplicit-function-declaration]
+000- 1141 |  DemoChangeRes_1080();
+000-      |  ^~~~~~~~~~~~~~~~~~
+000-      |  DemoChangeRes
+000/accelerator_spi_app/src/video_demo.c1138-1-1unused variable 'userInput' [-Wunused-variable]1-../src/video_demo.c:1138:7: warning: unused variable 'userInput' [-Wunused-variable]
+000- 1138 |  char userInput = 0;
+000-      |       ^~~~~~~~~
+000/accelerator_spi_app/src/video_demo.c1137-1-1unused variable 'nextFrame' [-Wunused-variable]1-../src/video_demo.c:1137:6: warning: unused variable 'nextFrame' [-Wunused-variable]
+000- 1137 |  int nextFrame = 0;
+000-      |      ^~~~~~~~~
+000-../src/video_demo.c: In function 'DemoRun':
+000/accelerator_spi_app/src/video_demo.c1243-1-1unused variable 'start_pixel_height' [-Wunused-variable]1-../src/video_demo.c:1243:8: warning: unused variable 'start_pixel_height' [-Wunused-variable]
+000- 1243 |    u32 start_pixel_height = (height/LAYER_0_INPUT_ROWS) / 2;
+000-      |        ^~~~~~~~~~~~~~~~~~
+000/accelerator_spi_app/src/video_demo.c1242-1-1unused variable 'start_pixel_width' [-Wunused-variable]1-../src/video_demo.c:1242:8: warning: unused variable 'start_pixel_width' [-Wunused-variable]
+000- 1242 |    u32 start_pixel_width = (width/LAYER_0_INPUT_COLS) / 2;
+000-      |        ^~~~~~~~~~~~~~~~~
+000-../src/video_demo.c: At top level:
+000/accelerator_spi_app/src/video_demo.c1407-1-1conflicting types for 'DemoChangeRes_1080'1DemoChangeRes_1080../src/video_demo.c:1407:6: warning: conflicting types for 'DemoChangeRes_1080'
+000- 1407 | void DemoChangeRes_1080()
+000-      |      ^~~~~~~~~~~~~~~~~~
+000/accelerator_spi_app/src/video_demo.c1141-1-1previous implicit declaration of 'DemoChangeRes_1080' was here0-../src/video_demo.c:1141:2: note: previous implicit declaration of 'DemoChangeRes_1080' was here
+000- 1141 |  DemoChangeRes_1080();
+000-      |  ^~~~~~~~~~~~~~~~~~
+000-../src/video_demo.c: In function 'DemoChangeRes_1080':
+000/accelerator_spi_app/src/video_demo.c1411-1-1unused variable 'userInput' [-Wunused-variable]1-../src/video_demo.c:1411:7: warning: unused variable 'userInput' [-Wunused-variable]
+000- 1411 |  char userInput = 0;
+000-      |       ^~~~~~~~~
+000/accelerator_spi_app/src/video_demo.c1410-1-1variable 'status' set but not used [-Wunused-but-set-variable]1-../src/video_demo.c:1410:6: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+000- 1410 |  int status;
+000-      |      ^~~~~~
+000/accelerator_spi_app/src/video_demo.c1409-1-1variable 'fResSet' set but not used [-Wunused-but-set-variable]1-../src/video_demo.c:1409:6: warning: variable 'fResSet' set but not used [-Wunused-but-set-variable]
+000- 1409 |  int fResSet = 0;
+000-      |      ^~~~~~~
+000-../src/video_demo.c: In function 'get_compressed_input_image':
+000/accelerator_spi_app/src/video_demo.c1544-1-1unused variable 'compressed_word_remaining_bytes' [-Wunused-variable]1-../src/video_demo.c:1544:5: warning: unused variable 'compressed_word_remaining_bytes' [-Wunused-variable]
+000- 1544 |  u8 compressed_word_remaining_bytes = AXI_BIT_WIDTH/8;
+000-      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+000/accelerator_spi_app/src/video_demo.c1542-1-1unused variable 'dest_line_start' [-Wunused-variable]1-../src/video_demo.c:1542:6: warning: unused variable 'dest_line_start' [-Wunused-variable]
+000- 1542 |  u32 dest_line_start = 0;
+000-      |      ^~~~~~~~~~~~~~~
+000-Finished building: ../src/video_demo.c
+000- 
+000-Building target: accelerator_spi_app.elf
+000-Invoking: ARM v7 gcc linker
+000-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L/media/hasan/HD_4TB/HD_4TB/vitis_2020_1_workspace/accelerator_spi/export/accelerator_spi/sw/accelerator_spi/standalone_domain/bsplib/lib -o "accelerator_spi_app.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/main.o ./src/neural_net_layer.o ./src/platform.o ./src/video_demo.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+000-Finished building target: accelerator_spi_app.elf
+000- 
+000-Invoking: ARM v7 Print Size
+000-arm-none-eabi-size accelerator_spi_app.elf  |tee "accelerator_spi_app.elf.size"
+000-   text	   data	    bss	    dec	    hex	filename
+000- 120733	4709164	75232576	80062473	4c5a809	accelerator_spi_app.elf
+000-Finished building: accelerator_spi_app.elf.size
+000- 
+00255-
+13:17:04 Build Finished (took 3s.461ms)
+

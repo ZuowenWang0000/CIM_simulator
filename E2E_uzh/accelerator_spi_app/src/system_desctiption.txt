@@ -1,0 +1,14 @@
+UZH: 
+1. FPGA
+
+IMEC
+1. Viper-box
+    -> base board. It has a house-keeping FPGA (don't know the board). The board connects to the host cpu over usb.
+    - connects UZH's FPGA SPI to the headstage
+    - deserializer <-> serializer pair. connects viper-box and headstage with thin 3 differential cables. (power, box-to-headstage(stimulation), headstage-to-box(recordings))
+    - 3 modes of operation
+        1. host cpu controls everything using usb
+        2. host cpu initializes the system, and then UZH's FGPA controls the headstage (initialization and commands)
+        3. (not there yet) the box self-initializes, and UZH's FPGA controls the headstage (initialization and commands)
+
+

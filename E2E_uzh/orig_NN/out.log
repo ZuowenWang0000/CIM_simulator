@@ -1,0 +1,1839 @@
+2022-08-24 16:05:09,126 INFO Epoch 1
+2022-08-24 16:05:13,364 INFO [0,    10] tr_recon_loss : 0.133 | val_recon_loss : 0.186 | tr_total_loss : 0.136 | val_total_loss : 0.190 | tr_stimu_loss : 0.433 | val_stimu_loss : 0.515
+2022-08-24 16:06:36,886 INFO Epoch 1
+2022-08-24 16:06:41,114 INFO [0,    10] tr_recon_loss : 0.133 | val_recon_loss : 0.186 | tr_total_loss : 0.136 | val_total_loss : 0.190 | tr_stimu_loss : 0.433 | val_stimu_loss : 0.515
+2022-08-24 16:06:41,114 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:06:41,119 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:06:45,209 INFO [0,    20] tr_recon_loss : 0.108 | val_recon_loss : 0.156 | tr_total_loss : 0.111 | val_total_loss : 0.159 | tr_stimu_loss : 0.421 | val_stimu_loss : 0.514
+2022-08-24 16:06:45,210 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:06:45,214 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:06:49,207 INFO [0,    30] tr_recon_loss : 0.097 | val_recon_loss : 0.143 | tr_total_loss : 0.100 | val_total_loss : 0.146 | tr_stimu_loss : 0.407 | val_stimu_loss : 0.490
+2022-08-24 16:06:49,207 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:06:49,211 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:06:50,262 INFO Epoch 2
+2022-08-24 16:06:54,228 INFO [1,    10] tr_recon_loss : 0.100 | val_recon_loss : 0.137 | tr_total_loss : 0.103 | val_total_loss : 0.139 | tr_stimu_loss : 0.394 | val_stimu_loss : 0.407
+2022-08-24 16:06:54,228 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:06:54,232 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:07:04,008 INFO Epoch 1
+2022-08-24 16:07:08,256 INFO [0,    10] tr_recon_loss : 0.133 | val_recon_loss : 0.186 | tr_total_loss : 0.136 | val_total_loss : 0.190 | tr_stimu_loss : 0.433 | val_stimu_loss : 0.515
+2022-08-24 16:07:08,256 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:07:08,261 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:07:12,348 INFO [0,    20] tr_recon_loss : 0.108 | val_recon_loss : 0.156 | tr_total_loss : 0.111 | val_total_loss : 0.159 | tr_stimu_loss : 0.423 | val_stimu_loss : 0.515
+2022-08-24 16:07:12,348 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:07:12,352 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:07:16,340 INFO [0,    30] tr_recon_loss : 0.096 | val_recon_loss : 0.145 | tr_total_loss : 0.100 | val_total_loss : 0.149 | tr_stimu_loss : 0.408 | val_stimu_loss : 0.489
+2022-08-24 16:07:16,340 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:07:16,344 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:07:17,397 INFO Epoch 2
+2022-08-24 16:07:21,360 INFO [1,    10] tr_recon_loss : 0.104 | val_recon_loss : 0.141 | tr_total_loss : 0.107 | val_total_loss : 0.143 | tr_stimu_loss : 0.393 | val_stimu_loss : 0.411
+2022-08-24 16:07:21,360 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:07:21,364 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:07:25,597 INFO [1,    20] tr_recon_loss : 0.098 | val_recon_loss : 0.125 | tr_total_loss : 0.100 | val_total_loss : 0.127 | tr_stimu_loss : 0.385 | val_stimu_loss : 0.377
+2022-08-24 16:07:25,598 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:07:25,602 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:07:29,678 INFO [1,    30] tr_recon_loss : 0.095 | val_recon_loss : 0.111 | tr_total_loss : 0.097 | val_total_loss : 0.114 | tr_stimu_loss : 0.373 | val_stimu_loss : 0.364
+2022-08-24 16:07:29,679 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:07:29,683 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:07:30,714 INFO Epoch 3
+2022-08-24 16:07:34,781 INFO [2,    10] tr_recon_loss : 0.087 | val_recon_loss : 0.091 | tr_total_loss : 0.090 | val_total_loss : 0.094 | tr_stimu_loss : 0.371 | val_stimu_loss : 0.335
+2022-08-24 16:07:34,782 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:07:34,786 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:07:38,974 INFO [2,    20] tr_recon_loss : 0.081 | val_recon_loss : 0.089 | tr_total_loss : 0.084 | val_total_loss : 0.092 | tr_stimu_loss : 0.378 | val_stimu_loss : 0.354
+2022-08-24 16:07:38,974 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:07:38,978 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:07:43,026 INFO [2,    30] tr_recon_loss : 0.078 | val_recon_loss : 0.083 | tr_total_loss : 0.081 | val_total_loss : 0.086 | tr_stimu_loss : 0.379 | val_stimu_loss : 0.370
+2022-08-24 16:07:43,026 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:07:43,030 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:07:44,080 INFO Epoch 4
+2022-08-24 16:07:48,081 INFO [3,    10] tr_recon_loss : 0.079 | val_recon_loss : 0.070 | tr_total_loss : 0.083 | val_total_loss : 0.073 | tr_stimu_loss : 0.411 | val_stimu_loss : 0.414
+2022-08-24 16:07:48,081 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:07:48,085 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:07:52,317 INFO [3,    20] tr_recon_loss : 0.063 | val_recon_loss : 0.063 | tr_total_loss : 0.067 | val_total_loss : 0.067 | tr_stimu_loss : 0.430 | val_stimu_loss : 0.418
+2022-08-24 16:07:52,317 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:07:52,321 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:07:56,427 INFO [3,    30] tr_recon_loss : 0.060 | val_recon_loss : 0.061 | tr_total_loss : 0.063 | val_total_loss : 0.064 | tr_stimu_loss : 0.419 | val_stimu_loss : 0.408
+2022-08-24 16:07:56,427 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:07:56,431 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:07:57,460 INFO Epoch 5
+2022-08-24 16:08:01,576 INFO [4,    10] tr_recon_loss : 0.058 | val_recon_loss : 0.061 | tr_total_loss : 0.062 | val_total_loss : 0.064 | tr_stimu_loss : 0.407 | val_stimu_loss : 0.415
+2022-08-24 16:08:01,576 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:08:01,580 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:08:05,748 INFO [4,    20] tr_recon_loss : 0.059 | val_recon_loss : 0.059 | tr_total_loss : 0.062 | val_total_loss : 0.063 | tr_stimu_loss : 0.400 | val_stimu_loss : 0.430
+2022-08-24 16:08:05,748 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:08:05,752 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:08:09,771 INFO [4,    30] tr_recon_loss : 0.045 | val_recon_loss : 0.041 | tr_total_loss : 0.049 | val_total_loss : 0.046 | tr_stimu_loss : 0.431 | val_stimu_loss : 0.456
+2022-08-24 16:08:09,771 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:08:09,775 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:08:10,845 INFO Epoch 6
+2022-08-24 16:08:15,086 INFO [5,    10] tr_recon_loss : 0.029 | val_recon_loss : 0.025 | tr_total_loss : 0.034 | val_total_loss : 0.030 | tr_stimu_loss : 0.489 | val_stimu_loss : 0.487
+2022-08-24 16:08:15,086 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:08:15,090 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:08:19,132 INFO [5,    20] tr_recon_loss : 0.024 | val_recon_loss : 0.026 | tr_total_loss : 0.029 | val_total_loss : 0.031 | tr_stimu_loss : 0.503 | val_stimu_loss : 0.494
+2022-08-24 16:08:19,132 INFO not improved for     1 iterations
+2022-08-24 16:08:23,087 INFO [5,    30] tr_recon_loss : 0.025 | val_recon_loss : 0.027 | tr_total_loss : 0.029 | val_total_loss : 0.032 | tr_stimu_loss : 0.497 | val_stimu_loss : 0.500
+2022-08-24 16:08:23,087 INFO not improved for     2 iterations
+2022-08-24 16:08:24,200 INFO Epoch 7
+2022-08-24 16:08:28,265 INFO [6,    10] tr_recon_loss : 0.021 | val_recon_loss : 0.021 | tr_total_loss : 0.026 | val_total_loss : 0.026 | tr_stimu_loss : 0.495 | val_stimu_loss : 0.507
+2022-08-24 16:08:28,265 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:08:28,269 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:08:32,365 INFO [6,    20] tr_recon_loss : 0.019 | val_recon_loss : 0.022 | tr_total_loss : 0.024 | val_total_loss : 0.027 | tr_stimu_loss : 0.483 | val_stimu_loss : 0.486
+2022-08-24 16:08:32,365 INFO not improved for     1 iterations
+2022-08-24 16:08:36,541 INFO [6,    30] tr_recon_loss : 0.017 | val_recon_loss : 0.018 | tr_total_loss : 0.021 | val_total_loss : 0.023 | tr_stimu_loss : 0.487 | val_stimu_loss : 0.483
+2022-08-24 16:08:36,541 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:08:36,545 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:08:37,594 INFO Epoch 8
+2022-08-24 16:08:41,823 INFO [7,    10] tr_recon_loss : 0.015 | val_recon_loss : 0.015 | tr_total_loss : 0.020 | val_total_loss : 0.020 | tr_stimu_loss : 0.487 | val_stimu_loss : 0.485
+2022-08-24 16:08:41,823 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:08:41,827 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:08:45,901 INFO [7,    20] tr_recon_loss : 0.015 | val_recon_loss : 0.015 | tr_total_loss : 0.019 | val_total_loss : 0.019 | tr_stimu_loss : 0.486 | val_stimu_loss : 0.486
+2022-08-24 16:08:45,902 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:08:45,906 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:08:49,938 INFO [7,    30] tr_recon_loss : 0.015 | val_recon_loss : 0.014 | tr_total_loss : 0.019 | val_total_loss : 0.019 | tr_stimu_loss : 0.485 | val_stimu_loss : 0.488
+2022-08-24 16:08:49,938 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:08:49,942 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:08:50,997 INFO Epoch 9
+2022-08-24 16:08:55,143 INFO [8,    10] tr_recon_loss : 0.017 | val_recon_loss : 0.017 | tr_total_loss : 0.022 | val_total_loss : 0.022 | tr_stimu_loss : 0.492 | val_stimu_loss : 0.488
+2022-08-24 16:08:55,144 INFO not improved for     1 iterations
+2022-08-24 16:08:59,234 INFO [8,    20] tr_recon_loss : 0.014 | val_recon_loss : 0.017 | tr_total_loss : 0.019 | val_total_loss : 0.022 | tr_stimu_loss : 0.511 | val_stimu_loss : 0.502
+2022-08-24 16:08:59,234 INFO not improved for     2 iterations
+2022-08-24 16:09:03,339 INFO [8,    30] tr_recon_loss : 0.013 | val_recon_loss : 0.012 | tr_total_loss : 0.018 | val_total_loss : 0.017 | tr_stimu_loss : 0.510 | val_stimu_loss : 0.510
+2022-08-24 16:09:03,340 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:09:03,344 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:09:04,400 INFO Epoch 10
+2022-08-24 16:09:08,740 INFO [9,    10] tr_recon_loss : 0.012 | val_recon_loss : 0.013 | tr_total_loss : 0.017 | val_total_loss : 0.018 | tr_stimu_loss : 0.508 | val_stimu_loss : 0.509
+2022-08-24 16:09:08,740 INFO not improved for     1 iterations
+2022-08-24 16:09:12,871 INFO [9,    20] tr_recon_loss : 0.012 | val_recon_loss : 0.012 | tr_total_loss : 0.017 | val_total_loss : 0.017 | tr_stimu_loss : 0.504 | val_stimu_loss : 0.506
+2022-08-24 16:09:12,872 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:09:12,876 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:09:16,804 INFO [9,    30] tr_recon_loss : 0.012 | val_recon_loss : 0.013 | tr_total_loss : 0.017 | val_total_loss : 0.018 | tr_stimu_loss : 0.500 | val_stimu_loss : 0.501
+2022-08-24 16:09:16,805 INFO not improved for     1 iterations
+2022-08-24 16:09:17,832 INFO Epoch 11
+2022-08-24 16:09:21,952 INFO [10,    10] tr_recon_loss : 0.012 | val_recon_loss : 0.012 | tr_total_loss : 0.016 | val_total_loss : 0.017 | tr_stimu_loss : 0.496 | val_stimu_loss : 0.495
+2022-08-24 16:09:21,952 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:09:21,956 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:09:26,058 INFO [10,    20] tr_recon_loss : 0.012 | val_recon_loss : 0.012 | tr_total_loss : 0.017 | val_total_loss : 0.017 | tr_stimu_loss : 0.494 | val_stimu_loss : 0.493
+2022-08-24 16:09:26,058 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:09:26,062 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:09:30,152 INFO [10,    30] tr_recon_loss : 0.012 | val_recon_loss : 0.014 | tr_total_loss : 0.017 | val_total_loss : 0.019 | tr_stimu_loss : 0.494 | val_stimu_loss : 0.494
+2022-08-24 16:09:30,152 INFO not improved for     1 iterations
+2022-08-24 16:09:31,277 INFO Epoch 12
+2022-08-24 16:09:35,406 INFO [11,    10] tr_recon_loss : 0.012 | val_recon_loss : 0.012 | tr_total_loss : 0.017 | val_total_loss : 0.017 | tr_stimu_loss : 0.497 | val_stimu_loss : 0.498
+2022-08-24 16:09:35,406 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:09:35,410 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:09:39,464 INFO [11,    20] tr_recon_loss : 0.013 | val_recon_loss : 0.013 | tr_total_loss : 0.018 | val_total_loss : 0.018 | tr_stimu_loss : 0.499 | val_stimu_loss : 0.496
+2022-08-24 16:09:39,465 INFO not improved for     1 iterations
+2022-08-24 16:09:43,594 INFO [11,    30] tr_recon_loss : 0.011 | val_recon_loss : 0.012 | tr_total_loss : 0.016 | val_total_loss : 0.017 | tr_stimu_loss : 0.502 | val_stimu_loss : 0.501
+2022-08-24 16:09:43,594 INFO not improved for     2 iterations
+2022-08-24 16:09:44,691 INFO Epoch 13
+2022-08-24 16:09:48,923 INFO [12,    10] tr_recon_loss : 0.011 | val_recon_loss : 0.011 | tr_total_loss : 0.016 | val_total_loss : 0.016 | tr_stimu_loss : 0.500 | val_stimu_loss : 0.499
+2022-08-24 16:09:48,923 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:09:48,927 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:09:53,084 INFO [12,    20] tr_recon_loss : 0.011 | val_recon_loss : 0.011 | tr_total_loss : 0.016 | val_total_loss : 0.016 | tr_stimu_loss : 0.499 | val_stimu_loss : 0.501
+2022-08-24 16:09:53,085 INFO not improved for     1 iterations
+2022-08-24 16:09:57,065 INFO [12,    30] tr_recon_loss : 0.011 | val_recon_loss : 0.012 | tr_total_loss : 0.016 | val_total_loss : 0.017 | tr_stimu_loss : 0.501 | val_stimu_loss : 0.504
+2022-08-24 16:09:57,065 INFO not improved for     2 iterations
+2022-08-24 16:09:58,131 INFO Epoch 14
+2022-08-24 16:10:02,310 INFO [13,    10] tr_recon_loss : 0.011 | val_recon_loss : 0.010 | tr_total_loss : 0.016 | val_total_loss : 0.015 | tr_stimu_loss : 0.502 | val_stimu_loss : 0.501
+2022-08-24 16:10:02,310 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:10:02,314 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:10:06,490 INFO [13,    20] tr_recon_loss : 0.011 | val_recon_loss : 0.011 | tr_total_loss : 0.016 | val_total_loss : 0.015 | tr_stimu_loss : 0.502 | val_stimu_loss : 0.499
+2022-08-24 16:10:06,490 INFO not improved for     1 iterations
+2022-08-24 16:10:10,429 INFO [13,    30] tr_recon_loss : 0.010 | val_recon_loss : 0.011 | tr_total_loss : 0.015 | val_total_loss : 0.016 | tr_stimu_loss : 0.505 | val_stimu_loss : 0.506
+2022-08-24 16:10:10,429 INFO not improved for     2 iterations
+2022-08-24 16:10:11,544 INFO Epoch 15
+2022-08-24 16:10:15,595 INFO [14,    10] tr_recon_loss : 0.011 | val_recon_loss : 0.010 | tr_total_loss : 0.016 | val_total_loss : 0.015 | tr_stimu_loss : 0.506 | val_stimu_loss : 0.505
+2022-08-24 16:10:15,595 INFO not improved for     3 iterations
+2022-08-24 16:10:19,725 INFO [14,    20] tr_recon_loss : 0.010 | val_recon_loss : 0.010 | tr_total_loss : 0.015 | val_total_loss : 0.015 | tr_stimu_loss : 0.504 | val_stimu_loss : 0.504
+2022-08-24 16:10:19,725 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:10:19,729 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:10:23,925 INFO [14,    30] tr_recon_loss : 0.017 | val_recon_loss : 0.010 | tr_total_loss : 0.022 | val_total_loss : 0.015 | tr_stimu_loss : 0.504 | val_stimu_loss : 0.497
+2022-08-24 16:10:23,925 INFO not improved for     1 iterations
+2022-08-24 16:10:25,002 INFO Epoch 16
+2022-08-24 16:10:29,180 INFO [15,    10] tr_recon_loss : 0.009 | val_recon_loss : 0.020 | tr_total_loss : 0.014 | val_total_loss : 0.025 | tr_stimu_loss : 0.518 | val_stimu_loss : 0.502
+2022-08-24 16:10:29,180 INFO not improved for     2 iterations
+2022-08-24 16:10:33,056 INFO [15,    20] tr_recon_loss : 0.009 | val_recon_loss : 0.012 | tr_total_loss : 0.014 | val_total_loss : 0.017 | tr_stimu_loss : 0.521 | val_stimu_loss : 0.512
+2022-08-24 16:10:33,056 INFO not improved for     3 iterations
+2022-08-24 16:10:37,298 INFO [15,    30] tr_recon_loss : 0.009 | val_recon_loss : 0.009 | tr_total_loss : 0.014 | val_total_loss : 0.014 | tr_stimu_loss : 0.519 | val_stimu_loss : 0.515
+2022-08-24 16:10:37,298 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:10:37,302 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:10:38,359 INFO Epoch 17
+2022-08-24 16:10:42,294 INFO [16,    10] tr_recon_loss : 0.009 | val_recon_loss : 0.009 | tr_total_loss : 0.014 | val_total_loss : 0.014 | tr_stimu_loss : 0.516 | val_stimu_loss : 0.516
+2022-08-24 16:10:42,294 INFO not improved for     1 iterations
+2022-08-24 16:10:46,488 INFO [16,    20] tr_recon_loss : 0.009 | val_recon_loss : 0.010 | tr_total_loss : 0.014 | val_total_loss : 0.015 | tr_stimu_loss : 0.514 | val_stimu_loss : 0.516
+2022-08-24 16:10:46,488 INFO not improved for     2 iterations
+2022-08-24 16:10:50,628 INFO [16,    30] tr_recon_loss : 0.009 | val_recon_loss : 0.010 | tr_total_loss : 0.014 | val_total_loss : 0.015 | tr_stimu_loss : 0.512 | val_stimu_loss : 0.514
+2022-08-24 16:10:50,628 INFO not improved for     3 iterations
+2022-08-24 16:10:51,761 INFO Epoch 18
+2022-08-24 16:10:55,767 INFO [17,    10] tr_recon_loss : 0.009 | val_recon_loss : 0.010 | tr_total_loss : 0.014 | val_total_loss : 0.015 | tr_stimu_loss : 0.510 | val_stimu_loss : 0.510
+2022-08-24 16:10:55,767 INFO not improved for     4 iterations
+2022-08-24 16:10:59,806 INFO [17,    20] tr_recon_loss : 0.009 | val_recon_loss : 0.010 | tr_total_loss : 0.014 | val_total_loss : 0.015 | tr_stimu_loss : 0.507 | val_stimu_loss : 0.508
+2022-08-24 16:10:59,806 INFO not improved for     5 iterations
+2022-08-24 16:11:03,949 INFO [17,    30] tr_recon_loss : 0.009 | val_recon_loss : 0.009 | tr_total_loss : 0.014 | val_total_loss : 0.014 | tr_stimu_loss : 0.505 | val_stimu_loss : 0.504
+2022-08-24 16:11:03,949 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:11:03,953 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:11:05,160 INFO Epoch 19
+2022-08-24 16:11:09,437 INFO [18,    10] tr_recon_loss : 0.008 | val_recon_loss : 0.009 | tr_total_loss : 0.013 | val_total_loss : 0.014 | tr_stimu_loss : 0.503 | val_stimu_loss : 0.500
+2022-08-24 16:11:09,438 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:11:09,442 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:11:13,432 INFO [18,    20] tr_recon_loss : 0.009 | val_recon_loss : 0.009 | tr_total_loss : 0.014 | val_total_loss : 0.014 | tr_stimu_loss : 0.502 | val_stimu_loss : 0.497
+2022-08-24 16:11:13,432 INFO not improved for     1 iterations
+2022-08-24 16:11:17,536 INFO [18,    30] tr_recon_loss : 0.008 | val_recon_loss : 0.009 | tr_total_loss : 0.013 | val_total_loss : 0.013 | tr_stimu_loss : 0.501 | val_stimu_loss : 0.496
+2022-08-24 16:11:17,537 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:11:17,541 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:11:18,592 INFO Epoch 20
+2022-08-24 16:11:22,745 INFO [19,    10] tr_recon_loss : 0.010 | val_recon_loss : 0.013 | tr_total_loss : 0.015 | val_total_loss : 0.017 | tr_stimu_loss : 0.500 | val_stimu_loss : 0.493
+2022-08-24 16:11:22,745 INFO not improved for     1 iterations
+2022-08-24 16:11:26,774 INFO [19,    20] tr_recon_loss : 0.009 | val_recon_loss : 0.013 | tr_total_loss : 0.014 | val_total_loss : 0.018 | tr_stimu_loss : 0.501 | val_stimu_loss : 0.495
+2022-08-24 16:11:26,774 INFO not improved for     2 iterations
+2022-08-24 16:11:30,899 INFO [19,    30] tr_recon_loss : 0.008 | val_recon_loss : 0.009 | tr_total_loss : 0.013 | val_total_loss : 0.014 | tr_stimu_loss : 0.501 | val_stimu_loss : 0.497
+2022-08-24 16:11:30,899 INFO not improved for     3 iterations
+2022-08-24 16:11:31,997 INFO Epoch 21
+2022-08-24 16:11:36,204 INFO [20,    10] tr_recon_loss : 0.009 | val_recon_loss : 0.009 | tr_total_loss : 0.014 | val_total_loss : 0.014 | tr_stimu_loss : 0.500 | val_stimu_loss : 0.497
+2022-08-24 16:11:36,204 INFO not improved for     4 iterations
+2022-08-24 16:11:40,214 INFO [20,    20] tr_recon_loss : 0.008 | val_recon_loss : 0.011 | tr_total_loss : 0.013 | val_total_loss : 0.016 | tr_stimu_loss : 0.502 | val_stimu_loss : 0.502
+2022-08-24 16:11:40,215 INFO not improved for     5 iterations
+2022-08-24 16:11:44,370 INFO [20,    30] tr_recon_loss : 0.009 | val_recon_loss : 0.010 | tr_total_loss : 0.014 | val_total_loss : 0.015 | tr_stimu_loss : 0.502 | val_stimu_loss : 0.503
+2022-08-24 16:11:44,370 INFO not improved for     6 iterations
+2022-08-24 16:11:45,407 INFO Epoch 22
+2022-08-24 16:11:49,545 INFO [21,    10] tr_recon_loss : 0.009 | val_recon_loss : 0.009 | tr_total_loss : 0.014 | val_total_loss : 0.014 | tr_stimu_loss : 0.503 | val_stimu_loss : 0.502
+2022-08-24 16:11:49,545 INFO not improved for     7 iterations
+2022-08-24 16:11:53,659 INFO [21,    20] tr_recon_loss : 0.009 | val_recon_loss : 0.009 | tr_total_loss : 0.014 | val_total_loss : 0.014 | tr_stimu_loss : 0.505 | val_stimu_loss : 0.501
+2022-08-24 16:11:53,659 INFO not improved for     8 iterations
+2022-08-24 16:11:57,704 INFO [21,    30] tr_recon_loss : 0.008 | val_recon_loss : 0.008 | tr_total_loss : 0.013 | val_total_loss : 0.013 | tr_stimu_loss : 0.508 | val_stimu_loss : 0.502
+2022-08-24 16:11:57,704 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:11:57,708 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:11:58,834 INFO Epoch 23
+2022-08-24 16:12:03,117 INFO [22,    10] tr_recon_loss : 0.009 | val_recon_loss : 0.009 | tr_total_loss : 0.014 | val_total_loss : 0.014 | tr_stimu_loss : 0.508 | val_stimu_loss : 0.504
+2022-08-24 16:12:03,118 INFO not improved for     1 iterations
+2022-08-24 16:12:07,132 INFO [22,    20] tr_recon_loss : 0.009 | val_recon_loss : 0.009 | tr_total_loss : 0.014 | val_total_loss : 0.014 | tr_stimu_loss : 0.507 | val_stimu_loss : 0.503
+2022-08-24 16:12:07,132 INFO not improved for     2 iterations
+2022-08-24 16:12:11,244 INFO [22,    30] tr_recon_loss : 0.009 | val_recon_loss : 0.041 | tr_total_loss : 0.014 | val_total_loss : 0.045 | tr_stimu_loss : 0.506 | val_stimu_loss : 0.503
+2022-08-24 16:12:11,244 INFO not improved for     3 iterations
+2022-08-24 16:12:12,253 INFO Epoch 24
+2022-08-24 16:12:16,546 INFO [23,    10] tr_recon_loss : 0.009 | val_recon_loss : 0.008 | tr_total_loss : 0.014 | val_total_loss : 0.013 | tr_stimu_loss : 0.508 | val_stimu_loss : 0.503
+2022-08-24 16:12:16,546 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:12:16,551 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:12:21,024 INFO [23,    20] tr_recon_loss : 0.008 | val_recon_loss : 0.009 | tr_total_loss : 0.013 | val_total_loss : 0.014 | tr_stimu_loss : 0.508 | val_stimu_loss : 0.506
+2022-08-24 16:12:21,024 INFO not improved for     1 iterations
+2022-08-24 16:12:25,071 INFO [23,    30] tr_recon_loss : 0.008 | val_recon_loss : 0.008 | tr_total_loss : 0.013 | val_total_loss : 0.013 | tr_stimu_loss : 0.509 | val_stimu_loss : 0.505
+2022-08-24 16:12:25,072 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:12:25,076 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:12:26,126 INFO Epoch 25
+2022-08-24 16:12:30,376 INFO [24,    10] tr_recon_loss : 0.008 | val_recon_loss : 0.008 | tr_total_loss : 0.013 | val_total_loss : 0.013 | tr_stimu_loss : 0.509 | val_stimu_loss : 0.504
+2022-08-24 16:12:30,376 INFO not improved for     1 iterations
+2022-08-24 16:12:34,456 INFO [24,    20] tr_recon_loss : 0.008 | val_recon_loss : 0.008 | tr_total_loss : 0.013 | val_total_loss : 0.013 | tr_stimu_loss : 0.508 | val_stimu_loss : 0.503
+2022-08-24 16:12:34,456 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:12:34,460 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:12:38,545 INFO [24,    30] tr_recon_loss : 0.008 | val_recon_loss : 0.009 | tr_total_loss : 0.013 | val_total_loss : 0.014 | tr_stimu_loss : 0.508 | val_stimu_loss : 0.506
+2022-08-24 16:12:38,545 INFO not improved for     1 iterations
+2022-08-24 16:12:39,580 INFO Epoch 26
+2022-08-24 16:12:43,858 INFO [25,    10] tr_recon_loss : 0.008 | val_recon_loss : 0.008 | tr_total_loss : 0.013 | val_total_loss : 0.013 | tr_stimu_loss : 0.510 | val_stimu_loss : 0.504
+2022-08-24 16:12:43,859 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:12:43,863 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:12:48,167 INFO [25,    20] tr_recon_loss : 0.009 | val_recon_loss : 0.009 | tr_total_loss : 0.014 | val_total_loss : 0.014 | tr_stimu_loss : 0.508 | val_stimu_loss : 0.501
+2022-08-24 16:12:48,167 INFO not improved for     1 iterations
+2022-08-24 16:12:52,263 INFO [25,    30] tr_recon_loss : 0.008 | val_recon_loss : 0.008 | tr_total_loss : 0.013 | val_total_loss : 0.013 | tr_stimu_loss : 0.508 | val_stimu_loss : 0.500
+2022-08-24 16:12:52,263 INFO not improved for     2 iterations
+2022-08-24 16:12:53,335 INFO Epoch 27
+2022-08-24 16:12:57,360 INFO [26,    10] tr_recon_loss : 0.009 | val_recon_loss : 0.009 | tr_total_loss : 0.014 | val_total_loss : 0.014 | tr_stimu_loss : 0.509 | val_stimu_loss : 0.502
+2022-08-24 16:12:57,360 INFO not improved for     3 iterations
+2022-08-24 16:13:01,498 INFO [26,    20] tr_recon_loss : 0.008 | val_recon_loss : 0.009 | tr_total_loss : 0.013 | val_total_loss : 0.014 | tr_stimu_loss : 0.508 | val_stimu_loss : 0.505
+2022-08-24 16:13:01,498 INFO not improved for     4 iterations
+2022-08-24 16:13:05,730 INFO [26,    30] tr_recon_loss : 0.009 | val_recon_loss : 0.008 | tr_total_loss : 0.014 | val_total_loss : 0.013 | tr_stimu_loss : 0.507 | val_stimu_loss : 0.502
+2022-08-24 16:13:05,730 INFO not improved for     5 iterations
+2022-08-24 16:13:06,748 INFO Epoch 28
+2022-08-24 16:13:10,839 INFO [27,    10] tr_recon_loss : 0.008 | val_recon_loss : 0.008 | tr_total_loss : 0.013 | val_total_loss : 0.013 | tr_stimu_loss : 0.504 | val_stimu_loss : 0.499
+2022-08-24 16:13:10,839 INFO not improved for     6 iterations
+2022-08-24 16:13:14,937 INFO [27,    20] tr_recon_loss : 0.008 | val_recon_loss : 0.007 | tr_total_loss : 0.013 | val_total_loss : 0.012 | tr_stimu_loss : 0.504 | val_stimu_loss : 0.501
+2022-08-24 16:13:14,938 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:13:14,942 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:13:19,053 INFO [27,    30] tr_recon_loss : 0.007 | val_recon_loss : 0.008 | tr_total_loss : 0.012 | val_total_loss : 0.013 | tr_stimu_loss : 0.504 | val_stimu_loss : 0.503
+2022-08-24 16:13:19,053 INFO not improved for     1 iterations
+2022-08-24 16:13:20,200 INFO Epoch 29
+2022-08-24 16:13:24,317 INFO [28,    10] tr_recon_loss : 0.008 | val_recon_loss : 0.008 | tr_total_loss : 0.013 | val_total_loss : 0.013 | tr_stimu_loss : 0.504 | val_stimu_loss : 0.500
+2022-08-24 16:13:24,317 INFO not improved for     2 iterations
+2022-08-24 16:13:28,628 INFO [28,    20] tr_recon_loss : 0.007 | val_recon_loss : 0.008 | tr_total_loss : 0.012 | val_total_loss : 0.013 | tr_stimu_loss : 0.504 | val_stimu_loss : 0.501
+2022-08-24 16:13:28,628 INFO not improved for     3 iterations
+2022-08-24 16:13:32,532 INFO [28,    30] tr_recon_loss : 0.007 | val_recon_loss : 0.007 | tr_total_loss : 0.012 | val_total_loss : 0.012 | tr_stimu_loss : 0.504 | val_stimu_loss : 0.502
+2022-08-24 16:13:32,533 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:13:32,537 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:13:33,614 INFO Epoch 30
+2022-08-24 16:13:37,714 INFO [29,    10] tr_recon_loss : 0.007 | val_recon_loss : 0.008 | tr_total_loss : 0.012 | val_total_loss : 0.013 | tr_stimu_loss : 0.504 | val_stimu_loss : 0.501
+2022-08-24 16:13:37,714 INFO not improved for     1 iterations
+2022-08-24 16:13:41,993 INFO [29,    20] tr_recon_loss : 0.008 | val_recon_loss : 0.008 | tr_total_loss : 0.013 | val_total_loss : 0.013 | tr_stimu_loss : 0.506 | val_stimu_loss : 0.500
+2022-08-24 16:13:41,993 INFO not improved for     2 iterations
+2022-08-24 16:13:45,930 INFO [29,    30] tr_recon_loss : 0.007 | val_recon_loss : 0.008 | tr_total_loss : 0.012 | val_total_loss : 0.013 | tr_stimu_loss : 0.507 | val_stimu_loss : 0.504
+2022-08-24 16:13:45,931 INFO not improved for     3 iterations
+2022-08-24 16:13:47,013 INFO Epoch 31
+2022-08-24 16:13:51,052 INFO [30,    10] tr_recon_loss : 0.007 | val_recon_loss : 0.007 | tr_total_loss : 0.012 | val_total_loss : 0.012 | tr_stimu_loss : 0.508 | val_stimu_loss : 0.509
+2022-08-24 16:13:51,052 INFO not improved for     4 iterations
+2022-08-24 16:13:55,262 INFO [30,    20] tr_recon_loss : 0.007 | val_recon_loss : 0.010 | tr_total_loss : 0.012 | val_total_loss : 0.015 | tr_stimu_loss : 0.509 | val_stimu_loss : 0.510
+2022-08-24 16:13:55,262 INFO not improved for     5 iterations
+2022-08-24 16:13:59,273 INFO [30,    30] tr_recon_loss : 0.007 | val_recon_loss : 0.008 | tr_total_loss : 0.012 | val_total_loss : 0.013 | tr_stimu_loss : 0.510 | val_stimu_loss : 0.508
+2022-08-24 16:13:59,273 INFO not improved for     6 iterations
+2022-08-24 16:14:00,392 INFO Epoch 32
+2022-08-24 16:14:04,518 INFO [31,    10] tr_recon_loss : 0.008 | val_recon_loss : 0.007 | tr_total_loss : 0.013 | val_total_loss : 0.012 | tr_stimu_loss : 0.512 | val_stimu_loss : 0.509
+2022-08-24 16:14:04,518 INFO not improved for     7 iterations
+2022-08-24 16:14:08,602 INFO [31,    20] tr_recon_loss : 0.007 | val_recon_loss : 0.007 | tr_total_loss : 0.012 | val_total_loss : 0.012 | tr_stimu_loss : 0.513 | val_stimu_loss : 0.511
+2022-08-24 16:14:08,602 INFO not improved for     8 iterations
+2022-08-24 16:14:12,724 INFO [31,    30] tr_recon_loss : 0.007 | val_recon_loss : 0.007 | tr_total_loss : 0.012 | val_total_loss : 0.013 | tr_stimu_loss : 0.512 | val_stimu_loss : 0.510
+2022-08-24 16:14:12,724 INFO not improved for     9 iterations
+2022-08-24 16:14:13,767 INFO Epoch 33
+2022-08-24 16:14:17,955 INFO [32,    10] tr_recon_loss : 0.007 | val_recon_loss : 0.010 | tr_total_loss : 0.012 | val_total_loss : 0.015 | tr_stimu_loss : 0.511 | val_stimu_loss : 0.507
+2022-08-24 16:14:17,956 INFO not improved for    10 iterations
+2022-08-24 16:14:22,046 INFO [32,    20] tr_recon_loss : 0.009 | val_recon_loss : 0.009 | tr_total_loss : 0.014 | val_total_loss : 0.014 | tr_stimu_loss : 0.513 | val_stimu_loss : 0.505
+2022-08-24 16:14:22,046 INFO not improved for    11 iterations
+2022-08-24 16:14:26,160 INFO [32,    30] tr_recon_loss : 0.007 | val_recon_loss : 0.008 | tr_total_loss : 0.012 | val_total_loss : 0.013 | tr_stimu_loss : 0.516 | val_stimu_loss : 0.510
+2022-08-24 16:14:26,160 INFO not improved for    12 iterations
+2022-08-24 16:14:27,244 INFO Epoch 34
+2022-08-24 16:14:31,184 INFO [33,    10] tr_recon_loss : 0.007 | val_recon_loss : 0.007 | tr_total_loss : 0.012 | val_total_loss : 0.012 | tr_stimu_loss : 0.513 | val_stimu_loss : 0.508
+2022-08-24 16:14:31,184 INFO not improved for    13 iterations
+2022-08-24 16:14:35,446 INFO [33,    20] tr_recon_loss : 0.008 | val_recon_loss : 0.008 | tr_total_loss : 0.013 | val_total_loss : 0.013 | tr_stimu_loss : 0.510 | val_stimu_loss : 0.506
+2022-08-24 16:14:35,446 INFO not improved for    14 iterations
+2022-08-24 16:14:39,556 INFO [33,    30] tr_recon_loss : 0.008 | val_recon_loss : 0.008 | tr_total_loss : 0.013 | val_total_loss : 0.013 | tr_stimu_loss : 0.510 | val_stimu_loss : 0.508
+2022-08-24 16:14:39,556 INFO not improved for    15 iterations
+2022-08-24 16:14:40,623 INFO Epoch 35
+2022-08-24 16:14:44,743 INFO [34,    10] tr_recon_loss : 0.007 | val_recon_loss : 0.007 | tr_total_loss : 0.012 | val_total_loss : 0.012 | tr_stimu_loss : 0.512 | val_stimu_loss : 0.508
+2022-08-24 16:14:44,743 INFO not improved for    16 iterations
+2022-08-24 16:14:48,799 INFO [34,    20] tr_recon_loss : 0.009 | val_recon_loss : 0.008 | tr_total_loss : 0.014 | val_total_loss : 0.013 | tr_stimu_loss : 0.511 | val_stimu_loss : 0.504
+2022-08-24 16:14:48,800 INFO not improved for    17 iterations
+2022-08-24 16:14:52,969 INFO [34,    30] tr_recon_loss : 0.007 | val_recon_loss : 0.007 | tr_total_loss : 0.012 | val_total_loss : 0.012 | tr_stimu_loss : 0.508 | val_stimu_loss : 0.503
+2022-08-24 16:14:52,969 INFO not improved for    18 iterations
+2022-08-24 16:14:54,036 INFO Epoch 36
+2022-08-24 16:14:58,158 INFO [35,    10] tr_recon_loss : 0.007 | val_recon_loss : 0.007 | tr_total_loss : 0.012 | val_total_loss : 0.012 | tr_stimu_loss : 0.508 | val_stimu_loss : 0.507
+2022-08-24 16:14:58,158 INFO not improved for    19 iterations
+2022-08-24 16:15:02,210 INFO [35,    20] tr_recon_loss : 0.007 | val_recon_loss : 0.007 | tr_total_loss : 0.012 | val_total_loss : 0.012 | tr_stimu_loss : 0.508 | val_stimu_loss : 0.510
+2022-08-24 16:15:02,210 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:15:02,214 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:15:06,421 INFO [35,    30] tr_recon_loss : 0.007 | val_recon_loss : 0.007 | tr_total_loss : 0.012 | val_total_loss : 0.012 | tr_stimu_loss : 0.508 | val_stimu_loss : 0.507
+2022-08-24 16:15:06,422 INFO not improved for     1 iterations
+2022-08-24 16:15:07,455 INFO Epoch 37
+2022-08-24 16:15:11,617 INFO [36,    10] tr_recon_loss : 0.007 | val_recon_loss : 0.007 | tr_total_loss : 0.012 | val_total_loss : 0.012 | tr_stimu_loss : 0.509 | val_stimu_loss : 0.508
+2022-08-24 16:15:11,617 INFO not improved for     2 iterations
+2022-08-24 16:15:15,660 INFO [36,    20] tr_recon_loss : 0.007 | val_recon_loss : 0.006 | tr_total_loss : 0.012 | val_total_loss : 0.011 | tr_stimu_loss : 0.509 | val_stimu_loss : 0.507
+2022-08-24 16:15:15,660 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:15:15,664 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:15:19,766 INFO [36,    30] tr_recon_loss : 0.007 | val_recon_loss : 0.007 | tr_total_loss : 0.012 | val_total_loss : 0.012 | tr_stimu_loss : 0.508 | val_stimu_loss : 0.505
+2022-08-24 16:15:19,767 INFO not improved for     1 iterations
+2022-08-24 16:15:20,913 INFO Epoch 38
+2022-08-24 16:15:24,958 INFO [37,    10] tr_recon_loss : 0.009 | val_recon_loss : 0.008 | tr_total_loss : 0.014 | val_total_loss : 0.013 | tr_stimu_loss : 0.509 | val_stimu_loss : 0.499
+2022-08-24 16:15:24,959 INFO not improved for     2 iterations
+2022-08-24 16:15:29,121 INFO [37,    20] tr_recon_loss : 0.007 | val_recon_loss : 0.012 | tr_total_loss : 0.012 | val_total_loss : 0.017 | tr_stimu_loss : 0.510 | val_stimu_loss : 0.495
+2022-08-24 16:15:29,121 INFO not improved for     3 iterations
+2022-08-24 16:15:33,152 INFO [37,    30] tr_recon_loss : 0.006 | val_recon_loss : 0.007 | tr_total_loss : 0.011 | val_total_loss : 0.012 | tr_stimu_loss : 0.511 | val_stimu_loss : 0.505
+2022-08-24 16:15:33,152 INFO not improved for     4 iterations
+2022-08-24 16:15:34,331 INFO Epoch 39
+2022-08-24 16:15:38,493 INFO [38,    10] tr_recon_loss : 0.006 | val_recon_loss : 0.007 | tr_total_loss : 0.011 | val_total_loss : 0.012 | tr_stimu_loss : 0.512 | val_stimu_loss : 0.517
+2022-08-24 16:15:38,493 INFO not improved for     5 iterations
+2022-08-24 16:15:42,658 INFO [38,    20] tr_recon_loss : 0.007 | val_recon_loss : 0.009 | tr_total_loss : 0.012 | val_total_loss : 0.014 | tr_stimu_loss : 0.512 | val_stimu_loss : 0.516
+2022-08-24 16:15:42,658 INFO not improved for     6 iterations
+2022-08-24 16:15:46,681 INFO [38,    30] tr_recon_loss : 0.007 | val_recon_loss : 0.008 | tr_total_loss : 0.012 | val_total_loss : 0.013 | tr_stimu_loss : 0.510 | val_stimu_loss : 0.512
+2022-08-24 16:15:46,682 INFO not improved for     7 iterations
+2022-08-24 16:15:47,771 INFO Epoch 40
+2022-08-24 16:15:51,962 INFO [39,    10] tr_recon_loss : 0.006 | val_recon_loss : 0.007 | tr_total_loss : 0.011 | val_total_loss : 0.012 | tr_stimu_loss : 0.511 | val_stimu_loss : 0.510
+2022-08-24 16:15:51,962 INFO not improved for     8 iterations
+2022-08-24 16:15:56,083 INFO [39,    20] tr_recon_loss : 0.006 | val_recon_loss : 0.007 | tr_total_loss : 0.011 | val_total_loss : 0.012 | tr_stimu_loss : 0.511 | val_stimu_loss : 0.507
+2022-08-24 16:15:56,083 INFO not improved for     9 iterations
+2022-08-24 16:16:00,116 INFO [39,    30] tr_recon_loss : 0.009 | val_recon_loss : 0.006 | tr_total_loss : 0.014 | val_total_loss : 0.011 | tr_stimu_loss : 0.509 | val_stimu_loss : 0.504
+2022-08-24 16:16:00,116 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:16:00,120 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:16:01,209 INFO Epoch 41
+2022-08-24 16:16:05,395 INFO [40,    10] tr_recon_loss : 0.006 | val_recon_loss : 0.006 | tr_total_loss : 0.011 | val_total_loss : 0.011 | tr_stimu_loss : 0.509 | val_stimu_loss : 0.508
+2022-08-24 16:16:05,395 INFO not improved for     1 iterations
+2022-08-24 16:16:09,404 INFO [40,    20] tr_recon_loss : 0.009 | val_recon_loss : 0.007 | tr_total_loss : 0.014 | val_total_loss : 0.012 | tr_stimu_loss : 0.510 | val_stimu_loss : 0.502
+2022-08-24 16:16:09,404 INFO not improved for     2 iterations
+2022-08-24 16:16:13,716 INFO [40,    30] tr_recon_loss : 0.006 | val_recon_loss : 0.006 | tr_total_loss : 0.012 | val_total_loss : 0.011 | tr_stimu_loss : 0.511 | val_stimu_loss : 0.512
+2022-08-24 16:16:13,716 INFO not improved for     3 iterations
+2022-08-24 16:16:14,829 INFO Epoch 42
+2022-08-24 16:16:19,114 INFO [41,    10] tr_recon_loss : 0.006 | val_recon_loss : 0.007 | tr_total_loss : 0.011 | val_total_loss : 0.012 | tr_stimu_loss : 0.512 | val_stimu_loss : 0.513
+2022-08-24 16:16:19,115 INFO not improved for     4 iterations
+2022-08-24 16:16:23,265 INFO [41,    20] tr_recon_loss : 0.007 | val_recon_loss : 0.007 | tr_total_loss : 0.012 | val_total_loss : 0.012 | tr_stimu_loss : 0.512 | val_stimu_loss : 0.511
+2022-08-24 16:16:23,265 INFO not improved for     5 iterations
+2022-08-24 16:16:27,492 INFO [41,    30] tr_recon_loss : 0.006 | val_recon_loss : 0.007 | tr_total_loss : 0.011 | val_total_loss : 0.012 | tr_stimu_loss : 0.513 | val_stimu_loss : 0.511
+2022-08-24 16:16:27,492 INFO not improved for     6 iterations
+2022-08-24 16:16:28,533 INFO Epoch 43
+2022-08-24 16:16:32,597 INFO [42,    10] tr_recon_loss : 0.007 | val_recon_loss : 0.007 | tr_total_loss : 0.012 | val_total_loss : 0.012 | tr_stimu_loss : 0.514 | val_stimu_loss : 0.511
+2022-08-24 16:16:32,597 INFO not improved for     7 iterations
+2022-08-24 16:16:36,863 INFO [42,    20] tr_recon_loss : 0.007 | val_recon_loss : 0.007 | tr_total_loss : 0.012 | val_total_loss : 0.012 | tr_stimu_loss : 0.516 | val_stimu_loss : 0.514
+2022-08-24 16:16:36,871 INFO not improved for     8 iterations
+2022-08-24 16:16:40,909 INFO [42,    30] tr_recon_loss : 0.008 | val_recon_loss : 0.008 | tr_total_loss : 0.013 | val_total_loss : 0.013 | tr_stimu_loss : 0.516 | val_stimu_loss : 0.516
+2022-08-24 16:16:40,909 INFO not improved for     9 iterations
+2022-08-24 16:16:41,938 INFO Epoch 44
+2022-08-24 16:16:46,122 INFO [43,    10] tr_recon_loss : 0.007 | val_recon_loss : 0.007 | tr_total_loss : 0.012 | val_total_loss : 0.012 | tr_stimu_loss : 0.519 | val_stimu_loss : 0.514
+2022-08-24 16:16:46,123 INFO not improved for    10 iterations
+2022-08-24 16:16:50,184 INFO [43,    20] tr_recon_loss : 0.007 | val_recon_loss : 0.009 | tr_total_loss : 0.012 | val_total_loss : 0.014 | tr_stimu_loss : 0.518 | val_stimu_loss : 0.510
+2022-08-24 16:16:50,184 INFO not improved for    11 iterations
+2022-08-24 16:16:54,277 INFO [43,    30] tr_recon_loss : 0.008 | val_recon_loss : 0.010 | tr_total_loss : 0.013 | val_total_loss : 0.015 | tr_stimu_loss : 0.516 | val_stimu_loss : 0.513
+2022-08-24 16:16:54,277 INFO not improved for    12 iterations
+2022-08-24 16:16:55,325 INFO Epoch 45
+2022-08-24 16:16:59,511 INFO [44,    10] tr_recon_loss : 0.008 | val_recon_loss : 0.008 | tr_total_loss : 0.013 | val_total_loss : 0.013 | tr_stimu_loss : 0.518 | val_stimu_loss : 0.511
+2022-08-24 16:16:59,511 INFO not improved for    13 iterations
+2022-08-24 16:17:03,676 INFO [44,    20] tr_recon_loss : 0.007 | val_recon_loss : 0.008 | tr_total_loss : 0.012 | val_total_loss : 0.013 | tr_stimu_loss : 0.515 | val_stimu_loss : 0.512
+2022-08-24 16:17:03,676 INFO not improved for    14 iterations
+2022-08-24 16:17:07,741 INFO [44,    30] tr_recon_loss : 0.008 | val_recon_loss : 0.008 | tr_total_loss : 0.013 | val_total_loss : 0.013 | tr_stimu_loss : 0.514 | val_stimu_loss : 0.511
+2022-08-24 16:17:07,742 INFO not improved for    15 iterations
+2022-08-24 16:17:08,797 INFO Epoch 46
+2022-08-24 16:17:12,815 INFO [45,    10] tr_recon_loss : 0.007 | val_recon_loss : 0.008 | tr_total_loss : 0.012 | val_total_loss : 0.013 | tr_stimu_loss : 0.516 | val_stimu_loss : 0.514
+2022-08-24 16:17:12,815 INFO not improved for    16 iterations
+2022-08-24 16:17:17,012 INFO [45,    20] tr_recon_loss : 0.009 | val_recon_loss : 0.009 | tr_total_loss : 0.014 | val_total_loss : 0.014 | tr_stimu_loss : 0.516 | val_stimu_loss : 0.513
+2022-08-24 16:17:17,012 INFO not improved for    17 iterations
+2022-08-24 16:17:21,102 INFO [45,    30] tr_recon_loss : 0.007 | val_recon_loss : 0.008 | tr_total_loss : 0.013 | val_total_loss : 0.013 | tr_stimu_loss : 0.517 | val_stimu_loss : 0.516
+2022-08-24 16:17:21,102 INFO not improved for    18 iterations
+2022-08-24 16:17:22,223 INFO Epoch 47
+2022-08-24 16:17:26,357 INFO [46,    10] tr_recon_loss : 0.008 | val_recon_loss : 0.008 | tr_total_loss : 0.013 | val_total_loss : 0.013 | tr_stimu_loss : 0.518 | val_stimu_loss : 0.515
+2022-08-24 16:17:26,357 INFO not improved for    19 iterations
+2022-08-24 16:17:30,421 INFO [46,    20] tr_recon_loss : 0.009 | val_recon_loss : 0.011 | tr_total_loss : 0.014 | val_total_loss : 0.016 | tr_stimu_loss : 0.518 | val_stimu_loss : 0.516
+2022-08-24 16:17:30,421 INFO not improved for    20 iterations
+2022-08-24 16:17:34,573 INFO [46,    30] tr_recon_loss : 0.008 | val_recon_loss : 0.008 | tr_total_loss : 0.013 | val_total_loss : 0.013 | tr_stimu_loss : 0.522 | val_stimu_loss : 0.520
+2022-08-24 16:17:34,573 INFO not improved for    21 iterations
+2022-08-24 16:17:35,655 INFO Epoch 48
+2022-08-24 16:17:39,776 INFO [47,    10] tr_recon_loss : 0.008 | val_recon_loss : 0.011 | tr_total_loss : 0.013 | val_total_loss : 0.016 | tr_stimu_loss : 0.522 | val_stimu_loss : 0.524
+2022-08-24 16:17:39,776 INFO not improved for    22 iterations
+2022-08-24 16:17:43,824 INFO [47,    20] tr_recon_loss : 0.009 | val_recon_loss : 0.011 | tr_total_loss : 0.014 | val_total_loss : 0.016 | tr_stimu_loss : 0.522 | val_stimu_loss : 0.523
+2022-08-24 16:17:43,825 INFO not improved for    23 iterations
+2022-08-24 16:17:48,004 INFO [47,    30] tr_recon_loss : 0.012 | val_recon_loss : 0.011 | tr_total_loss : 0.017 | val_total_loss : 0.016 | tr_stimu_loss : 0.522 | val_stimu_loss : 0.513
+2022-08-24 16:17:48,004 INFO not improved for    24 iterations
+2022-08-24 16:17:49,072 INFO Epoch 49
+2022-08-24 16:17:53,320 INFO [48,    10] tr_recon_loss : 0.010 | val_recon_loss : 0.010 | tr_total_loss : 0.015 | val_total_loss : 0.015 | tr_stimu_loss : 0.521 | val_stimu_loss : 0.508
+2022-08-24 16:17:53,320 INFO not improved for    25 iterations
+2022-08-24 16:17:57,374 INFO [48,    20] tr_recon_loss : 0.008 | val_recon_loss : 0.015 | tr_total_loss : 0.013 | val_total_loss : 0.020 | tr_stimu_loss : 0.518 | val_stimu_loss : 0.507
+2022-08-24 16:17:57,374 INFO not improved for    26 iterations
+2022-08-24 16:18:01,359 INFO [48,    30] tr_recon_loss : 0.008 | val_recon_loss : 0.014 | tr_total_loss : 0.013 | val_total_loss : 0.019 | tr_stimu_loss : 0.516 | val_stimu_loss : 0.500
+2022-08-24 16:18:01,359 INFO not improved for    27 iterations
+2022-08-24 16:18:02,450 INFO Epoch 50
+2022-08-24 16:18:06,495 INFO [49,    10] tr_recon_loss : 0.008 | val_recon_loss : 0.024 | tr_total_loss : 0.013 | val_total_loss : 0.029 | tr_stimu_loss : 0.512 | val_stimu_loss : 0.499
+2022-08-24 16:18:06,495 INFO not improved for    28 iterations
+2022-08-24 16:18:10,612 INFO [49,    20] tr_recon_loss : 0.009 | val_recon_loss : 0.017 | tr_total_loss : 0.014 | val_total_loss : 0.022 | tr_stimu_loss : 0.508 | val_stimu_loss : 0.501
+2022-08-24 16:18:10,612 INFO not improved for    29 iterations
+2022-08-24 16:18:14,654 INFO [49,    30] tr_recon_loss : 0.008 | val_recon_loss : 0.008 | tr_total_loss : 0.013 | val_total_loss : 0.013 | tr_stimu_loss : 0.505 | val_stimu_loss : 0.499
+2022-08-24 16:18:14,655 INFO not improved for    30 iterations
+2022-08-24 16:18:15,803 INFO Epoch 51
+2022-08-24 16:18:19,917 INFO [50,    10] tr_recon_loss : 0.008 | val_recon_loss : 0.007 | tr_total_loss : 0.013 | val_total_loss : 0.012 | tr_stimu_loss : 0.505 | val_stimu_loss : 0.502
+2022-08-24 16:18:19,917 INFO not improved for    31 iterations
+2022-08-24 16:18:19,917 INFO Finished Training
+2022-08-24 16:28:08,716 INFO Epoch 1
+2022-08-24 16:28:13,975 INFO [0,    10] tr_recon_loss : 0.161 | val_recon_loss : 0.201 | tr_total_loss : 0.283 | val_total_loss : 0.346 | tr_stimu_loss : 0.405 | val_stimu_loss : 0.491
+2022-08-24 16:28:13,975 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:28:13,980 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:28:18,610 INFO [0,    20] tr_recon_loss : 0.184 | val_recon_loss : 0.196 | tr_total_loss : 0.268 | val_total_loss : 0.325 | tr_stimu_loss : 0.352 | val_stimu_loss : 0.454
+2022-08-24 16:28:18,610 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:28:18,614 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:28:23,568 INFO [0,    30] tr_recon_loss : 0.192 | val_recon_loss : 0.195 | tr_total_loss : 0.251 | val_total_loss : 0.307 | tr_stimu_loss : 0.309 | val_stimu_loss : 0.419
+2022-08-24 16:28:23,568 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:28:23,572 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:28:24,763 INFO Epoch 2
+2022-08-24 16:28:29,193 INFO [1,    10] tr_recon_loss : 0.149 | val_recon_loss : 0.167 | tr_total_loss : 0.214 | val_total_loss : 0.256 | tr_stimu_loss : 0.280 | val_stimu_loss : 0.344
+2022-08-24 16:28:29,193 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:28:29,197 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:28:33,853 INFO [1,    20] tr_recon_loss : 0.095 | val_recon_loss : 0.166 | tr_total_loss : 0.177 | val_total_loss : 0.222 | tr_stimu_loss : 0.259 | val_stimu_loss : 0.277
+2022-08-24 16:28:33,853 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:28:33,857 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:28:38,520 INFO [1,    30] tr_recon_loss : 0.084 | val_recon_loss : 0.136 | tr_total_loss : 0.156 | val_total_loss : 0.200 | tr_stimu_loss : 0.228 | val_stimu_loss : 0.263
+2022-08-24 16:28:38,520 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:28:38,524 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:28:39,708 INFO Epoch 3
+2022-08-24 16:28:44,321 INFO [2,    10] tr_recon_loss : 0.073 | val_recon_loss : 0.095 | tr_total_loss : 0.141 | val_total_loss : 0.153 | tr_stimu_loss : 0.208 | val_stimu_loss : 0.211
+2022-08-24 16:28:44,321 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:28:44,325 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:28:49,335 INFO [2,    20] tr_recon_loss : 0.089 | val_recon_loss : 0.080 | tr_total_loss : 0.140 | val_total_loss : 0.128 | tr_stimu_loss : 0.192 | val_stimu_loss : 0.176
+2022-08-24 16:28:49,336 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:28:49,340 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:28:54,173 INFO [2,    30] tr_recon_loss : 0.057 | val_recon_loss : 0.053 | tr_total_loss : 0.128 | val_total_loss : 0.122 | tr_stimu_loss : 0.199 | val_stimu_loss : 0.191
+2022-08-24 16:28:54,174 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:28:54,178 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:28:55,404 INFO Epoch 4
+2022-08-24 16:28:59,984 INFO [3,    10] tr_recon_loss : 0.042 | val_recon_loss : 0.038 | tr_total_loss : 0.109 | val_total_loss : 0.100 | tr_stimu_loss : 0.176 | val_stimu_loss : 0.162
+2022-08-24 16:28:59,985 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:28:59,989 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:29:04,908 INFO [3,    20] tr_recon_loss : 0.046 | val_recon_loss : 0.048 | tr_total_loss : 0.098 | val_total_loss : 0.097 | tr_stimu_loss : 0.151 | val_stimu_loss : 0.146
+2022-08-24 16:29:04,909 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:29:04,913 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:29:09,626 INFO [3,    30] tr_recon_loss : 0.049 | val_recon_loss : 0.055 | tr_total_loss : 0.096 | val_total_loss : 0.103 | tr_stimu_loss : 0.143 | val_stimu_loss : 0.151
+2022-08-24 16:29:09,626 INFO not improved for     1 iterations
+2022-08-24 16:29:10,782 INFO Epoch 5
+2022-08-24 16:29:15,870 INFO [4,    10] tr_recon_loss : 0.087 | val_recon_loss : 0.124 | tr_total_loss : 0.121 | val_total_loss : 0.143 | tr_stimu_loss : 0.156 | val_stimu_loss : 0.162
+2022-08-24 16:29:15,870 INFO not improved for     2 iterations
+2022-08-24 16:29:20,794 INFO [4,    20] tr_recon_loss : 0.081 | val_recon_loss : 0.141 | tr_total_loss : 0.137 | val_total_loss : 0.166 | tr_stimu_loss : 0.193 | val_stimu_loss : 0.192
+2022-08-24 16:29:20,800 INFO not improved for     3 iterations
+2022-08-24 16:29:25,673 INFO [4,    30] tr_recon_loss : 0.070 | val_recon_loss : 0.115 | tr_total_loss : 0.124 | val_total_loss : 0.156 | tr_stimu_loss : 0.178 | val_stimu_loss : 0.196
+2022-08-24 16:29:25,674 INFO not improved for     4 iterations
+2022-08-24 16:29:26,894 INFO Epoch 6
+2022-08-24 16:29:32,128 INFO [5,    10] tr_recon_loss : 0.069 | val_recon_loss : 0.060 | tr_total_loss : 0.116 | val_total_loss : 0.103 | tr_stimu_loss : 0.163 | val_stimu_loss : 0.145
+2022-08-24 16:29:32,128 INFO not improved for     5 iterations
+2022-08-24 16:29:37,071 INFO [5,    20] tr_recon_loss : 0.048 | val_recon_loss : 0.036 | tr_total_loss : 0.098 | val_total_loss : 0.086 | tr_stimu_loss : 0.147 | val_stimu_loss : 0.136
+2022-08-24 16:29:37,071 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:29:37,075 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:29:41,660 INFO [5,    30] tr_recon_loss : 0.038 | val_recon_loss : 0.035 | tr_total_loss : 0.085 | val_total_loss : 0.077 | tr_stimu_loss : 0.131 | val_stimu_loss : 0.118
+2022-08-24 16:29:41,660 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:29:41,664 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:29:42,925 INFO Epoch 7
+2022-08-24 16:29:47,489 INFO [6,    10] tr_recon_loss : 0.038 | val_recon_loss : 0.039 | tr_total_loss : 0.076 | val_total_loss : 0.073 | tr_stimu_loss : 0.114 | val_stimu_loss : 0.107
+2022-08-24 16:29:47,489 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:29:47,493 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:29:52,369 INFO [6,    20] tr_recon_loss : 0.031 | val_recon_loss : 0.028 | tr_total_loss : 0.072 | val_total_loss : 0.071 | tr_stimu_loss : 0.112 | val_stimu_loss : 0.115
+2022-08-24 16:29:52,369 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:29:52,373 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:29:57,425 INFO [6,    30] tr_recon_loss : 0.027 | val_recon_loss : 0.031 | tr_total_loss : 0.067 | val_total_loss : 0.069 | tr_stimu_loss : 0.106 | val_stimu_loss : 0.108
+2022-08-24 16:29:57,425 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:29:57,429 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:29:58,602 INFO Epoch 8
+2022-08-24 16:30:03,461 INFO [7,    10] tr_recon_loss : 0.030 | val_recon_loss : 0.037 | tr_total_loss : 0.061 | val_total_loss : 0.067 | tr_stimu_loss : 0.092 | val_stimu_loss : 0.098
+2022-08-24 16:30:03,461 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:30:03,465 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:30:07,751 INFO [7,    20] tr_recon_loss : 0.028 | val_recon_loss : 0.034 | tr_total_loss : 0.059 | val_total_loss : 0.062 | tr_stimu_loss : 0.090 | val_stimu_loss : 0.089
+2022-08-24 16:30:07,751 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:30:07,755 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:30:11,832 INFO [7,    30] tr_recon_loss : 0.028 | val_recon_loss : 0.030 | tr_total_loss : 0.057 | val_total_loss : 0.059 | tr_stimu_loss : 0.086 | val_stimu_loss : 0.088
+2022-08-24 16:30:11,836 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:30:11,847 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:30:12,931 INFO Epoch 9
+2022-08-24 16:30:17,124 INFO [8,    10] tr_recon_loss : 0.025 | val_recon_loss : 0.027 | tr_total_loss : 0.054 | val_total_loss : 0.057 | tr_stimu_loss : 0.084 | val_stimu_loss : 0.088
+2022-08-24 16:30:17,124 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:30:17,128 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:30:21,259 INFO [8,    20] tr_recon_loss : 0.026 | val_recon_loss : 0.023 | tr_total_loss : 0.053 | val_total_loss : 0.058 | tr_stimu_loss : 0.081 | val_stimu_loss : 0.094
+2022-08-24 16:30:21,259 INFO not improved for     1 iterations
+2022-08-24 16:30:25,400 INFO [8,    30] tr_recon_loss : 0.024 | val_recon_loss : 0.030 | tr_total_loss : 0.053 | val_total_loss : 0.059 | tr_stimu_loss : 0.082 | val_stimu_loss : 0.088
+2022-08-24 16:30:25,400 INFO not improved for     2 iterations
+2022-08-24 16:30:26,454 INFO Epoch 10
+2022-08-24 16:30:30,821 INFO [9,    10] tr_recon_loss : 0.024 | val_recon_loss : 0.025 | tr_total_loss : 0.050 | val_total_loss : 0.051 | tr_stimu_loss : 0.076 | val_stimu_loss : 0.077
+2022-08-24 16:30:30,822 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:30:30,826 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:30:35,046 INFO [9,    20] tr_recon_loss : 0.022 | val_recon_loss : 0.025 | tr_total_loss : 0.049 | val_total_loss : 0.051 | tr_stimu_loss : 0.076 | val_stimu_loss : 0.077
+2022-08-24 16:30:35,046 INFO not improved for     1 iterations
+2022-08-24 16:30:38,993 INFO [9,    30] tr_recon_loss : 0.022 | val_recon_loss : 0.022 | tr_total_loss : 0.047 | val_total_loss : 0.049 | tr_stimu_loss : 0.073 | val_stimu_loss : 0.076
+2022-08-24 16:30:38,993 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:30:38,997 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:30:40,033 INFO Epoch 11
+2022-08-24 16:30:44,167 INFO [10,    10] tr_recon_loss : 0.021 | val_recon_loss : 0.020 | tr_total_loss : 0.046 | val_total_loss : 0.049 | tr_stimu_loss : 0.071 | val_stimu_loss : 0.078
+2022-08-24 16:30:44,168 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:30:44,172 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:30:48,291 INFO [10,    20] tr_recon_loss : 0.021 | val_recon_loss : 0.023 | tr_total_loss : 0.045 | val_total_loss : 0.047 | tr_stimu_loss : 0.070 | val_stimu_loss : 0.071
+2022-08-24 16:30:48,291 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:30:48,295 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:30:52,474 INFO [10,    30] tr_recon_loss : 0.019 | val_recon_loss : 0.018 | tr_total_loss : 0.044 | val_total_loss : 0.045 | tr_stimu_loss : 0.068 | val_stimu_loss : 0.072
+2022-08-24 16:30:52,474 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:30:52,478 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:30:53,638 INFO Epoch 12
+2022-08-24 16:30:57,970 INFO [11,    10] tr_recon_loss : 0.019 | val_recon_loss : 0.021 | tr_total_loss : 0.044 | val_total_loss : 0.045 | tr_stimu_loss : 0.069 | val_stimu_loss : 0.069
+2022-08-24 16:30:57,970 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:30:57,974 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:31:02,112 INFO [11,    20] tr_recon_loss : 0.018 | val_recon_loss : 0.019 | tr_total_loss : 0.042 | val_total_loss : 0.046 | tr_stimu_loss : 0.066 | val_stimu_loss : 0.074
+2022-08-24 16:31:02,112 INFO not improved for     1 iterations
+2022-08-24 16:31:06,245 INFO [11,    30] tr_recon_loss : 0.018 | val_recon_loss : 0.020 | tr_total_loss : 0.042 | val_total_loss : 0.045 | tr_stimu_loss : 0.066 | val_stimu_loss : 0.071
+2022-08-24 16:31:06,245 INFO not improved for     2 iterations
+2022-08-24 16:31:07,349 INFO Epoch 13
+2022-08-24 16:31:11,607 INFO [12,    10] tr_recon_loss : 0.018 | val_recon_loss : 0.018 | tr_total_loss : 0.041 | val_total_loss : 0.043 | tr_stimu_loss : 0.065 | val_stimu_loss : 0.067
+2022-08-24 16:31:11,607 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:31:11,611 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:31:15,788 INFO [12,    20] tr_recon_loss : 0.019 | val_recon_loss : 0.019 | tr_total_loss : 0.042 | val_total_loss : 0.042 | tr_stimu_loss : 0.064 | val_stimu_loss : 0.065
+2022-08-24 16:31:15,788 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:31:15,792 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:31:19,803 INFO [12,    30] tr_recon_loss : 0.017 | val_recon_loss : 0.020 | tr_total_loss : 0.040 | val_total_loss : 0.044 | tr_stimu_loss : 0.064 | val_stimu_loss : 0.068
+2022-08-24 16:31:19,803 INFO not improved for     1 iterations
+2022-08-24 16:31:20,886 INFO Epoch 14
+2022-08-24 16:31:25,076 INFO [13,    10] tr_recon_loss : 0.018 | val_recon_loss : 0.018 | tr_total_loss : 0.041 | val_total_loss : 0.043 | tr_stimu_loss : 0.064 | val_stimu_loss : 0.068
+2022-08-24 16:31:25,077 INFO not improved for     2 iterations
+2022-08-24 16:31:29,260 INFO [13,    20] tr_recon_loss : 0.019 | val_recon_loss : 0.024 | tr_total_loss : 0.040 | val_total_loss : 0.045 | tr_stimu_loss : 0.062 | val_stimu_loss : 0.066
+2022-08-24 16:31:29,261 INFO not improved for     3 iterations
+2022-08-24 16:31:33,238 INFO [13,    30] tr_recon_loss : 0.018 | val_recon_loss : 0.020 | tr_total_loss : 0.040 | val_total_loss : 0.042 | tr_stimu_loss : 0.063 | val_stimu_loss : 0.065
+2022-08-24 16:31:33,239 INFO not improved for     4 iterations
+2022-08-24 16:31:34,356 INFO Epoch 15
+2022-08-24 16:31:38,446 INFO [14,    10] tr_recon_loss : 0.017 | val_recon_loss : 0.026 | tr_total_loss : 0.040 | val_total_loss : 0.046 | tr_stimu_loss : 0.063 | val_stimu_loss : 0.067
+2022-08-24 16:31:38,446 INFO not improved for     5 iterations
+2022-08-24 16:31:42,603 INFO [14,    20] tr_recon_loss : 0.018 | val_recon_loss : 0.022 | tr_total_loss : 0.040 | val_total_loss : 0.044 | tr_stimu_loss : 0.062 | val_stimu_loss : 0.066
+2022-08-24 16:31:42,603 INFO not improved for     6 iterations
+2022-08-24 16:31:46,811 INFO [14,    30] tr_recon_loss : 0.018 | val_recon_loss : 0.024 | tr_total_loss : 0.041 | val_total_loss : 0.045 | tr_stimu_loss : 0.063 | val_stimu_loss : 0.067
+2022-08-24 16:31:46,811 INFO not improved for     7 iterations
+2022-08-24 16:31:47,890 INFO Epoch 16
+2022-08-24 16:31:52,087 INFO [15,    10] tr_recon_loss : 0.018 | val_recon_loss : 0.021 | tr_total_loss : 0.041 | val_total_loss : 0.045 | tr_stimu_loss : 0.064 | val_stimu_loss : 0.069
+2022-08-24 16:31:52,087 INFO not improved for     8 iterations
+2022-08-24 16:31:55,992 INFO [15,    20] tr_recon_loss : 0.019 | val_recon_loss : 0.018 | tr_total_loss : 0.042 | val_total_loss : 0.044 | tr_stimu_loss : 0.065 | val_stimu_loss : 0.070
+2022-08-24 16:31:55,992 INFO not improved for     9 iterations
+2022-08-24 16:32:00,269 INFO [15,    30] tr_recon_loss : 0.019 | val_recon_loss : 0.020 | tr_total_loss : 0.042 | val_total_loss : 0.045 | tr_stimu_loss : 0.065 | val_stimu_loss : 0.069
+2022-08-24 16:32:00,270 INFO not improved for    10 iterations
+2022-08-24 16:32:01,347 INFO Epoch 17
+2022-08-24 16:32:05,355 INFO [16,    10] tr_recon_loss : 0.018 | val_recon_loss : 0.021 | tr_total_loss : 0.042 | val_total_loss : 0.044 | tr_stimu_loss : 0.065 | val_stimu_loss : 0.067
+2022-08-24 16:32:05,356 INFO not improved for    11 iterations
+2022-08-24 16:32:09,637 INFO [16,    20] tr_recon_loss : 0.020 | val_recon_loss : 0.020 | tr_total_loss : 0.042 | val_total_loss : 0.045 | tr_stimu_loss : 0.065 | val_stimu_loss : 0.069
+2022-08-24 16:32:09,637 INFO not improved for    12 iterations
+2022-08-24 16:32:13,864 INFO [16,    30] tr_recon_loss : 0.019 | val_recon_loss : 0.024 | tr_total_loss : 0.041 | val_total_loss : 0.045 | tr_stimu_loss : 0.064 | val_stimu_loss : 0.066
+2022-08-24 16:32:13,864 INFO not improved for    13 iterations
+2022-08-24 16:32:15,015 INFO Epoch 18
+2022-08-24 16:32:19,117 INFO [17,    10] tr_recon_loss : 0.020 | val_recon_loss : 0.020 | tr_total_loss : 0.041 | val_total_loss : 0.044 | tr_stimu_loss : 0.063 | val_stimu_loss : 0.068
+2022-08-24 16:32:19,118 INFO not improved for    14 iterations
+2022-08-24 16:32:23,179 INFO [17,    20] tr_recon_loss : 0.020 | val_recon_loss : 0.020 | tr_total_loss : 0.041 | val_total_loss : 0.043 | tr_stimu_loss : 0.063 | val_stimu_loss : 0.067
+2022-08-24 16:32:23,179 INFO not improved for    15 iterations
+2022-08-24 16:32:27,347 INFO [17,    30] tr_recon_loss : 0.018 | val_recon_loss : 0.022 | tr_total_loss : 0.041 | val_total_loss : 0.045 | tr_stimu_loss : 0.064 | val_stimu_loss : 0.067
+2022-08-24 16:32:27,347 INFO not improved for    16 iterations
+2022-08-24 16:32:28,558 INFO Epoch 19
+2022-08-24 16:32:32,871 INFO [18,    10] tr_recon_loss : 0.019 | val_recon_loss : 0.021 | tr_total_loss : 0.041 | val_total_loss : 0.046 | tr_stimu_loss : 0.063 | val_stimu_loss : 0.071
+2022-08-24 16:32:32,871 INFO not improved for    17 iterations
+2022-08-24 16:32:36,862 INFO [18,    20] tr_recon_loss : 0.020 | val_recon_loss : 0.023 | tr_total_loss : 0.042 | val_total_loss : 0.045 | tr_stimu_loss : 0.064 | val_stimu_loss : 0.067
+2022-08-24 16:32:36,862 INFO not improved for    18 iterations
+2022-08-24 16:32:40,988 INFO [18,    30] tr_recon_loss : 0.018 | val_recon_loss : 0.021 | tr_total_loss : 0.041 | val_total_loss : 0.044 | tr_stimu_loss : 0.064 | val_stimu_loss : 0.066
+2022-08-24 16:32:40,988 INFO not improved for    19 iterations
+2022-08-24 16:32:42,039 INFO Epoch 20
+2022-08-24 16:32:46,224 INFO [19,    10] tr_recon_loss : 0.018 | val_recon_loss : 0.018 | tr_total_loss : 0.041 | val_total_loss : 0.042 | tr_stimu_loss : 0.064 | val_stimu_loss : 0.066
+2022-08-24 16:32:46,224 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:32:46,228 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:32:50,311 INFO [19,    20] tr_recon_loss : 0.019 | val_recon_loss : 0.026 | tr_total_loss : 0.040 | val_total_loss : 0.044 | tr_stimu_loss : 0.062 | val_stimu_loss : 0.063
+2022-08-24 16:32:50,311 INFO not improved for     1 iterations
+2022-08-24 16:32:54,456 INFO [19,    30] tr_recon_loss : 0.018 | val_recon_loss : 0.020 | tr_total_loss : 0.042 | val_total_loss : 0.044 | tr_stimu_loss : 0.065 | val_stimu_loss : 0.068
+2022-08-24 16:32:54,456 INFO not improved for     2 iterations
+2022-08-24 16:32:55,558 INFO Epoch 21
+2022-08-24 16:32:59,782 INFO [20,    10] tr_recon_loss : 0.018 | val_recon_loss : 0.022 | tr_total_loss : 0.041 | val_total_loss : 0.044 | tr_stimu_loss : 0.064 | val_stimu_loss : 0.065
+2022-08-24 16:32:59,782 INFO not improved for     3 iterations
+2022-08-24 16:33:03,840 INFO [20,    20] tr_recon_loss : 0.018 | val_recon_loss : 0.019 | tr_total_loss : 0.040 | val_total_loss : 0.043 | tr_stimu_loss : 0.062 | val_stimu_loss : 0.068
+2022-08-24 16:33:03,840 INFO not improved for     4 iterations
+2022-08-24 16:33:08,027 INFO [20,    30] tr_recon_loss : 0.017 | val_recon_loss : 0.020 | tr_total_loss : 0.040 | val_total_loss : 0.043 | tr_stimu_loss : 0.064 | val_stimu_loss : 0.067
+2022-08-24 16:33:08,027 INFO not improved for     5 iterations
+2022-08-24 16:33:09,073 INFO Epoch 22
+2022-08-24 16:33:13,239 INFO [21,    10] tr_recon_loss : 0.017 | val_recon_loss : 0.020 | tr_total_loss : 0.041 | val_total_loss : 0.044 | tr_stimu_loss : 0.064 | val_stimu_loss : 0.067
+2022-08-24 16:33:13,240 INFO not improved for     6 iterations
+2022-08-24 16:33:17,378 INFO [21,    20] tr_recon_loss : 0.017 | val_recon_loss : 0.020 | tr_total_loss : 0.041 | val_total_loss : 0.043 | tr_stimu_loss : 0.065 | val_stimu_loss : 0.067
+2022-08-24 16:33:17,378 INFO not improved for     7 iterations
+2022-08-24 16:33:21,440 INFO [21,    30] tr_recon_loss : 0.019 | val_recon_loss : 0.018 | tr_total_loss : 0.041 | val_total_loss : 0.043 | tr_stimu_loss : 0.063 | val_stimu_loss : 0.068
+2022-08-24 16:33:21,440 INFO not improved for     8 iterations
+2022-08-24 16:33:22,559 INFO Epoch 23
+2022-08-24 16:33:26,800 INFO [22,    10] tr_recon_loss : 0.017 | val_recon_loss : 0.019 | tr_total_loss : 0.040 | val_total_loss : 0.044 | tr_stimu_loss : 0.064 | val_stimu_loss : 0.069
+2022-08-24 16:33:26,801 INFO not improved for     9 iterations
+2022-08-24 16:33:30,836 INFO [22,    20] tr_recon_loss : 0.017 | val_recon_loss : 0.018 | tr_total_loss : 0.041 | val_total_loss : 0.043 | tr_stimu_loss : 0.064 | val_stimu_loss : 0.069
+2022-08-24 16:33:30,837 INFO not improved for    10 iterations
+2022-08-24 16:33:34,985 INFO [22,    30] tr_recon_loss : 0.017 | val_recon_loss : 0.022 | tr_total_loss : 0.041 | val_total_loss : 0.043 | tr_stimu_loss : 0.066 | val_stimu_loss : 0.064
+2022-08-24 16:33:34,986 INFO not improved for    11 iterations
+2022-08-24 16:33:36,001 INFO Epoch 24
+2022-08-24 16:33:40,122 INFO [23,    10] tr_recon_loss : 0.016 | val_recon_loss : 0.018 | tr_total_loss : 0.040 | val_total_loss : 0.043 | tr_stimu_loss : 0.063 | val_stimu_loss : 0.067
+2022-08-24 16:33:40,122 INFO not improved for    12 iterations
+2022-08-24 16:33:44,448 INFO [23,    20] tr_recon_loss : 0.017 | val_recon_loss : 0.021 | tr_total_loss : 0.041 | val_total_loss : 0.044 | tr_stimu_loss : 0.065 | val_stimu_loss : 0.067
+2022-08-24 16:33:44,448 INFO not improved for    13 iterations
+2022-08-24 16:33:48,452 INFO [23,    30] tr_recon_loss : 0.018 | val_recon_loss : 0.020 | tr_total_loss : 0.041 | val_total_loss : 0.046 | tr_stimu_loss : 0.065 | val_stimu_loss : 0.072
+2022-08-24 16:33:48,453 INFO not improved for    14 iterations
+2022-08-24 16:33:49,499 INFO Epoch 25
+2022-08-24 16:33:53,731 INFO [24,    10] tr_recon_loss : 0.017 | val_recon_loss : 0.019 | tr_total_loss : 0.041 | val_total_loss : 0.044 | tr_stimu_loss : 0.066 | val_stimu_loss : 0.068
+2022-08-24 16:33:53,731 INFO not improved for    15 iterations
+2022-08-24 16:33:57,839 INFO [24,    20] tr_recon_loss : 0.017 | val_recon_loss : 0.019 | tr_total_loss : 0.041 | val_total_loss : 0.045 | tr_stimu_loss : 0.064 | val_stimu_loss : 0.070
+2022-08-24 16:33:57,840 INFO not improved for    16 iterations
+2022-08-24 16:34:01,953 INFO [24,    30] tr_recon_loss : 0.015 | val_recon_loss : 0.017 | tr_total_loss : 0.041 | val_total_loss : 0.043 | tr_stimu_loss : 0.068 | val_stimu_loss : 0.069
+2022-08-24 16:34:01,953 INFO not improved for    17 iterations
+2022-08-24 16:34:02,991 INFO Epoch 26
+2022-08-24 16:34:07,169 INFO [25,    10] tr_recon_loss : 0.016 | val_recon_loss : 0.018 | tr_total_loss : 0.041 | val_total_loss : 0.044 | tr_stimu_loss : 0.066 | val_stimu_loss : 0.070
+2022-08-24 16:34:07,169 INFO not improved for    18 iterations
+2022-08-24 16:34:11,340 INFO [25,    20] tr_recon_loss : 0.016 | val_recon_loss : 0.020 | tr_total_loss : 0.042 | val_total_loss : 0.044 | tr_stimu_loss : 0.067 | val_stimu_loss : 0.068
+2022-08-24 16:34:11,340 INFO not improved for    19 iterations
+2022-08-24 16:34:15,554 INFO [25,    30] tr_recon_loss : 0.017 | val_recon_loss : 0.019 | tr_total_loss : 0.042 | val_total_loss : 0.045 | tr_stimu_loss : 0.067 | val_stimu_loss : 0.072
+2022-08-24 16:34:15,555 INFO not improved for    20 iterations
+2022-08-24 16:34:16,680 INFO Epoch 27
+2022-08-24 16:34:21,167 INFO [26,    10] tr_recon_loss : 0.016 | val_recon_loss : 0.018 | tr_total_loss : 0.042 | val_total_loss : 0.044 | tr_stimu_loss : 0.067 | val_stimu_loss : 0.071
+2022-08-24 16:34:21,167 INFO not improved for    21 iterations
+2022-08-24 16:34:25,821 INFO [26,    20] tr_recon_loss : 0.015 | val_recon_loss : 0.016 | tr_total_loss : 0.042 | val_total_loss : 0.045 | tr_stimu_loss : 0.069 | val_stimu_loss : 0.074
+2022-08-24 16:34:25,821 INFO not improved for    22 iterations
+2022-08-24 16:34:30,610 INFO [26,    30] tr_recon_loss : 0.015 | val_recon_loss : 0.018 | tr_total_loss : 0.042 | val_total_loss : 0.044 | tr_stimu_loss : 0.070 | val_stimu_loss : 0.070
+2022-08-24 16:34:30,610 INFO not improved for    23 iterations
+2022-08-24 16:34:31,764 INFO Epoch 28
+2022-08-24 16:34:36,445 INFO [27,    10] tr_recon_loss : 0.018 | val_recon_loss : 0.035 | tr_total_loss : 0.043 | val_total_loss : 0.051 | tr_stimu_loss : 0.068 | val_stimu_loss : 0.067
+2022-08-24 16:34:36,446 INFO not improved for    24 iterations
+2022-08-24 16:34:40,999 INFO [27,    20] tr_recon_loss : 0.018 | val_recon_loss : 0.019 | tr_total_loss : 0.044 | val_total_loss : 0.047 | tr_stimu_loss : 0.071 | val_stimu_loss : 0.076
+2022-08-24 16:34:40,999 INFO not improved for    25 iterations
+2022-08-24 16:34:45,576 INFO [27,    30] tr_recon_loss : 0.016 | val_recon_loss : 0.018 | tr_total_loss : 0.042 | val_total_loss : 0.043 | tr_stimu_loss : 0.067 | val_stimu_loss : 0.068
+2022-08-24 16:34:45,576 INFO not improved for    26 iterations
+2022-08-24 16:34:46,821 INFO Epoch 29
+2022-08-24 16:34:51,497 INFO [28,    10] tr_recon_loss : 0.015 | val_recon_loss : 0.017 | tr_total_loss : 0.043 | val_total_loss : 0.048 | tr_stimu_loss : 0.072 | val_stimu_loss : 0.078
+2022-08-24 16:34:51,497 INFO not improved for    27 iterations
+2022-08-24 16:34:56,563 INFO [28,    20] tr_recon_loss : 0.017 | val_recon_loss : 0.026 | tr_total_loss : 0.042 | val_total_loss : 0.047 | tr_stimu_loss : 0.068 | val_stimu_loss : 0.068
+2022-08-24 16:34:56,563 INFO not improved for    28 iterations
+2022-08-24 16:35:01,061 INFO [28,    30] tr_recon_loss : 0.016 | val_recon_loss : 0.017 | tr_total_loss : 0.043 | val_total_loss : 0.046 | tr_stimu_loss : 0.071 | val_stimu_loss : 0.075
+2022-08-24 16:35:01,061 INFO not improved for    29 iterations
+2022-08-24 16:35:02,381 INFO Epoch 30
+2022-08-24 16:35:07,557 INFO [29,    10] tr_recon_loss : 0.016 | val_recon_loss : 0.018 | tr_total_loss : 0.043 | val_total_loss : 0.045 | tr_stimu_loss : 0.070 | val_stimu_loss : 0.072
+2022-08-24 16:35:07,558 INFO not improved for    30 iterations
+2022-08-24 16:35:12,450 INFO [29,    20] tr_recon_loss : 0.015 | val_recon_loss : 0.016 | tr_total_loss : 0.042 | val_total_loss : 0.046 | tr_stimu_loss : 0.069 | val_stimu_loss : 0.075
+2022-08-24 16:35:12,451 INFO not improved for    31 iterations
+2022-08-24 16:35:12,451 INFO Finished Training
+2022-08-24 16:38:47,265 INFO Epoch 1
+2022-08-24 16:38:52,427 INFO [0,    10] tr_recon_loss : 0.208 | val_recon_loss : 0.212 | tr_total_loss : 0.251 | val_total_loss : 0.267 | tr_stimu_loss : 0.294 | val_stimu_loss : 0.321
+2022-08-24 16:38:52,428 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:38:52,433 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:38:57,374 INFO [0,    20] tr_recon_loss : 0.149 | val_recon_loss : 0.121 | tr_total_loss : 0.151 | val_total_loss : 0.192 | tr_stimu_loss : 0.153 | val_stimu_loss : 0.263
+2022-08-24 16:38:57,374 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:38:57,378 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:39:02,210 INFO [0,    30] tr_recon_loss : 0.084 | val_recon_loss : 0.091 | tr_total_loss : 0.175 | val_total_loss : 0.217 | tr_stimu_loss : 0.266 | val_stimu_loss : 0.344
+2022-08-24 16:39:02,210 INFO not improved for     1 iterations
+2022-08-24 16:39:03,598 INFO Epoch 2
+2022-08-24 16:39:08,437 INFO [1,    10] tr_recon_loss : 0.076 | val_recon_loss : 0.092 | tr_total_loss : 0.192 | val_total_loss : 0.213 | tr_stimu_loss : 0.308 | val_stimu_loss : 0.334
+2022-08-24 16:39:08,437 INFO not improved for     2 iterations
+2022-08-24 16:39:13,430 INFO [1,    20] tr_recon_loss : 0.070 | val_recon_loss : 0.087 | tr_total_loss : 0.196 | val_total_loss : 0.207 | tr_stimu_loss : 0.322 | val_stimu_loss : 0.327
+2022-08-24 16:39:13,431 INFO not improved for     3 iterations
+2022-08-24 16:39:18,291 INFO [1,    30] tr_recon_loss : 0.070 | val_recon_loss : 0.090 | tr_total_loss : 0.197 | val_total_loss : 0.209 | tr_stimu_loss : 0.324 | val_stimu_loss : 0.328
+2022-08-24 16:39:18,292 INFO not improved for     4 iterations
+2022-08-24 16:39:19,481 INFO Epoch 3
+2022-08-24 16:39:24,110 INFO [2,    10] tr_recon_loss : 0.068 | val_recon_loss : 0.087 | tr_total_loss : 0.200 | val_total_loss : 0.211 | tr_stimu_loss : 0.333 | val_stimu_loss : 0.336
+2022-08-24 16:39:24,110 INFO not improved for     5 iterations
+2022-08-24 16:39:29,103 INFO [2,    20] tr_recon_loss : 0.068 | val_recon_loss : 0.075 | tr_total_loss : 0.205 | val_total_loss : 0.210 | tr_stimu_loss : 0.341 | val_stimu_loss : 0.344
+2022-08-24 16:39:29,104 INFO not improved for     6 iterations
+2022-08-24 16:39:34,098 INFO [2,    30] tr_recon_loss : 0.063 | val_recon_loss : 0.084 | tr_total_loss : 0.208 | val_total_loss : 0.221 | tr_stimu_loss : 0.353 | val_stimu_loss : 0.357
+2022-08-24 16:39:34,098 INFO not improved for     7 iterations
+2022-08-24 16:39:35,341 INFO Epoch 4
+2022-08-24 16:39:40,256 INFO [3,    10] tr_recon_loss : 0.063 | val_recon_loss : 0.066 | tr_total_loss : 0.213 | val_total_loss : 0.219 | tr_stimu_loss : 0.362 | val_stimu_loss : 0.372
+2022-08-24 16:39:40,256 INFO not improved for     8 iterations
+2022-08-24 16:39:45,396 INFO [3,    20] tr_recon_loss : 0.054 | val_recon_loss : 0.162 | tr_total_loss : 0.214 | val_total_loss : 0.273 | tr_stimu_loss : 0.375 | val_stimu_loss : 0.385
+2022-08-24 16:39:45,396 INFO not improved for     9 iterations
+2022-08-24 16:39:50,022 INFO [3,    30] tr_recon_loss : 0.070 | val_recon_loss : 0.079 | tr_total_loss : 0.224 | val_total_loss : 0.234 | tr_stimu_loss : 0.379 | val_stimu_loss : 0.388
+2022-08-24 16:39:50,022 INFO not improved for    10 iterations
+2022-08-24 16:39:51,193 INFO Epoch 5
+2022-08-24 16:39:55,836 INFO [4,    10] tr_recon_loss : 0.063 | val_recon_loss : 0.205 | tr_total_loss : 0.223 | val_total_loss : 0.293 | tr_stimu_loss : 0.382 | val_stimu_loss : 0.381
+2022-08-24 16:39:55,836 INFO not improved for    11 iterations
+2022-08-24 16:40:00,864 INFO [4,    20] tr_recon_loss : 0.059 | val_recon_loss : 0.111 | tr_total_loss : 0.221 | val_total_loss : 0.245 | tr_stimu_loss : 0.383 | val_stimu_loss : 0.379
+2022-08-24 16:40:00,865 INFO not improved for    12 iterations
+2022-08-24 16:40:05,425 INFO [4,    30] tr_recon_loss : 0.057 | val_recon_loss : 0.148 | tr_total_loss : 0.221 | val_total_loss : 0.261 | tr_stimu_loss : 0.384 | val_stimu_loss : 0.374
+2022-08-24 16:40:05,425 INFO not improved for    13 iterations
+2022-08-24 16:40:06,646 INFO Epoch 6
+2022-08-24 16:40:11,578 INFO [5,    10] tr_recon_loss : 0.054 | val_recon_loss : 0.061 | tr_total_loss : 0.219 | val_total_loss : 0.218 | tr_stimu_loss : 0.384 | val_stimu_loss : 0.375
+2022-08-24 16:40:11,578 INFO not improved for    14 iterations
+2022-08-24 16:40:16,309 INFO [5,    20] tr_recon_loss : 0.055 | val_recon_loss : 0.078 | tr_total_loss : 0.221 | val_total_loss : 0.228 | tr_stimu_loss : 0.387 | val_stimu_loss : 0.377
+2022-08-24 16:40:16,309 INFO not improved for    15 iterations
+2022-08-24 16:40:21,102 INFO [5,    30] tr_recon_loss : 0.053 | val_recon_loss : 0.415 | tr_total_loss : 0.219 | val_total_loss : 0.398 | tr_stimu_loss : 0.386 | val_stimu_loss : 0.382
+2022-08-24 16:40:21,102 INFO not improved for    16 iterations
+2022-08-24 16:40:22,362 INFO Epoch 7
+2022-08-24 16:40:26,926 INFO [6,    10] tr_recon_loss : 0.047 | val_recon_loss : 0.052 | tr_total_loss : 0.217 | val_total_loss : 0.218 | tr_stimu_loss : 0.388 | val_stimu_loss : 0.383
+2022-08-24 16:40:26,933 INFO not improved for    17 iterations
+2022-08-24 16:40:31,746 INFO [6,    20] tr_recon_loss : 0.043 | val_recon_loss : 0.089 | tr_total_loss : 0.215 | val_total_loss : 0.236 | tr_stimu_loss : 0.387 | val_stimu_loss : 0.382
+2022-08-24 16:40:31,747 INFO not improved for    18 iterations
+2022-08-24 16:40:36,920 INFO [6,    30] tr_recon_loss : 0.042 | val_recon_loss : 0.090 | tr_total_loss : 0.215 | val_total_loss : 0.236 | tr_stimu_loss : 0.389 | val_stimu_loss : 0.382
+2022-08-24 16:40:36,920 INFO not improved for    19 iterations
+2022-08-24 16:40:38,268 INFO Epoch 8
+2022-08-24 16:40:43,260 INFO [7,    10] tr_recon_loss : 0.040 | val_recon_loss : 0.088 | tr_total_loss : 0.214 | val_total_loss : 0.235 | tr_stimu_loss : 0.389 | val_stimu_loss : 0.381
+2022-08-24 16:40:43,261 INFO not improved for    20 iterations
+2022-08-24 16:40:47,810 INFO [7,    20] tr_recon_loss : 0.039 | val_recon_loss : 0.089 | tr_total_loss : 0.213 | val_total_loss : 0.235 | tr_stimu_loss : 0.387 | val_stimu_loss : 0.382
+2022-08-24 16:40:47,811 INFO not improved for    21 iterations
+2022-08-24 16:40:52,178 INFO [7,    30] tr_recon_loss : 0.038 | val_recon_loss : 0.088 | tr_total_loss : 0.212 | val_total_loss : 0.235 | tr_stimu_loss : 0.387 | val_stimu_loss : 0.382
+2022-08-24 16:40:52,179 INFO not improved for    22 iterations
+2022-08-24 16:40:53,231 INFO Epoch 9
+2022-08-24 16:41:06,661 INFO Epoch 1
+2022-08-24 16:41:11,523 INFO [0,    10] tr_recon_loss : 0.161 | val_recon_loss : 0.201 | tr_total_loss : 0.283 | val_total_loss : 0.346 | tr_stimu_loss : 0.405 | val_stimu_loss : 0.491
+2022-08-24 16:41:11,523 INFO Saving to ./orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:41:11,527 INFO Saving to ./orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:41:16,059 INFO [0,    20] tr_recon_loss : 0.184 | val_recon_loss : 0.196 | tr_total_loss : 0.268 | val_total_loss : 0.325 | tr_stimu_loss : 0.352 | val_stimu_loss : 0.454
+2022-08-24 16:41:16,059 INFO Saving to ./orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:41:16,063 INFO Saving to ./orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:41:20,491 INFO [0,    30] tr_recon_loss : 0.193 | val_recon_loss : 0.195 | tr_total_loss : 0.251 | val_total_loss : 0.306 | tr_stimu_loss : 0.309 | val_stimu_loss : 0.417
+2022-08-24 16:41:20,491 INFO Saving to ./orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:41:20,495 INFO Saving to ./orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:41:21,683 INFO Epoch 2
+2022-08-24 16:41:26,606 INFO [1,    10] tr_recon_loss : 0.153 | val_recon_loss : 0.169 | tr_total_loss : 0.216 | val_total_loss : 0.257 | tr_stimu_loss : 0.279 | val_stimu_loss : 0.345
+2022-08-24 16:41:26,606 INFO Saving to ./orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:41:26,611 INFO Saving to ./orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:41:31,411 INFO [1,    20] tr_recon_loss : 0.098 | val_recon_loss : 0.167 | tr_total_loss : 0.177 | val_total_loss : 0.222 | tr_stimu_loss : 0.257 | val_stimu_loss : 0.277
+2022-08-24 16:41:31,412 INFO Saving to ./orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:41:31,416 INFO Saving to ./orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:41:36,029 INFO [1,    30] tr_recon_loss : 0.082 | val_recon_loss : 0.140 | tr_total_loss : 0.155 | val_total_loss : 0.201 | tr_stimu_loss : 0.228 | val_stimu_loss : 0.263
+2022-08-24 16:41:36,029 INFO Saving to ./orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:41:36,034 INFO Saving to ./orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:41:37,195 INFO Epoch 3
+2022-08-24 16:41:41,834 INFO [2,    10] tr_recon_loss : 0.088 | val_recon_loss : 0.119 | tr_total_loss : 0.147 | val_total_loss : 0.148 | tr_stimu_loss : 0.205 | val_stimu_loss : 0.177
+2022-08-24 16:41:41,834 INFO Saving to ./orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:41:41,838 INFO Saving to ./orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:41:46,847 INFO [2,    20] tr_recon_loss : 0.082 | val_recon_loss : 0.061 | tr_total_loss : 0.143 | val_total_loss : 0.132 | tr_stimu_loss : 0.203 | val_stimu_loss : 0.202
+2022-08-24 16:41:46,848 INFO Saving to ./orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:41:46,852 INFO Saving to ./orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:41:51,366 INFO [2,    30] tr_recon_loss : 0.054 | val_recon_loss : 0.052 | tr_total_loss : 0.128 | val_total_loss : 0.125 | tr_stimu_loss : 0.202 | val_stimu_loss : 0.198
+2022-08-24 16:41:51,366 INFO Saving to ./orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:41:51,370 INFO Saving to ./orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:41:52,557 INFO Epoch 4
+2022-08-24 16:41:57,086 INFO [3,    10] tr_recon_loss : 0.044 | val_recon_loss : 0.046 | tr_total_loss : 0.113 | val_total_loss : 0.105 | tr_stimu_loss : 0.182 | val_stimu_loss : 0.165
+2022-08-24 16:41:57,086 INFO Saving to ./orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:41:57,090 INFO Saving to ./orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:42:02,036 INFO [3,    20] tr_recon_loss : 0.046 | val_recon_loss : 0.044 | tr_total_loss : 0.104 | val_total_loss : 0.100 | tr_stimu_loss : 0.162 | val_stimu_loss : 0.156
+2022-08-24 16:42:02,036 INFO Saving to ./orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:42:02,040 INFO Saving to ./orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:42:06,567 INFO [3,    30] tr_recon_loss : 0.043 | val_recon_loss : 0.044 | tr_total_loss : 0.098 | val_total_loss : 0.094 | tr_stimu_loss : 0.152 | val_stimu_loss : 0.145
+2022-08-24 16:42:06,567 INFO Saving to ./orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:42:06,572 INFO Saving to ./orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:42:07,718 INFO Epoch 5
+2022-08-24 16:42:12,295 INFO [4,    10] tr_recon_loss : 0.043 | val_recon_loss : 0.038 | tr_total_loss : 0.092 | val_total_loss : 0.092 | tr_stimu_loss : 0.141 | val_stimu_loss : 0.145
+2022-08-24 16:42:12,295 INFO Saving to ./orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:42:12,299 INFO Saving to ./orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:42:17,294 INFO [4,    20] tr_recon_loss : 0.037 | val_recon_loss : 0.036 | tr_total_loss : 0.086 | val_total_loss : 0.082 | tr_stimu_loss : 0.136 | val_stimu_loss : 0.128
+2022-08-24 16:42:17,294 INFO Saving to ./orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:42:17,298 INFO Saving to ./orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:42:22,280 INFO [4,    30] tr_recon_loss : 0.037 | val_recon_loss : 0.032 | tr_total_loss : 0.081 | val_total_loss : 0.083 | tr_stimu_loss : 0.126 | val_stimu_loss : 0.135
+2022-08-24 16:42:22,280 INFO not improved for     1 iterations
+2022-08-24 16:42:23,678 INFO Epoch 6
+2022-08-24 16:42:28,588 INFO [5,    10] tr_recon_loss : 0.032 | val_recon_loss : 0.040 | tr_total_loss : 0.077 | val_total_loss : 0.077 | tr_stimu_loss : 0.121 | val_stimu_loss : 0.114
+2022-08-24 16:42:28,589 INFO Saving to ./orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:42:28,593 INFO Saving to ./orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:42:33,182 INFO [5,    20] tr_recon_loss : 0.032 | val_recon_loss : 0.028 | tr_total_loss : 0.072 | val_total_loss : 0.073 | tr_stimu_loss : 0.112 | val_stimu_loss : 0.117
+2022-08-24 16:42:33,183 INFO Saving to ./orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:42:33,187 INFO Saving to ./orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:42:37,739 INFO [5,    30] tr_recon_loss : 0.028 | val_recon_loss : 0.038 | tr_total_loss : 0.069 | val_total_loss : 0.072 | tr_stimu_loss : 0.111 | val_stimu_loss : 0.105
+2022-08-24 16:42:37,739 INFO Saving to ./orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:42:37,743 INFO Saving to ./orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:42:39,004 INFO Epoch 7
+2022-08-24 16:42:43,543 INFO [6,    10] tr_recon_loss : 0.028 | val_recon_loss : 0.025 | tr_total_loss : 0.067 | val_total_loss : 0.068 | tr_stimu_loss : 0.106 | val_stimu_loss : 0.112
+2022-08-24 16:42:43,544 INFO Saving to ./orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:42:43,548 INFO Saving to ./orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:42:48,077 INFO [6,    20] tr_recon_loss : 0.025 | val_recon_loss : 0.045 | tr_total_loss : 0.064 | val_total_loss : 0.075 | tr_stimu_loss : 0.102 | val_stimu_loss : 0.104
+2022-08-24 16:42:48,078 INFO not improved for     1 iterations
+2022-08-24 16:42:52,906 INFO [6,    30] tr_recon_loss : 0.025 | val_recon_loss : 0.025 | tr_total_loss : 0.061 | val_total_loss : 0.063 | tr_stimu_loss : 0.098 | val_stimu_loss : 0.102
+2022-08-24 16:42:52,907 INFO Saving to ./orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:42:52,911 INFO Saving to ./orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:42:54,053 INFO Epoch 8
+2022-08-24 16:42:58,696 INFO [7,    10] tr_recon_loss : 0.024 | val_recon_loss : 0.023 | tr_total_loss : 0.059 | val_total_loss : 0.062 | tr_stimu_loss : 0.094 | val_stimu_loss : 0.101
+2022-08-24 16:42:58,696 INFO Saving to ./orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:42:58,700 INFO Saving to ./orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:43:03,838 INFO [7,    20] tr_recon_loss : 0.023 | val_recon_loss : 0.029 | tr_total_loss : 0.057 | val_total_loss : 0.060 | tr_stimu_loss : 0.092 | val_stimu_loss : 0.092
+2022-08-24 16:43:03,838 INFO Saving to ./orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:43:03,843 INFO Saving to ./orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:43:08,576 INFO [7,    30] tr_recon_loss : 0.023 | val_recon_loss : 0.023 | tr_total_loss : 0.056 | val_total_loss : 0.060 | tr_stimu_loss : 0.090 | val_stimu_loss : 0.097
+2022-08-24 16:43:08,577 INFO Saving to ./orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:43:08,586 INFO Saving to ./orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:43:09,751 INFO Epoch 9
+2022-08-24 16:43:14,487 INFO [8,    10] tr_recon_loss : 0.022 | val_recon_loss : 0.023 | tr_total_loss : 0.055 | val_total_loss : 0.056 | tr_stimu_loss : 0.088 | val_stimu_loss : 0.090
+2022-08-24 16:43:14,488 INFO Saving to ./orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:43:14,492 INFO Saving to ./orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:43:19,260 INFO [8,    20] tr_recon_loss : 0.023 | val_recon_loss : 0.023 | tr_total_loss : 0.054 | val_total_loss : 0.056 | tr_stimu_loss : 0.085 | val_stimu_loss : 0.090
+2022-08-24 16:43:19,261 INFO not improved for     1 iterations
+2022-08-24 16:43:24,241 INFO [8,    30] tr_recon_loss : 0.023 | val_recon_loss : 0.021 | tr_total_loss : 0.053 | val_total_loss : 0.055 | tr_stimu_loss : 0.084 | val_stimu_loss : 0.089
+2022-08-24 16:43:24,241 INFO Saving to ./orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:43:24,245 INFO Saving to ./orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:43:25,514 INFO Epoch 10
+2022-08-24 16:43:30,264 INFO [9,    10] tr_recon_loss : 0.022 | val_recon_loss : 0.021 | tr_total_loss : 0.051 | val_total_loss : 0.053 | tr_stimu_loss : 0.080 | val_stimu_loss : 0.086
+2022-08-24 16:43:30,265 INFO Saving to ./orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:43:30,269 INFO Saving to ./orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:43:35,013 INFO [9,    20] tr_recon_loss : 0.020 | val_recon_loss : 0.024 | tr_total_loss : 0.051 | val_total_loss : 0.053 | tr_stimu_loss : 0.081 | val_stimu_loss : 0.082
+2022-08-24 16:43:35,013 INFO Saving to ./orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:43:35,017 INFO Saving to ./orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:43:39,522 INFO [9,    30] tr_recon_loss : 0.020 | val_recon_loss : 0.022 | tr_total_loss : 0.049 | val_total_loss : 0.054 | tr_stimu_loss : 0.078 | val_stimu_loss : 0.085
+2022-08-24 16:43:39,522 INFO not improved for     1 iterations
+2022-08-24 16:43:40,645 INFO Epoch 11
+2022-08-24 16:43:45,214 INFO [10,    10] tr_recon_loss : 0.020 | val_recon_loss : 0.021 | tr_total_loss : 0.049 | val_total_loss : 0.051 | tr_stimu_loss : 0.078 | val_stimu_loss : 0.081
+2022-08-24 16:43:45,215 INFO Saving to ./orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:43:45,219 INFO Saving to ./orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:43:49,993 INFO [10,    20] tr_recon_loss : 0.020 | val_recon_loss : 0.023 | tr_total_loss : 0.048 | val_total_loss : 0.053 | tr_stimu_loss : 0.077 | val_stimu_loss : 0.083
+2022-08-24 16:43:49,993 INFO not improved for     1 iterations
+2022-08-24 16:43:54,647 INFO [10,    30] tr_recon_loss : 0.020 | val_recon_loss : 0.022 | tr_total_loss : 0.048 | val_total_loss : 0.052 | tr_stimu_loss : 0.076 | val_stimu_loss : 0.082
+2022-08-24 16:43:54,647 INFO not improved for     2 iterations
+2022-08-24 16:43:55,942 INFO Epoch 12
+2022-08-24 16:44:00,740 INFO [11,    10] tr_recon_loss : 0.020 | val_recon_loss : 0.025 | tr_total_loss : 0.048 | val_total_loss : 0.051 | tr_stimu_loss : 0.077 | val_stimu_loss : 0.077
+2022-08-24 16:44:00,740 INFO not improved for     3 iterations
+2022-08-24 16:44:05,669 INFO [11,    20] tr_recon_loss : 0.019 | val_recon_loss : 0.031 | tr_total_loss : 0.046 | val_total_loss : 0.056 | tr_stimu_loss : 0.073 | val_stimu_loss : 0.081
+2022-08-24 16:44:05,669 INFO not improved for     4 iterations
+2022-08-24 16:44:10,351 INFO [11,    30] tr_recon_loss : 0.019 | val_recon_loss : 0.021 | tr_total_loss : 0.046 | val_total_loss : 0.050 | tr_stimu_loss : 0.073 | val_stimu_loss : 0.078
+2022-08-24 16:44:10,351 INFO Saving to ./orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:44:10,355 INFO Saving to ./orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:44:11,556 INFO Epoch 13
+2022-08-24 16:44:16,597 INFO [12,    10] tr_recon_loss : 0.019 | val_recon_loss : 0.022 | tr_total_loss : 0.046 | val_total_loss : 0.050 | tr_stimu_loss : 0.073 | val_stimu_loss : 0.078
+2022-08-24 16:44:16,597 INFO not improved for     1 iterations
+2022-08-24 16:44:21,437 INFO [12,    20] tr_recon_loss : 0.021 | val_recon_loss : 0.024 | tr_total_loss : 0.047 | val_total_loss : 0.051 | tr_stimu_loss : 0.074 | val_stimu_loss : 0.078
+2022-08-24 16:44:21,437 INFO not improved for     2 iterations
+2022-08-24 16:44:26,009 INFO [12,    30] tr_recon_loss : 0.020 | val_recon_loss : 0.020 | tr_total_loss : 0.046 | val_total_loss : 0.049 | tr_stimu_loss : 0.072 | val_stimu_loss : 0.078
+2022-08-24 16:44:26,009 INFO Saving to ./orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:44:26,013 INFO Saving to ./orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:44:27,219 INFO Epoch 14
+2022-08-24 16:44:32,084 INFO [13,    10] tr_recon_loss : 0.021 | val_recon_loss : 0.019 | tr_total_loss : 0.046 | val_total_loss : 0.048 | tr_stimu_loss : 0.072 | val_stimu_loss : 0.077
+2022-08-24 16:44:32,084 INFO Saving to ./orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:44:32,088 INFO Saving to ./orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:44:36,916 INFO [13,    20] tr_recon_loss : 0.019 | val_recon_loss : 0.024 | tr_total_loss : 0.045 | val_total_loss : 0.049 | tr_stimu_loss : 0.071 | val_stimu_loss : 0.074
+2022-08-24 16:44:36,916 INFO not improved for     1 iterations
+2022-08-24 16:44:41,559 INFO [13,    30] tr_recon_loss : 0.021 | val_recon_loss : 0.019 | tr_total_loss : 0.045 | val_total_loss : 0.048 | tr_stimu_loss : 0.070 | val_stimu_loss : 0.077
+2022-08-24 16:44:41,559 INFO not improved for     2 iterations
+2022-08-24 16:44:42,860 INFO Epoch 15
+2022-08-24 16:44:47,630 INFO [14,    10] tr_recon_loss : 0.020 | val_recon_loss : 0.023 | tr_total_loss : 0.045 | val_total_loss : 0.048 | tr_stimu_loss : 0.070 | val_stimu_loss : 0.073
+2022-08-24 16:44:47,630 INFO not improved for     3 iterations
+2022-08-24 16:44:52,628 INFO [14,    20] tr_recon_loss : 0.021 | val_recon_loss : 0.019 | tr_total_loss : 0.045 | val_total_loss : 0.048 | tr_stimu_loss : 0.068 | val_stimu_loss : 0.076
+2022-08-24 16:44:52,628 INFO Saving to ./orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:44:52,632 INFO Saving to ./orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:44:57,271 INFO [14,    30] tr_recon_loss : 0.021 | val_recon_loss : 0.023 | tr_total_loss : 0.045 | val_total_loss : 0.048 | tr_stimu_loss : 0.070 | val_stimu_loss : 0.073
+2022-08-24 16:44:57,271 INFO not improved for     1 iterations
+2022-08-24 16:44:58,475 INFO Epoch 16
+2022-08-24 16:45:03,058 INFO [15,    10] tr_recon_loss : 0.022 | val_recon_loss : 0.022 | tr_total_loss : 0.044 | val_total_loss : 0.048 | tr_stimu_loss : 0.067 | val_stimu_loss : 0.073
+2022-08-24 16:45:03,058 INFO not improved for     2 iterations
+2022-08-24 16:45:07,373 INFO [15,    20] tr_recon_loss : 0.021 | val_recon_loss : 0.021 | tr_total_loss : 0.044 | val_total_loss : 0.048 | tr_stimu_loss : 0.067 | val_stimu_loss : 0.074
+2022-08-24 16:45:07,373 INFO Saving to ./orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:45:07,377 INFO Saving to ./orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:45:12,078 INFO [15,    30] tr_recon_loss : 0.021 | val_recon_loss : 0.023 | tr_total_loss : 0.044 | val_total_loss : 0.047 | tr_stimu_loss : 0.067 | val_stimu_loss : 0.071
+2022-08-24 16:45:12,078 INFO Saving to ./orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:45:12,082 INFO Saving to ./orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:45:13,273 INFO Epoch 17
+2022-08-24 16:45:17,649 INFO [16,    10] tr_recon_loss : 0.019 | val_recon_loss : 0.023 | tr_total_loss : 0.044 | val_total_loss : 0.048 | tr_stimu_loss : 0.068 | val_stimu_loss : 0.074
+2022-08-24 16:45:17,649 INFO not improved for     1 iterations
+2022-08-24 16:45:22,226 INFO [16,    20] tr_recon_loss : 0.020 | val_recon_loss : 0.018 | tr_total_loss : 0.044 | val_total_loss : 0.047 | tr_stimu_loss : 0.068 | val_stimu_loss : 0.076
+2022-08-24 16:45:22,226 INFO not improved for     2 iterations
+2022-08-24 16:45:26,546 INFO [16,    30] tr_recon_loss : 0.017 | val_recon_loss : 0.021 | tr_total_loss : 0.043 | val_total_loss : 0.045 | tr_stimu_loss : 0.069 | val_stimu_loss : 0.069
+2022-08-24 16:45:26,546 INFO Saving to ./orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:45:26,550 INFO Saving to ./orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:45:27,731 INFO Epoch 18
+2022-08-24 16:45:32,322 INFO [17,    10] tr_recon_loss : 0.017 | val_recon_loss : 0.023 | tr_total_loss : 0.042 | val_total_loss : 0.049 | tr_stimu_loss : 0.067 | val_stimu_loss : 0.075
+2022-08-24 16:45:32,323 INFO not improved for     1 iterations
+2022-08-24 16:45:36,931 INFO [17,    20] tr_recon_loss : 0.017 | val_recon_loss : 0.016 | tr_total_loss : 0.043 | val_total_loss : 0.044 | tr_stimu_loss : 0.068 | val_stimu_loss : 0.072
+2022-08-24 16:45:36,931 INFO Saving to ./orig_NN/demo_model_best_encoder.pth...
+2022-08-24 16:45:36,935 INFO Saving to ./orig_NN/demo_model_best_decoder.pth...
+2022-08-24 16:45:41,496 INFO [17,    30] tr_recon_loss : 0.016 | val_recon_loss : 0.021 | tr_total_loss : 0.042 | val_total_loss : 0.046 | tr_stimu_loss : 0.067 | val_stimu_loss : 0.071
+2022-08-24 16:45:41,496 INFO not improved for     1 iterations
+2022-08-24 16:45:42,811 INFO Epoch 19
+2022-08-24 16:45:47,608 INFO [18,    10] tr_recon_loss : 0.016 | val_recon_loss : 0.017 | tr_total_loss : 0.042 | val_total_loss : 0.045 | tr_stimu_loss : 0.067 | val_stimu_loss : 0.072
+2022-08-24 16:45:47,608 INFO not improved for     2 iterations
+2022-08-24 16:45:52,079 INFO [18,    20] tr_recon_loss : 0.017 | val_recon_loss : 0.017 | tr_total_loss : 0.042 | val_total_loss : 0.045 | tr_stimu_loss : 0.068 | val_stimu_loss : 0.072
+2022-08-24 16:45:52,079 INFO not improved for     3 iterations
+2022-08-24 16:45:56,649 INFO [18,    30] tr_recon_loss : 0.016 | val_recon_loss : 0.018 | tr_total_loss : 0.042 | val_total_loss : 0.045 | tr_stimu_loss : 0.067 | val_stimu_loss : 0.073
+2022-08-24 16:45:56,649 INFO not improved for     4 iterations
+2022-08-24 16:45:57,909 INFO Epoch 20
+2022-08-24 16:46:03,074 INFO [19,    10] tr_recon_loss : 0.017 | val_recon_loss : 0.015 | tr_total_loss : 0.042 | val_total_loss : 0.044 | tr_stimu_loss : 0.067 | val_stimu_loss : 0.073
+2022-08-24 16:46:03,074 INFO not improved for     5 iterations
+2022-08-24 16:46:08,017 INFO [19,    20] tr_recon_loss : 0.016 | val_recon_loss : 0.017 | tr_total_loss : 0.041 | val_total_loss : 0.045 | tr_stimu_loss : 0.066 | val_stimu_loss : 0.073
+2022-08-24 16:46:08,017 INFO not improved for     6 iterations
+2022-08-24 16:46:12,830 INFO [19,    30] tr_recon_loss : 0.016 | val_recon_loss : 0.016 | tr_total_loss : 0.043 | val_total_loss : 0.045 | tr_stimu_loss : 0.070 | val_stimu_loss : 0.074
+2022-08-24 16:46:12,831 INFO not improved for     7 iterations
+2022-08-24 16:46:14,177 INFO Epoch 21
+2022-08-24 16:46:18,905 INFO [20,    10] tr_recon_loss : 0.015 | val_recon_loss : 0.019 | tr_total_loss : 0.043 | val_total_loss : 0.045 | tr_stimu_loss : 0.070 | val_stimu_loss : 0.072
+2022-08-24 16:46:18,905 INFO not improved for     8 iterations
+2022-08-24 16:46:23,341 INFO [20,    20] tr_recon_loss : 0.015 | val_recon_loss : 0.014 | tr_total_loss : 0.042 | val_total_loss : 0.044 | tr_stimu_loss : 0.068 | val_stimu_loss : 0.074
+2022-08-24 16:46:23,341 INFO not improved for     9 iterations
+2022-08-24 16:46:28,120 INFO [20,    30] tr_recon_loss : 0.015 | val_recon_loss : 0.016 | tr_total_loss : 0.042 | val_total_loss : 0.045 | tr_stimu_loss : 0.068 | val_stimu_loss : 0.074
+2022-08-24 16:46:28,120 INFO not improved for    10 iterations
+2022-08-24 16:46:29,338 INFO Epoch 22
+2022-08-24 16:46:34,014 INFO [21,    10] tr_recon_loss : 0.015 | val_recon_loss : 0.016 | tr_total_loss : 0.042 | val_total_loss : 0.045 | tr_stimu_loss : 0.070 | val_stimu_loss : 0.073
+2022-08-24 16:46:34,015 INFO not improved for    11 iterations
+2022-08-24 16:46:38,717 INFO [21,    20] tr_recon_loss : 0.016 | val_recon_loss : 0.016 | tr_total_loss : 0.042 | val_total_loss : 0.045 | tr_stimu_loss : 0.069 | val_stimu_loss : 0.073
+2022-08-24 16:46:38,717 INFO not improved for    12 iterations
+2022-08-24 16:46:43,227 INFO [21,    30] tr_recon_loss : 0.015 | val_recon_loss : 0.018 | tr_total_loss : 0.042 | val_total_loss : 0.045 | tr_stimu_loss : 0.069 | val_stimu_loss : 0.072
+2022-08-24 16:46:43,227 INFO not improved for    13 iterations
+2022-08-24 16:46:44,644 INFO Epoch 23
+2022-08-24 16:46:49,478 INFO [22,    10] tr_recon_loss : 0.015 | val_recon_loss : 0.016 | tr_total_loss : 0.042 | val_total_loss : 0.044 | tr_stimu_loss : 0.068 | val_stimu_loss : 0.073
+2022-08-24 16:46:49,478 INFO not improved for    14 iterations
+2022-08-24 16:46:53,965 INFO [22,    20] tr_recon_loss : 0.015 | val_recon_loss : 0.017 | tr_total_loss : 0.041 | val_total_loss : 0.046 | tr_stimu_loss : 0.068 | val_stimu_loss : 0.074
+2022-08-24 16:46:53,965 INFO not improved for    15 iterations
+2022-08-24 16:46:58,549 INFO [22,    30] tr_recon_loss : 0.015 | val_recon_loss : 0.015 | tr_total_loss : 0.043 | val_total_loss : 0.045 | tr_stimu_loss : 0.070 | val_stimu_loss : 0.074
+2022-08-24 16:46:58,549 INFO not improved for    16 iterations
+2022-08-24 16:46:59,699 INFO Epoch 24
+2022-08-24 16:47:04,752 INFO [23,    10] tr_recon_loss : 0.015 | val_recon_loss : 0.014 | tr_total_loss : 0.042 | val_total_loss : 0.044 | tr_stimu_loss : 0.069 | val_stimu_loss : 0.075
+2022-08-24 16:47:04,752 INFO not improved for    17 iterations
+2022-08-24 16:47:09,569 INFO [23,    20] tr_recon_loss : 0.016 | val_recon_loss : 0.016 | tr_total_loss : 0.043 | val_total_loss : 0.046 | tr_stimu_loss : 0.070 | val_stimu_loss : 0.075
+2022-08-24 16:47:09,569 INFO not improved for    18 iterations
+2022-08-24 16:47:14,007 INFO [23,    30] tr_recon_loss : 0.015 | val_recon_loss : 0.018 | tr_total_loss : 0.043 | val_total_loss : 0.046 | tr_stimu_loss : 0.071 | val_stimu_loss : 0.075
+2022-08-24 16:47:14,007 INFO not improved for    19 iterations
+2022-08-24 16:47:15,229 INFO Epoch 25
+2022-08-24 16:47:20,085 INFO [24,    10] tr_recon_loss : 0.015 | val_recon_loss : 0.017 | tr_total_loss : 0.043 | val_total_loss : 0.046 | tr_stimu_loss : 0.070 | val_stimu_loss : 0.076
+2022-08-24 16:47:20,085 INFO not improved for    20 iterations
+2022-08-24 16:47:24,772 INFO [24,    20] tr_recon_loss : 0.015 | val_recon_loss : 0.016 | tr_total_loss : 0.043 | val_total_loss : 0.046 | tr_stimu_loss : 0.072 | val_stimu_loss : 0.076
+2022-08-24 16:47:24,772 INFO not improved for    21 iterations
+2022-08-24 16:47:29,615 INFO [24,    30] tr_recon_loss : 0.017 | val_recon_loss : 0.019 | tr_total_loss : 0.044 | val_total_loss : 0.047 | tr_stimu_loss : 0.071 | val_stimu_loss : 0.075
+2022-08-24 16:47:29,615 INFO not improved for    22 iterations
+2022-08-24 16:47:30,848 INFO Epoch 26
+2022-08-24 16:47:35,670 INFO [25,    10] tr_recon_loss : 0.016 | val_recon_loss : 0.015 | tr_total_loss : 0.043 | val_total_loss : 0.046 | tr_stimu_loss : 0.071 | val_stimu_loss : 0.076
+2022-08-24 16:47:35,670 INFO not improved for    23 iterations
+2022-08-24 16:47:40,505 INFO [25,    20] tr_recon_loss : 0.016 | val_recon_loss : 0.016 | tr_total_loss : 0.043 | val_total_loss : 0.046 | tr_stimu_loss : 0.071 | val_stimu_loss : 0.076
+2022-08-24 16:47:40,505 INFO not improved for    24 iterations
+2022-08-24 16:47:45,082 INFO [25,    30] tr_recon_loss : 0.017 | val_recon_loss : 0.019 | tr_total_loss : 0.044 | val_total_loss : 0.047 | tr_stimu_loss : 0.071 | val_stimu_loss : 0.074
+2022-08-24 16:47:45,082 INFO not improved for    25 iterations
+2022-08-24 16:47:46,394 INFO Epoch 27
+2022-08-24 16:47:51,208 INFO [26,    10] tr_recon_loss : 0.016 | val_recon_loss : 0.016 | tr_total_loss : 0.043 | val_total_loss : 0.045 | tr_stimu_loss : 0.070 | val_stimu_loss : 0.074
+2022-08-24 16:47:51,208 INFO not improved for    26 iterations
+2022-08-24 16:47:56,145 INFO [26,    20] tr_recon_loss : 0.015 | val_recon_loss : 0.016 | tr_total_loss : 0.043 | val_total_loss : 0.046 | tr_stimu_loss : 0.071 | val_stimu_loss : 0.076
+2022-08-24 16:47:56,146 INFO not improved for    27 iterations
+2022-08-24 16:48:01,092 INFO [26,    30] tr_recon_loss : 0.015 | val_recon_loss : 0.015 | tr_total_loss : 0.044 | val_total_loss : 0.046 | tr_stimu_loss : 0.073 | val_stimu_loss : 0.078
+2022-08-24 16:48:01,092 INFO not improved for    28 iterations
+2022-08-24 16:48:02,399 INFO Epoch 28
+2022-08-24 16:48:07,393 INFO [27,    10] tr_recon_loss : 0.015 | val_recon_loss : 0.017 | tr_total_loss : 0.043 | val_total_loss : 0.046 | tr_stimu_loss : 0.072 | val_stimu_loss : 0.075
+2022-08-24 16:48:07,393 INFO not improved for    29 iterations
+2022-08-24 16:48:12,236 INFO [27,    20] tr_recon_loss : 0.015 | val_recon_loss : 0.016 | tr_total_loss : 0.043 | val_total_loss : 0.046 | tr_stimu_loss : 0.071 | val_stimu_loss : 0.076
+2022-08-24 16:48:12,236 INFO not improved for    30 iterations
+2022-08-24 16:48:17,261 INFO [27,    30] tr_recon_loss : 0.015 | val_recon_loss : 0.016 | tr_total_loss : 0.043 | val_total_loss : 0.046 | tr_stimu_loss : 0.072 | val_stimu_loss : 0.076
+2022-08-24 16:48:17,261 INFO not improved for    31 iterations
+2022-08-24 16:48:18,531 INFO Epoch 29
+2022-08-24 16:48:23,624 INFO [28,    10] tr_recon_loss : 0.015 | val_recon_loss : 0.015 | tr_total_loss : 0.043 | val_total_loss : 0.045 | tr_stimu_loss : 0.071 | val_stimu_loss : 0.076
+2022-08-24 16:48:23,624 INFO not improved for    32 iterations
+2022-08-24 16:48:28,546 INFO [28,    20] tr_recon_loss : 0.014 | val_recon_loss : 0.017 | tr_total_loss : 0.042 | val_total_loss : 0.046 | tr_stimu_loss : 0.071 | val_stimu_loss : 0.075
+2022-08-24 16:48:28,547 INFO not improved for    33 iterations
+2022-08-24 16:48:33,594 INFO [28,    30] tr_recon_loss : 0.014 | val_recon_loss : 0.014 | tr_total_loss : 0.043 | val_total_loss : 0.045 | tr_stimu_loss : 0.072 | val_stimu_loss : 0.076
+2022-08-24 16:48:33,594 INFO not improved for    34 iterations
+2022-08-24 16:48:34,885 INFO Epoch 30
+2022-08-24 16:48:39,823 INFO [29,    10] tr_recon_loss : 0.014 | val_recon_loss : 0.017 | tr_total_loss : 0.043 | val_total_loss : 0.045 | tr_stimu_loss : 0.072 | val_stimu_loss : 0.074
+2022-08-24 16:48:39,823 INFO not improved for    35 iterations
+2022-08-24 16:48:44,734 INFO [29,    20] tr_recon_loss : 0.015 | val_recon_loss : 0.015 | tr_total_loss : 0.042 | val_total_loss : 0.045 | tr_stimu_loss : 0.070 | val_stimu_loss : 0.075
+2022-08-24 16:48:44,734 INFO not improved for    36 iterations
+2022-08-24 16:48:49,548 INFO [29,    30] tr_recon_loss : 0.014 | val_recon_loss : 0.014 | tr_total_loss : 0.043 | val_total_loss : 0.044 | tr_stimu_loss : 0.071 | val_stimu_loss : 0.075
+2022-08-24 16:48:49,548 INFO not improved for    37 iterations
+2022-08-24 16:48:50,819 INFO Epoch 31
+2022-08-24 16:48:55,534 INFO [30,    10] tr_recon_loss : 0.013 | val_recon_loss : 0.016 | tr_total_loss : 0.041 | val_total_loss : 0.045 | tr_stimu_loss : 0.069 | val_stimu_loss : 0.075
+2022-08-24 16:48:55,534 INFO not improved for    38 iterations
+2022-08-24 16:49:00,553 INFO [30,    20] tr_recon_loss : 0.014 | val_recon_loss : 0.014 | tr_total_loss : 0.043 | val_total_loss : 0.045 | tr_stimu_loss : 0.071 | val_stimu_loss : 0.076
+2022-08-24 16:49:00,553 INFO not improved for    39 iterations
+2022-08-24 16:49:05,431 INFO [30,    30] tr_recon_loss : 0.013 | val_recon_loss : 0.014 | tr_total_loss : 0.043 | val_total_loss : 0.045 | tr_stimu_loss : 0.073 | val_stimu_loss : 0.077
+2022-08-24 16:49:05,431 INFO not improved for    40 iterations
+2022-08-24 16:49:06,644 INFO Epoch 32
+2022-08-24 16:49:11,453 INFO [31,    10] tr_recon_loss : 0.013 | val_recon_loss : 0.014 | tr_total_loss : 0.043 | val_total_loss : 0.045 | tr_stimu_loss : 0.072 | val_stimu_loss : 0.075
+2022-08-24 16:49:11,454 INFO not improved for    41 iterations
+2022-08-24 16:49:16,276 INFO [31,    20] tr_recon_loss : 0.013 | val_recon_loss : 0.015 | tr_total_loss : 0.043 | val_total_loss : 0.045 | tr_stimu_loss : 0.073 | val_stimu_loss : 0.076
+2022-08-24 16:49:16,277 INFO not improved for    42 iterations
+2022-08-24 16:49:21,130 INFO [31,    30] tr_recon_loss : 0.013 | val_recon_loss : 0.013 | tr_total_loss : 0.042 | val_total_loss : 0.045 | tr_stimu_loss : 0.072 | val_stimu_loss : 0.076
+2022-08-24 16:49:21,130 INFO not improved for    43 iterations
+2022-08-24 16:49:22,277 INFO Epoch 33
+2022-08-24 16:49:27,377 INFO [32,    10] tr_recon_loss : 0.012 | val_recon_loss : 0.014 | tr_total_loss : 0.042 | val_total_loss : 0.045 | tr_stimu_loss : 0.072 | val_stimu_loss : 0.077
+2022-08-24 16:49:27,377 INFO not improved for    44 iterations
+2022-08-24 16:49:32,090 INFO [32,    20] tr_recon_loss : 0.013 | val_recon_loss : 0.013 | tr_total_loss : 0.043 | val_total_loss : 0.044 | tr_stimu_loss : 0.073 | val_stimu_loss : 0.076
+2022-08-24 16:49:32,090 INFO not improved for    45 iterations
+2022-08-24 16:49:36,951 INFO [32,    30] tr_recon_loss : 0.013 | val_recon_loss : 0.013 | tr_total_loss : 0.043 | val_total_loss : 0.046 | tr_stimu_loss : 0.072 | val_stimu_loss : 0.078
+2022-08-24 16:49:36,951 INFO not improved for    46 iterations
+2022-08-24 16:49:38,270 INFO Epoch 34
+2022-08-24 16:49:42,614 INFO [33,    10] tr_recon_loss : 0.013 | val_recon_loss : 0.014 | tr_total_loss : 0.043 | val_total_loss : 0.046 | tr_stimu_loss : 0.074 | val_stimu_loss : 0.078
+2022-08-24 16:49:42,615 INFO not improved for    47 iterations
+2022-08-24 16:49:47,072 INFO [33,    20] tr_recon_loss : 0.013 | val_recon_loss : 0.013 | tr_total_loss : 0.044 | val_total_loss : 0.046 | tr_stimu_loss : 0.075 | val_stimu_loss : 0.079
+2022-08-24 16:49:47,072 INFO not improved for    48 iterations
+2022-08-24 16:49:51,545 INFO [33,    30] tr_recon_loss : 0.013 | val_recon_loss : 0.014 | tr_total_loss : 0.043 | val_total_loss : 0.045 | tr_stimu_loss : 0.074 | val_stimu_loss : 0.076
+2022-08-24 16:49:51,545 INFO not improved for    49 iterations
+2022-08-24 16:49:52,820 INFO Epoch 35
+2022-08-24 16:49:57,353 INFO [34,    10] tr_recon_loss : 0.013 | val_recon_loss : 0.014 | tr_total_loss : 0.043 | val_total_loss : 0.046 | tr_stimu_loss : 0.074 | val_stimu_loss : 0.079
+2022-08-24 16:49:57,353 INFO not improved for    50 iterations
+2022-08-24 16:50:01,955 INFO [34,    20] tr_recon_loss : 0.013 | val_recon_loss : 0.012 | tr_total_loss : 0.042 | val_total_loss : 0.045 | tr_stimu_loss : 0.071 | val_stimu_loss : 0.077
+2022-08-24 16:50:01,955 INFO not improved for    51 iterations
+2022-08-24 16:50:01,955 INFO Finished Training
+2022-09-21 13:27:33,121 INFO model_name                   demo_model
+savedir                        orig_NN/
+seed                                  0
+n_epochs                             80
+log_interval                         10
+convergence_crit                     50
+binary_stimulation                 True
+simulation_type                 regular
+input_channels                        1
+reconstruction_channels               1
+out_activation                  sigmoid
+dataset                      characters
+device                           cuda:0
+batch_size                           30
+optimizer                          adam
+learning_rate                    0.0001
+reconstruction_loss                 mse
+reconstruction_loss_param             0
+sparsity_loss                        L1
+kappa                               0.5
+dtype: object
+2022-09-21 13:27:33,122 INFO Epoch 1
+2022-09-21 13:27:38,066 INFO [0,    10] tr_recon_loss : 0.161 | val_recon_loss : 0.201 | tr_total_loss : 0.283 | val_total_loss : 0.346 | tr_stimu_loss : 0.405 | val_stimu_loss : 0.491
+2022-09-21 13:28:47,564 INFO model_name                   demo_model
+savedir                        orig_NN/
+seed                                  0
+n_epochs                             80
+log_interval                         10
+convergence_crit                     50
+binary_stimulation                 True
+simulation_type                 regular
+input_channels                        1
+reconstruction_channels               1
+out_activation                  sigmoid
+dataset                      characters
+device                           cuda:0
+batch_size                           30
+optimizer                          adam
+learning_rate                    0.0001
+reconstruction_loss                 mse
+reconstruction_loss_param             0
+sparsity_loss                        L1
+kappa                               0.5
+dtype: object
+2022-09-21 13:28:47,565 INFO Epoch 1
+2022-09-21 13:28:52,473 INFO [0,    10] tr_recon_loss : 0.165 | val_recon_loss : 0.207 | tr_total_loss : 0.291 | val_total_loss : 0.349 | tr_stimu_loss : 0.417 | val_stimu_loss : 0.490
+2022-09-21 13:29:15,222 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 13:29:15,237 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 13:29:32,946 INFO model_name                   demo_model
+savedir                        orig_NN/
+seed                                  0
+n_epochs                             80
+log_interval                         10
+convergence_crit                     50
+binary_stimulation                 True
+simulation_type                 regular
+input_channels                        1
+reconstruction_channels               1
+out_activation                  sigmoid
+dataset                      characters
+device                           cuda:0
+batch_size                           30
+optimizer                          adam
+learning_rate                    0.0001
+reconstruction_loss                 mse
+reconstruction_loss_param             0
+sparsity_loss                        L1
+kappa                               0.5
+dtype: object
+2022-09-21 13:29:32,947 INFO Epoch 1
+2022-09-21 13:29:37,856 INFO [0,    10] tr_recon_loss : 0.165 | val_recon_loss : 0.202 | tr_total_loss : 0.284 | val_total_loss : 0.345 | tr_stimu_loss : 0.403 | val_stimu_loss : 0.488
+2022-09-21 13:30:46,441 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 13:30:46,456 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 13:30:51,224 INFO [0,    20] tr_recon_loss : 0.191 | val_recon_loss : 0.195 | tr_total_loss : 0.266 | val_total_loss : 0.316 | tr_stimu_loss : 0.341 | val_stimu_loss : 0.437
+2022-09-21 13:31:08,134 INFO model_name                   demo_model
+savedir                        orig_NN/
+seed                                  0
+n_epochs                             80
+log_interval                         10
+convergence_crit                     50
+binary_stimulation                 True
+simulation_type                 regular
+input_channels                        1
+reconstruction_channels               1
+out_activation                  sigmoid
+dataset                      characters
+device                           cuda:0
+batch_size                           30
+optimizer                          adam
+learning_rate                    0.0001
+reconstruction_loss                 mse
+reconstruction_loss_param             0
+sparsity_loss                        L1
+kappa                               0.5
+dtype: object
+2022-09-21 13:31:08,134 INFO Epoch 1
+2022-09-21 13:31:12,908 INFO [0,    10] tr_recon_loss : 0.165 | val_recon_loss : 0.202 | tr_total_loss : 0.284 | val_total_loss : 0.344 | tr_stimu_loss : 0.403 | val_stimu_loss : 0.486
+2022-09-21 13:32:19,690 INFO model_name                   demo_model
+savedir                        orig_NN/
+seed                                  0
+n_epochs                             80
+log_interval                         10
+convergence_crit                     50
+binary_stimulation                 True
+simulation_type                 regular
+input_channels                        1
+reconstruction_channels               1
+out_activation                  sigmoid
+dataset                      characters
+device                           cuda:0
+batch_size                           30
+optimizer                          adam
+learning_rate                    0.0001
+reconstruction_loss                 mse
+reconstruction_loss_param             0
+sparsity_loss                        L1
+kappa                               0.5
+dtype: object
+2022-09-21 13:32:19,690 INFO Epoch 1
+2022-09-21 13:32:34,667 INFO model_name                   demo_model
+savedir                        orig_NN/
+seed                                  0
+n_epochs                             80
+log_interval                         10
+convergence_crit                     50
+binary_stimulation                 True
+simulation_type                 regular
+input_channels                        1
+reconstruction_channels               1
+out_activation                  sigmoid
+dataset                      characters
+device                           cuda:0
+batch_size                           30
+optimizer                          adam
+learning_rate                    0.0001
+reconstruction_loss                 mse
+reconstruction_loss_param             0
+sparsity_loss                        L1
+kappa                               0.5
+dtype: object
+2022-09-21 13:32:34,668 INFO Epoch 1
+2022-09-21 13:34:18,936 INFO model_name                   demo_model
+savedir                        orig_NN/
+seed                                  0
+n_epochs                             80
+log_interval                         10
+convergence_crit                     50
+binary_stimulation                 True
+simulation_type                 regular
+input_channels                        1
+reconstruction_channels               1
+out_activation                  sigmoid
+dataset                      characters
+device                           cuda:0
+batch_size                           30
+optimizer                          adam
+learning_rate                    0.0001
+reconstruction_loss                 mse
+reconstruction_loss_param             0
+sparsity_loss                        L1
+kappa                               0.5
+dtype: object
+2022-09-21 13:34:18,937 INFO Epoch 1
+2022-09-21 13:35:30,749 INFO model_name                   demo_model
+savedir                        orig_NN/
+seed                                  0
+n_epochs                             80
+log_interval                         10
+convergence_crit                     50
+binary_stimulation                 True
+simulation_type                 regular
+input_channels                        1
+reconstruction_channels               1
+out_activation                  sigmoid
+dataset                      characters
+device                           cuda:0
+batch_size                           30
+optimizer                          adam
+learning_rate                    0.0001
+reconstruction_loss                 mse
+reconstruction_loss_param             0
+sparsity_loss                        L1
+kappa                               0.5
+dtype: object
+2022-09-21 13:35:30,749 INFO Epoch 1
+2022-09-21 13:36:18,340 INFO model_name                   demo_model
+savedir                        orig_NN/
+seed                                  0
+n_epochs                             80
+log_interval                         10
+convergence_crit                     50
+binary_stimulation                 True
+simulation_type                 regular
+input_channels                        1
+reconstruction_channels               1
+out_activation                  sigmoid
+dataset                      characters
+device                           cuda:0
+batch_size                           30
+optimizer                          adam
+learning_rate                    0.0001
+reconstruction_loss                 mse
+reconstruction_loss_param             0
+sparsity_loss                        L1
+kappa                               0.5
+dtype: object
+2022-09-21 13:36:18,341 INFO Epoch 1
+2022-09-21 13:37:25,239 INFO model_name                   demo_model
+savedir                        orig_NN/
+seed                                  0
+n_epochs                             80
+log_interval                         10
+convergence_crit                     50
+binary_stimulation                 True
+simulation_type                 regular
+input_channels                        1
+reconstruction_channels               1
+out_activation                  sigmoid
+dataset                      characters
+device                           cuda:0
+batch_size                           30
+optimizer                          adam
+learning_rate                    0.0001
+reconstruction_loss                 mse
+reconstruction_loss_param             0
+sparsity_loss                        L1
+kappa                               0.5
+dtype: object
+2022-09-21 13:37:25,239 INFO Epoch 1
+2022-09-21 13:37:30,096 INFO [0,    10] tr_recon_loss : 0.162 | val_recon_loss : 0.203 | tr_total_loss : 0.283 | val_total_loss : 0.348 | tr_stimu_loss : 0.405 | val_stimu_loss : 0.494
+2022-09-21 13:38:05,363 INFO model_name                   demo_model
+savedir                        orig_NN/
+seed                                  0
+n_epochs                             80
+log_interval                         10
+convergence_crit                     50
+binary_stimulation                 True
+simulation_type                 regular
+input_channels                        1
+reconstruction_channels               1
+out_activation                  sigmoid
+dataset                      characters
+device                           cuda:0
+batch_size                           30
+optimizer                          adam
+learning_rate                    0.0001
+reconstruction_loss                 mse
+reconstruction_loss_param             0
+sparsity_loss                        L1
+kappa                               0.5
+dtype: object
+2022-09-21 13:38:05,363 INFO Epoch 1
+2022-09-21 13:38:10,212 INFO [0,    10] tr_recon_loss : 0.166 | val_recon_loss : 0.208 | tr_total_loss : 0.288 | val_total_loss : 0.351 | tr_stimu_loss : 0.410 | val_stimu_loss : 0.493
+2022-09-21 13:38:59,999 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 13:39:00,013 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 13:39:18,964 INFO model_name                   demo_model
+savedir                        orig_NN/
+seed                                  0
+n_epochs                             80
+log_interval                         10
+convergence_crit                     50
+binary_stimulation                 True
+simulation_type                 regular
+input_channels                        1
+reconstruction_channels               1
+out_activation                  sigmoid
+dataset                      characters
+device                           cuda:0
+batch_size                           30
+optimizer                          adam
+learning_rate                    0.0001
+reconstruction_loss                 mse
+reconstruction_loss_param             0
+sparsity_loss                        L1
+kappa                               0.5
+dtype: object
+2022-09-21 13:39:18,964 INFO Epoch 1
+2022-09-21 13:39:23,893 INFO [0,    10] tr_recon_loss : 0.162 | val_recon_loss : 0.204 | tr_total_loss : 0.284 | val_total_loss : 0.349 | tr_stimu_loss : 0.406 | val_stimu_loss : 0.493
+2022-09-21 13:40:02,743 INFO model_name                   demo_model
+savedir                        orig_NN/
+seed                                  0
+n_epochs                             80
+log_interval                         10
+convergence_crit                     50
+binary_stimulation                 True
+simulation_type                 regular
+input_channels                        1
+reconstruction_channels               1
+out_activation                  sigmoid
+dataset                      characters
+device                           cuda:0
+batch_size                           30
+optimizer                          adam
+learning_rate                    0.0001
+reconstruction_loss                 mse
+reconstruction_loss_param             0
+sparsity_loss                        L1
+kappa                               0.5
+dtype: object
+2022-09-21 13:40:02,743 INFO Epoch 1
+2022-09-21 13:40:07,701 INFO [0,    10] tr_recon_loss : 0.166 | val_recon_loss : 0.203 | tr_total_loss : 0.284 | val_total_loss : 0.344 | tr_stimu_loss : 0.402 | val_stimu_loss : 0.485
+2022-09-21 13:40:22,035 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 13:40:22,048 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 13:40:26,857 INFO [0,    20] tr_recon_loss : 0.191 | val_recon_loss : 0.195 | tr_total_loss : 0.266 | val_total_loss : 0.314 | tr_stimu_loss : 0.341 | val_stimu_loss : 0.433
+2022-09-21 13:40:29,501 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 13:40:29,512 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 13:40:34,208 INFO [0,    30] tr_recon_loss : 0.182 | val_recon_loss : 0.185 | tr_total_loss : 0.245 | val_total_loss : 0.298 | tr_stimu_loss : 0.308 | val_stimu_loss : 0.411
+2022-09-21 13:40:37,617 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 13:40:37,631 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 13:40:38,939 INFO Epoch 2
+2022-09-21 13:40:43,690 INFO [1,    10] tr_recon_loss : 0.144 | val_recon_loss : 0.157 | tr_total_loss : 0.211 | val_total_loss : 0.249 | tr_stimu_loss : 0.277 | val_stimu_loss : 0.342
+2022-09-21 13:40:46,167 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 13:40:46,180 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 13:40:51,067 INFO [1,    20] tr_recon_loss : 0.097 | val_recon_loss : 0.154 | tr_total_loss : 0.177 | val_total_loss : 0.213 | tr_stimu_loss : 0.258 | val_stimu_loss : 0.271
+2022-09-21 14:01:15,241 INFO model_name                   demo_model
+savedir                        orig_NN/
+seed                                  0
+n_epochs                             80
+log_interval                         10
+convergence_crit                     50
+binary_stimulation                 True
+simulation_type                 regular
+input_channels                        1
+reconstruction_channels               1
+out_activation                  sigmoid
+dataset                      characters
+device                           cuda:0
+batch_size                           30
+optimizer                          adam
+learning_rate                    0.0001
+reconstruction_loss                 mse
+reconstruction_loss_param             0
+sparsity_loss                        L1
+kappa                               0.5
+dtype: object
+2022-09-21 14:01:15,242 INFO Epoch 1
+2022-09-21 14:07:09,610 INFO model_name                   demo_model
+savedir                        orig_NN/
+seed                                  0
+n_epochs                             80
+log_interval                         10
+convergence_crit                     50
+binary_stimulation                 True
+simulation_type                 regular
+input_channels                        1
+reconstruction_channels               1
+out_activation                  sigmoid
+dataset                      characters
+device                           cuda:0
+batch_size                           30
+optimizer                          adam
+learning_rate                    0.0001
+reconstruction_loss                 mse
+reconstruction_loss_param             0
+sparsity_loss                        L1
+kappa                               0.5
+dtype: object
+2022-09-21 14:07:09,611 INFO Epoch 1
+2022-09-21 14:07:14,472 INFO [0,    10] tr_recon_loss : 0.160 | val_recon_loss : 0.201 | tr_total_loss : 0.283 | val_total_loss : 0.346 | tr_stimu_loss : 0.405 | val_stimu_loss : 0.491
+2022-09-21 14:07:44,384 INFO model_name                   demo_model
+savedir                        orig_NN/
+seed                                  0
+n_epochs                             80
+log_interval                         10
+convergence_crit                     50
+binary_stimulation                 True
+simulation_type                 regular
+input_channels                        1
+reconstruction_channels               1
+out_activation                  sigmoid
+dataset                      characters
+device                           cuda:0
+batch_size                           30
+optimizer                          adam
+learning_rate                    0.0001
+reconstruction_loss                 mse
+reconstruction_loss_param             0
+sparsity_loss                        L1
+kappa                               0.5
+dtype: object
+2022-09-21 14:07:44,384 INFO Epoch 1
+2022-09-21 14:07:46,991 INFO [0,    10] tr_recon_loss : 0.147 | val_recon_loss : 0.187 | tr_total_loss : 0.270 | val_total_loss : 0.336 | tr_stimu_loss : 0.393 | val_stimu_loss : 0.485
+2022-09-21 14:08:22,698 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:08:22,713 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:08:25,064 INFO [0,    20] tr_recon_loss : 0.148 | val_recon_loss : 0.173 | tr_total_loss : 0.242 | val_total_loss : 0.301 | tr_stimu_loss : 0.337 | val_stimu_loss : 0.428
+2022-09-21 14:08:35,365 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:08:35,374 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:08:37,752 INFO [0,    30] tr_recon_loss : 0.140 | val_recon_loss : 0.137 | tr_total_loss : 0.218 | val_total_loss : 0.266 | tr_stimu_loss : 0.296 | val_stimu_loss : 0.395
+2022-09-21 14:08:54,602 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:08:54,615 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:08:55,288 INFO Epoch 2
+2022-09-21 14:08:57,654 INFO [1,    10] tr_recon_loss : 0.095 | val_recon_loss : 0.065 | tr_total_loss : 0.185 | val_total_loss : 0.200 | tr_stimu_loss : 0.274 | val_stimu_loss : 0.335
+2022-09-21 14:09:13,965 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:09:13,980 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:09:16,374 INFO [1,    20] tr_recon_loss : 0.081 | val_recon_loss : 0.075 | tr_total_loss : 0.166 | val_total_loss : 0.171 | tr_stimu_loss : 0.250 | val_stimu_loss : 0.267
+2022-09-21 14:11:35,220 INFO model_name                   demo_model
+savedir                        orig_NN/
+seed                                  0
+n_epochs                             80
+log_interval                         10
+convergence_crit                     50
+binary_stimulation                 True
+simulation_type                 regular
+input_channels                        1
+reconstruction_channels               1
+out_activation                  sigmoid
+dataset                      characters
+device                           cuda:0
+batch_size                           30
+optimizer                          adam
+learning_rate                    0.0001
+reconstruction_loss                 mse
+reconstruction_loss_param             0
+sparsity_loss                        L1
+kappa                               0.5
+dtype: object
+2022-09-21 14:11:35,220 INFO Epoch 1
+2022-09-21 14:11:37,615 INFO [0,    10] tr_recon_loss : 0.147 | val_recon_loss : 0.187 | tr_total_loss : 0.270 | val_total_loss : 0.336 | tr_stimu_loss : 0.393 | val_stimu_loss : 0.485
+2022-09-21 14:11:52,401 INFO model_name                   demo_model
+savedir                        orig_NN/
+seed                                  0
+n_epochs                             80
+log_interval                         10
+convergence_crit                     50
+binary_stimulation                 True
+simulation_type                 regular
+input_channels                        1
+reconstruction_channels               1
+out_activation                  sigmoid
+dataset                      characters
+device                           cuda:0
+batch_size                           30
+optimizer                          adam
+learning_rate                    0.0001
+reconstruction_loss                 mse
+reconstruction_loss_param             0
+sparsity_loss                        L1
+kappa                               0.5
+dtype: object
+2022-09-21 14:11:52,402 INFO Epoch 1
+2022-09-21 14:11:54,843 INFO [0,    10] tr_recon_loss : 0.147 | val_recon_loss : 0.187 | tr_total_loss : 0.270 | val_total_loss : 0.336 | tr_stimu_loss : 0.393 | val_stimu_loss : 0.485
+2022-09-21 14:11:54,843 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:11:54,848 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:11:57,111 INFO [0,    20] tr_recon_loss : 0.147 | val_recon_loss : 0.173 | tr_total_loss : 0.242 | val_total_loss : 0.301 | tr_stimu_loss : 0.337 | val_stimu_loss : 0.428
+2022-09-21 14:11:57,111 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:11:57,116 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:11:59,481 INFO [0,    30] tr_recon_loss : 0.140 | val_recon_loss : 0.140 | tr_total_loss : 0.218 | val_total_loss : 0.267 | tr_stimu_loss : 0.297 | val_stimu_loss : 0.394
+2022-09-21 14:11:59,481 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:11:59,485 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:12:00,114 INFO Epoch 2
+2022-09-21 14:12:02,425 INFO [1,    10] tr_recon_loss : 0.097 | val_recon_loss : 0.067 | tr_total_loss : 0.186 | val_total_loss : 0.207 | tr_stimu_loss : 0.275 | val_stimu_loss : 0.346
+2022-09-21 14:12:02,425 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:12:02,429 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:12:04,770 INFO [1,    20] tr_recon_loss : 0.082 | val_recon_loss : 0.080 | tr_total_loss : 0.166 | val_total_loss : 0.161 | tr_stimu_loss : 0.251 | val_stimu_loss : 0.242
+2022-09-21 14:12:04,770 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:12:04,774 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:12:07,022 INFO [1,    30] tr_recon_loss : 0.089 | val_recon_loss : 0.079 | tr_total_loss : 0.159 | val_total_loss : 0.148 | tr_stimu_loss : 0.229 | val_stimu_loss : 0.218
+2022-09-21 14:12:07,022 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:12:07,027 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:12:07,613 INFO Epoch 3
+2022-09-21 14:12:10,005 INFO [2,    10] tr_recon_loss : 0.072 | val_recon_loss : 0.075 | tr_total_loss : 0.149 | val_total_loss : 0.161 | tr_stimu_loss : 0.227 | val_stimu_loss : 0.247
+2022-09-21 14:12:10,006 INFO not improved for     1 iterations
+2022-09-21 14:12:12,425 INFO [2,    20] tr_recon_loss : 0.069 | val_recon_loss : 0.074 | tr_total_loss : 0.149 | val_total_loss : 0.153 | tr_stimu_loss : 0.230 | val_stimu_loss : 0.232
+2022-09-21 14:12:12,425 INFO not improved for     2 iterations
+2022-09-21 14:12:14,660 INFO [2,    30] tr_recon_loss : 0.067 | val_recon_loss : 0.069 | tr_total_loss : 0.149 | val_total_loss : 0.150 | tr_stimu_loss : 0.231 | val_stimu_loss : 0.230
+2022-09-21 14:12:14,660 INFO not improved for     3 iterations
+2022-09-21 14:12:15,265 INFO Epoch 4
+2022-09-21 14:12:17,482 INFO [3,    10] tr_recon_loss : 0.060 | val_recon_loss : 0.060 | tr_total_loss : 0.141 | val_total_loss : 0.141 | tr_stimu_loss : 0.222 | val_stimu_loss : 0.222
+2022-09-21 14:12:17,482 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:12:17,487 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:12:19,931 INFO [3,    20] tr_recon_loss : 0.052 | val_recon_loss : 0.059 | tr_total_loss : 0.128 | val_total_loss : 0.128 | tr_stimu_loss : 0.203 | val_stimu_loss : 0.198
+2022-09-21 14:12:19,931 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:12:19,935 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:12:22,511 INFO [3,    30] tr_recon_loss : 0.054 | val_recon_loss : 0.059 | tr_total_loss : 0.126 | val_total_loss : 0.131 | tr_stimu_loss : 0.198 | val_stimu_loss : 0.203
+2022-09-21 14:12:22,511 INFO not improved for     1 iterations
+2022-09-21 14:12:23,148 INFO Epoch 5
+2022-09-21 14:12:25,602 INFO [4,    10] tr_recon_loss : 0.052 | val_recon_loss : 0.053 | tr_total_loss : 0.122 | val_total_loss : 0.119 | tr_stimu_loss : 0.193 | val_stimu_loss : 0.185
+2022-09-21 14:12:25,602 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:12:25,606 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:12:28,039 INFO [4,    20] tr_recon_loss : 0.046 | val_recon_loss : 0.050 | tr_total_loss : 0.114 | val_total_loss : 0.113 | tr_stimu_loss : 0.182 | val_stimu_loss : 0.175
+2022-09-21 14:12:28,039 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:12:28,043 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:12:30,405 INFO [4,    30] tr_recon_loss : 0.042 | val_recon_loss : 0.047 | tr_total_loss : 0.108 | val_total_loss : 0.111 | tr_stimu_loss : 0.175 | val_stimu_loss : 0.174
+2022-09-21 14:12:30,405 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:12:30,409 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:12:31,031 INFO Epoch 6
+2022-09-21 14:12:33,414 INFO [5,    10] tr_recon_loss : 0.040 | val_recon_loss : 0.045 | tr_total_loss : 0.104 | val_total_loss : 0.105 | tr_stimu_loss : 0.167 | val_stimu_loss : 0.165
+2022-09-21 14:12:33,414 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:12:33,418 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:12:35,678 INFO [5,    20] tr_recon_loss : 0.037 | val_recon_loss : 0.042 | tr_total_loss : 0.098 | val_total_loss : 0.098 | tr_stimu_loss : 0.158 | val_stimu_loss : 0.154
+2022-09-21 14:12:35,678 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:12:35,683 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:12:38,045 INFO [5,    30] tr_recon_loss : 0.037 | val_recon_loss : 0.041 | tr_total_loss : 0.094 | val_total_loss : 0.097 | tr_stimu_loss : 0.151 | val_stimu_loss : 0.152
+2022-09-21 14:12:38,045 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:12:38,049 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:12:38,685 INFO Epoch 7
+2022-09-21 14:12:41,103 INFO [6,    10] tr_recon_loss : 0.034 | val_recon_loss : 0.037 | tr_total_loss : 0.089 | val_total_loss : 0.092 | tr_stimu_loss : 0.143 | val_stimu_loss : 0.147
+2022-09-21 14:12:41,104 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:12:41,108 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:12:43,405 INFO [6,    20] tr_recon_loss : 0.032 | val_recon_loss : 0.036 | tr_total_loss : 0.084 | val_total_loss : 0.087 | tr_stimu_loss : 0.137 | val_stimu_loss : 0.139
+2022-09-21 14:12:43,406 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:12:43,410 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:12:45,678 INFO [6,    30] tr_recon_loss : 0.030 | val_recon_loss : 0.031 | tr_total_loss : 0.080 | val_total_loss : 0.083 | tr_stimu_loss : 0.129 | val_stimu_loss : 0.135
+2022-09-21 14:12:45,678 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:12:45,682 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:12:46,377 INFO Epoch 8
+2022-09-21 14:12:48,748 INFO [7,    10] tr_recon_loss : 0.028 | val_recon_loss : 0.031 | tr_total_loss : 0.075 | val_total_loss : 0.079 | tr_stimu_loss : 0.122 | val_stimu_loss : 0.128
+2022-09-21 14:12:48,748 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:12:48,752 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:12:51,151 INFO [7,    20] tr_recon_loss : 0.027 | val_recon_loss : 0.029 | tr_total_loss : 0.073 | val_total_loss : 0.076 | tr_stimu_loss : 0.120 | val_stimu_loss : 0.123
+2022-09-21 14:12:51,151 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:12:51,156 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:12:53,374 INFO [7,    30] tr_recon_loss : 0.028 | val_recon_loss : 0.029 | tr_total_loss : 0.071 | val_total_loss : 0.075 | tr_stimu_loss : 0.114 | val_stimu_loss : 0.122
+2022-09-21 14:12:53,374 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:12:53,378 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:12:53,966 INFO Epoch 9
+2022-09-21 14:12:56,321 INFO [8,    10] tr_recon_loss : 0.026 | val_recon_loss : 0.029 | tr_total_loss : 0.068 | val_total_loss : 0.072 | tr_stimu_loss : 0.109 | val_stimu_loss : 0.114
+2022-09-21 14:12:56,322 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:12:56,326 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:12:58,699 INFO [8,    20] tr_recon_loss : 0.027 | val_recon_loss : 0.030 | tr_total_loss : 0.065 | val_total_loss : 0.068 | tr_stimu_loss : 0.104 | val_stimu_loss : 0.106
+2022-09-21 14:12:58,699 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:12:58,704 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:13:00,929 INFO [8,    30] tr_recon_loss : 0.026 | val_recon_loss : 0.028 | tr_total_loss : 0.064 | val_total_loss : 0.066 | tr_stimu_loss : 0.101 | val_stimu_loss : 0.104
+2022-09-21 14:13:00,930 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:13:00,934 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:13:01,512 INFO Epoch 10
+2022-09-21 14:13:03,961 INFO [9,    10] tr_recon_loss : 0.025 | val_recon_loss : 0.029 | tr_total_loss : 0.061 | val_total_loss : 0.065 | tr_stimu_loss : 0.097 | val_stimu_loss : 0.100
+2022-09-21 14:13:03,961 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:13:03,967 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:13:06,421 INFO [9,    20] tr_recon_loss : 0.026 | val_recon_loss : 0.027 | tr_total_loss : 0.060 | val_total_loss : 0.064 | tr_stimu_loss : 0.094 | val_stimu_loss : 0.101
+2022-09-21 14:13:06,421 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:13:06,426 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:13:08,710 INFO [9,    30] tr_recon_loss : 0.024 | val_recon_loss : 0.027 | tr_total_loss : 0.058 | val_total_loss : 0.061 | tr_stimu_loss : 0.092 | val_stimu_loss : 0.095
+2022-09-21 14:13:08,710 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:13:08,715 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:13:09,358 INFO Epoch 11
+2022-09-21 14:13:11,745 INFO [10,    10] tr_recon_loss : 0.025 | val_recon_loss : 0.029 | tr_total_loss : 0.058 | val_total_loss : 0.062 | tr_stimu_loss : 0.090 | val_stimu_loss : 0.094
+2022-09-21 14:13:11,745 INFO not improved for     1 iterations
+2022-09-21 14:13:14,054 INFO [10,    20] tr_recon_loss : 0.026 | val_recon_loss : 0.030 | tr_total_loss : 0.057 | val_total_loss : 0.060 | tr_stimu_loss : 0.089 | val_stimu_loss : 0.090
+2022-09-21 14:13:14,054 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:13:14,059 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:13:16,384 INFO [10,    30] tr_recon_loss : 0.025 | val_recon_loss : 0.030 | tr_total_loss : 0.055 | val_total_loss : 0.059 | tr_stimu_loss : 0.084 | val_stimu_loss : 0.088
+2022-09-21 14:13:16,385 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:13:16,389 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:13:17,044 INFO Epoch 12
+2022-09-21 14:13:19,547 INFO [11,    10] tr_recon_loss : 0.024 | val_recon_loss : 0.029 | tr_total_loss : 0.055 | val_total_loss : 0.058 | tr_stimu_loss : 0.086 | val_stimu_loss : 0.087
+2022-09-21 14:13:19,547 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:13:19,551 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:13:21,799 INFO [11,    20] tr_recon_loss : 0.024 | val_recon_loss : 0.026 | tr_total_loss : 0.053 | val_total_loss : 0.057 | tr_stimu_loss : 0.082 | val_stimu_loss : 0.088
+2022-09-21 14:13:21,799 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:13:21,803 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:13:24,142 INFO [11,    30] tr_recon_loss : 0.024 | val_recon_loss : 0.027 | tr_total_loss : 0.053 | val_total_loss : 0.056 | tr_stimu_loss : 0.082 | val_stimu_loss : 0.086
+2022-09-21 14:13:24,142 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:13:24,146 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:13:24,796 INFO Epoch 13
+2022-09-21 14:13:27,208 INFO [12,    10] tr_recon_loss : 0.023 | val_recon_loss : 0.028 | tr_total_loss : 0.052 | val_total_loss : 0.057 | tr_stimu_loss : 0.081 | val_stimu_loss : 0.086
+2022-09-21 14:13:27,208 INFO not improved for     1 iterations
+2022-09-21 14:13:29,512 INFO [12,    20] tr_recon_loss : 0.024 | val_recon_loss : 0.025 | tr_total_loss : 0.053 | val_total_loss : 0.055 | tr_stimu_loss : 0.082 | val_stimu_loss : 0.084
+2022-09-21 14:13:29,512 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:13:29,516 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:13:31,666 INFO [12,    30] tr_recon_loss : 0.023 | val_recon_loss : 0.026 | tr_total_loss : 0.051 | val_total_loss : 0.054 | tr_stimu_loss : 0.079 | val_stimu_loss : 0.083
+2022-09-21 14:13:31,666 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:13:31,670 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:13:32,281 INFO Epoch 14
+2022-09-21 14:13:34,727 INFO [13,    10] tr_recon_loss : 0.024 | val_recon_loss : 0.026 | tr_total_loss : 0.051 | val_total_loss : 0.054 | tr_stimu_loss : 0.079 | val_stimu_loss : 0.082
+2022-09-21 14:13:34,727 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:13:34,731 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:13:37,156 INFO [13,    20] tr_recon_loss : 0.023 | val_recon_loss : 0.029 | tr_total_loss : 0.051 | val_total_loss : 0.055 | tr_stimu_loss : 0.079 | val_stimu_loss : 0.082
+2022-09-21 14:13:37,156 INFO not improved for     1 iterations
+2022-09-21 14:13:39,335 INFO [13,    30] tr_recon_loss : 0.024 | val_recon_loss : 0.026 | tr_total_loss : 0.051 | val_total_loss : 0.054 | tr_stimu_loss : 0.078 | val_stimu_loss : 0.083
+2022-09-21 14:13:39,335 INFO not improved for     2 iterations
+2022-09-21 14:13:39,972 INFO Epoch 15
+2022-09-21 14:13:42,181 INFO [14,    10] tr_recon_loss : 0.023 | val_recon_loss : 0.025 | tr_total_loss : 0.050 | val_total_loss : 0.053 | tr_stimu_loss : 0.078 | val_stimu_loss : 0.080
+2022-09-21 14:13:42,182 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:13:42,187 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:13:44,572 INFO [14,    20] tr_recon_loss : 0.023 | val_recon_loss : 0.026 | tr_total_loss : 0.050 | val_total_loss : 0.054 | tr_stimu_loss : 0.077 | val_stimu_loss : 0.083
+2022-09-21 14:13:44,572 INFO not improved for     1 iterations
+2022-09-21 14:13:46,948 INFO [14,    30] tr_recon_loss : 0.024 | val_recon_loss : 0.026 | tr_total_loss : 0.050 | val_total_loss : 0.053 | tr_stimu_loss : 0.077 | val_stimu_loss : 0.080
+2022-09-21 14:13:46,948 INFO not improved for     2 iterations
+2022-09-21 14:13:47,556 INFO Epoch 16
+2022-09-21 14:13:49,869 INFO [15,    10] tr_recon_loss : 0.023 | val_recon_loss : 0.026 | tr_total_loss : 0.049 | val_total_loss : 0.053 | tr_stimu_loss : 0.075 | val_stimu_loss : 0.080
+2022-09-21 14:13:49,870 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:13:49,874 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:13:52,074 INFO [15,    20] tr_recon_loss : 0.024 | val_recon_loss : 0.026 | tr_total_loss : 0.050 | val_total_loss : 0.053 | tr_stimu_loss : 0.075 | val_stimu_loss : 0.079
+2022-09-21 14:13:52,074 INFO not improved for     1 iterations
+2022-09-21 14:13:54,434 INFO [15,    30] tr_recon_loss : 0.024 | val_recon_loss : 0.024 | tr_total_loss : 0.049 | val_total_loss : 0.053 | tr_stimu_loss : 0.074 | val_stimu_loss : 0.082
+2022-09-21 14:13:54,434 INFO not improved for     2 iterations
+2022-09-21 14:13:55,067 INFO Epoch 17
+2022-09-21 14:13:57,287 INFO [16,    10] tr_recon_loss : 0.023 | val_recon_loss : 0.029 | tr_total_loss : 0.049 | val_total_loss : 0.052 | tr_stimu_loss : 0.075 | val_stimu_loss : 0.075
+2022-09-21 14:13:57,287 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:13:57,291 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:13:59,629 INFO [16,    20] tr_recon_loss : 0.024 | val_recon_loss : 0.024 | tr_total_loss : 0.049 | val_total_loss : 0.052 | tr_stimu_loss : 0.074 | val_stimu_loss : 0.080
+2022-09-21 14:13:59,629 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:13:59,634 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:14:02,229 INFO [16,    30] tr_recon_loss : 0.023 | val_recon_loss : 0.028 | tr_total_loss : 0.048 | val_total_loss : 0.052 | tr_stimu_loss : 0.074 | val_stimu_loss : 0.076
+2022-09-21 14:14:02,229 INFO not improved for     1 iterations
+2022-09-21 14:14:03,023 INFO Epoch 18
+2022-09-21 14:14:05,384 INFO [17,    10] tr_recon_loss : 0.023 | val_recon_loss : 0.024 | tr_total_loss : 0.047 | val_total_loss : 0.050 | tr_stimu_loss : 0.071 | val_stimu_loss : 0.076
+2022-09-21 14:14:05,384 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:14:05,388 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:14:07,578 INFO [17,    20] tr_recon_loss : 0.023 | val_recon_loss : 0.023 | tr_total_loss : 0.047 | val_total_loss : 0.050 | tr_stimu_loss : 0.071 | val_stimu_loss : 0.077
+2022-09-21 14:14:07,578 INFO not improved for     1 iterations
+2022-09-21 14:14:09,919 INFO [17,    30] tr_recon_loss : 0.022 | val_recon_loss : 0.024 | tr_total_loss : 0.047 | val_total_loss : 0.052 | tr_stimu_loss : 0.073 | val_stimu_loss : 0.079
+2022-09-21 14:14:09,919 INFO not improved for     2 iterations
+2022-09-21 14:14:10,681 INFO Epoch 19
+2022-09-21 14:14:13,057 INFO [18,    10] tr_recon_loss : 0.022 | val_recon_loss : 0.025 | tr_total_loss : 0.047 | val_total_loss : 0.051 | tr_stimu_loss : 0.072 | val_stimu_loss : 0.077
+2022-09-21 14:14:13,057 INFO not improved for     3 iterations
+2022-09-21 14:14:15,309 INFO [18,    20] tr_recon_loss : 0.022 | val_recon_loss : 0.022 | tr_total_loss : 0.048 | val_total_loss : 0.050 | tr_stimu_loss : 0.073 | val_stimu_loss : 0.077
+2022-09-21 14:14:15,309 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:14:15,314 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:14:17,564 INFO [18,    30] tr_recon_loss : 0.022 | val_recon_loss : 0.025 | tr_total_loss : 0.047 | val_total_loss : 0.050 | tr_stimu_loss : 0.071 | val_stimu_loss : 0.074
+2022-09-21 14:14:17,565 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:14:17,569 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:14:18,163 INFO Epoch 20
+2022-09-21 14:14:20,470 INFO [19,    10] tr_recon_loss : 0.023 | val_recon_loss : 0.024 | tr_total_loss : 0.047 | val_total_loss : 0.051 | tr_stimu_loss : 0.070 | val_stimu_loss : 0.077
+2022-09-21 14:14:20,471 INFO not improved for     1 iterations
+2022-09-21 14:14:22,797 INFO [19,    20] tr_recon_loss : 0.023 | val_recon_loss : 0.026 | tr_total_loss : 0.046 | val_total_loss : 0.050 | tr_stimu_loss : 0.069 | val_stimu_loss : 0.074
+2022-09-21 14:14:22,797 INFO not improved for     2 iterations
+2022-09-21 14:14:25,260 INFO [19,    30] tr_recon_loss : 0.024 | val_recon_loss : 0.027 | tr_total_loss : 0.047 | val_total_loss : 0.050 | tr_stimu_loss : 0.070 | val_stimu_loss : 0.073
+2022-09-21 14:14:25,260 INFO not improved for     3 iterations
+2022-09-21 14:14:25,949 INFO Epoch 21
+2022-09-21 14:14:28,433 INFO [20,    10] tr_recon_loss : 0.023 | val_recon_loss : 0.024 | tr_total_loss : 0.047 | val_total_loss : 0.049 | tr_stimu_loss : 0.071 | val_stimu_loss : 0.074
+2022-09-21 14:14:28,433 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:14:28,438 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:14:30,750 INFO [20,    20] tr_recon_loss : 0.021 | val_recon_loss : 0.025 | tr_total_loss : 0.045 | val_total_loss : 0.048 | tr_stimu_loss : 0.068 | val_stimu_loss : 0.072
+2022-09-21 14:14:30,750 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:14:30,754 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:14:33,170 INFO [20,    30] tr_recon_loss : 0.023 | val_recon_loss : 0.023 | tr_total_loss : 0.045 | val_total_loss : 0.049 | tr_stimu_loss : 0.068 | val_stimu_loss : 0.075
+2022-09-21 14:14:33,171 INFO not improved for     1 iterations
+2022-09-21 14:14:33,779 INFO Epoch 22
+2022-09-21 14:14:36,150 INFO [21,    10] tr_recon_loss : 0.023 | val_recon_loss : 0.025 | tr_total_loss : 0.046 | val_total_loss : 0.049 | tr_stimu_loss : 0.068 | val_stimu_loss : 0.074
+2022-09-21 14:14:36,150 INFO not improved for     2 iterations
+2022-09-21 14:14:38,506 INFO [21,    20] tr_recon_loss : 0.022 | val_recon_loss : 0.025 | tr_total_loss : 0.045 | val_total_loss : 0.048 | tr_stimu_loss : 0.068 | val_stimu_loss : 0.071
+2022-09-21 14:14:38,507 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:14:38,520 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:14:40,907 INFO [21,    30] tr_recon_loss : 0.024 | val_recon_loss : 0.023 | tr_total_loss : 0.045 | val_total_loss : 0.050 | tr_stimu_loss : 0.067 | val_stimu_loss : 0.077
+2022-09-21 14:14:40,907 INFO not improved for     1 iterations
+2022-09-21 14:14:41,574 INFO Epoch 23
+2022-09-21 14:14:43,968 INFO [22,    10] tr_recon_loss : 0.022 | val_recon_loss : 0.026 | tr_total_loss : 0.046 | val_total_loss : 0.049 | tr_stimu_loss : 0.070 | val_stimu_loss : 0.071
+2022-09-21 14:14:43,968 INFO not improved for     2 iterations
+2022-09-21 14:14:46,206 INFO [22,    20] tr_recon_loss : 0.023 | val_recon_loss : 0.021 | tr_total_loss : 0.045 | val_total_loss : 0.049 | tr_stimu_loss : 0.067 | val_stimu_loss : 0.077
+2022-09-21 14:14:46,206 INFO not improved for     3 iterations
+2022-09-21 14:14:48,590 INFO [22,    30] tr_recon_loss : 0.022 | val_recon_loss : 0.025 | tr_total_loss : 0.045 | val_total_loss : 0.048 | tr_stimu_loss : 0.069 | val_stimu_loss : 0.070
+2022-09-21 14:14:48,590 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:14:48,597 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:14:49,224 INFO Epoch 24
+2022-09-21 14:14:51,669 INFO [23,    10] tr_recon_loss : 0.023 | val_recon_loss : 0.023 | tr_total_loss : 0.044 | val_total_loss : 0.048 | tr_stimu_loss : 0.065 | val_stimu_loss : 0.073
+2022-09-21 14:14:51,670 INFO not improved for     1 iterations
+2022-09-21 14:14:54,080 INFO [23,    20] tr_recon_loss : 0.023 | val_recon_loss : 0.023 | tr_total_loss : 0.045 | val_total_loss : 0.047 | tr_stimu_loss : 0.068 | val_stimu_loss : 0.072
+2022-09-21 14:14:54,080 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:14:54,084 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:14:56,304 INFO [23,    30] tr_recon_loss : 0.023 | val_recon_loss : 0.026 | tr_total_loss : 0.044 | val_total_loss : 0.047 | tr_stimu_loss : 0.066 | val_stimu_loss : 0.069
+2022-09-21 14:14:56,305 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:14:56,309 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:14:56,887 INFO Epoch 25
+2022-09-21 14:14:59,289 INFO [24,    10] tr_recon_loss : 0.022 | val_recon_loss : 0.023 | tr_total_loss : 0.044 | val_total_loss : 0.046 | tr_stimu_loss : 0.065 | val_stimu_loss : 0.070
+2022-09-21 14:14:59,289 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:14:59,293 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:15:01,684 INFO [24,    20] tr_recon_loss : 0.023 | val_recon_loss : 0.024 | tr_total_loss : 0.044 | val_total_loss : 0.047 | tr_stimu_loss : 0.065 | val_stimu_loss : 0.070
+2022-09-21 14:15:01,684 INFO not improved for     1 iterations
+2022-09-21 14:15:03,983 INFO [24,    30] tr_recon_loss : 0.023 | val_recon_loss : 0.025 | tr_total_loss : 0.044 | val_total_loss : 0.046 | tr_stimu_loss : 0.065 | val_stimu_loss : 0.067
+2022-09-21 14:15:03,983 INFO not improved for     2 iterations
+2022-09-21 14:15:04,569 INFO Epoch 26
+2022-09-21 14:15:06,874 INFO [25,    10] tr_recon_loss : 0.023 | val_recon_loss : 0.025 | tr_total_loss : 0.043 | val_total_loss : 0.047 | tr_stimu_loss : 0.063 | val_stimu_loss : 0.069
+2022-09-21 14:15:06,875 INFO not improved for     3 iterations
+2022-09-21 14:15:09,303 INFO [25,    20] tr_recon_loss : 0.023 | val_recon_loss : 0.023 | tr_total_loss : 0.043 | val_total_loss : 0.045 | tr_stimu_loss : 0.063 | val_stimu_loss : 0.067
+2022-09-21 14:15:09,303 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:15:09,308 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:15:11,641 INFO [25,    30] tr_recon_loss : 0.024 | val_recon_loss : 0.025 | tr_total_loss : 0.043 | val_total_loss : 0.046 | tr_stimu_loss : 0.063 | val_stimu_loss : 0.067
+2022-09-21 14:15:11,641 INFO not improved for     1 iterations
+2022-09-21 14:15:12,233 INFO Epoch 27
+2022-09-21 14:15:14,429 INFO [26,    10] tr_recon_loss : 0.024 | val_recon_loss : 0.026 | tr_total_loss : 0.043 | val_total_loss : 0.047 | tr_stimu_loss : 0.062 | val_stimu_loss : 0.068
+2022-09-21 14:15:14,430 INFO not improved for     2 iterations
+2022-09-21 14:15:16,852 INFO [26,    20] tr_recon_loss : 0.025 | val_recon_loss : 0.026 | tr_total_loss : 0.044 | val_total_loss : 0.048 | tr_stimu_loss : 0.063 | val_stimu_loss : 0.069
+2022-09-21 14:15:16,852 INFO not improved for     3 iterations
+2022-09-21 14:15:19,556 INFO [26,    30] tr_recon_loss : 0.024 | val_recon_loss : 0.025 | tr_total_loss : 0.045 | val_total_loss : 0.047 | tr_stimu_loss : 0.066 | val_stimu_loss : 0.068
+2022-09-21 14:15:19,556 INFO not improved for     4 iterations
+2022-09-21 14:15:20,174 INFO Epoch 28
+2022-09-21 14:15:22,627 INFO [27,    10] tr_recon_loss : 0.025 | val_recon_loss : 0.029 | tr_total_loss : 0.043 | val_total_loss : 0.048 | tr_stimu_loss : 0.062 | val_stimu_loss : 0.066
+2022-09-21 14:15:22,627 INFO not improved for     5 iterations
+2022-09-21 14:15:25,050 INFO [27,    20] tr_recon_loss : 0.026 | val_recon_loss : 0.027 | tr_total_loss : 0.045 | val_total_loss : 0.050 | tr_stimu_loss : 0.064 | val_stimu_loss : 0.074
+2022-09-21 14:15:25,050 INFO not improved for     6 iterations
+2022-09-21 14:15:27,361 INFO [27,    30] tr_recon_loss : 0.026 | val_recon_loss : 0.027 | tr_total_loss : 0.045 | val_total_loss : 0.047 | tr_stimu_loss : 0.065 | val_stimu_loss : 0.068
+2022-09-21 14:15:27,362 INFO not improved for     7 iterations
+2022-09-21 14:15:28,023 INFO Epoch 29
+2022-09-21 14:15:30,397 INFO [28,    10] tr_recon_loss : 0.027 | val_recon_loss : 0.029 | tr_total_loss : 0.044 | val_total_loss : 0.048 | tr_stimu_loss : 0.061 | val_stimu_loss : 0.067
+2022-09-21 14:15:30,397 INFO not improved for     8 iterations
+2022-09-21 14:15:32,787 INFO [28,    20] tr_recon_loss : 0.026 | val_recon_loss : 0.032 | tr_total_loss : 0.044 | val_total_loss : 0.047 | tr_stimu_loss : 0.061 | val_stimu_loss : 0.062
+2022-09-21 14:15:32,788 INFO not improved for     9 iterations
+2022-09-21 14:15:34,869 INFO [28,    30] tr_recon_loss : 0.027 | val_recon_loss : 0.028 | tr_total_loss : 0.045 | val_total_loss : 0.051 | tr_stimu_loss : 0.062 | val_stimu_loss : 0.075
+2022-09-21 14:15:34,869 INFO not improved for    10 iterations
+2022-09-21 14:15:35,465 INFO Epoch 30
+2022-09-21 14:15:37,757 INFO [29,    10] tr_recon_loss : 0.026 | val_recon_loss : 0.026 | tr_total_loss : 0.045 | val_total_loss : 0.046 | tr_stimu_loss : 0.063 | val_stimu_loss : 0.066
+2022-09-21 14:15:37,757 INFO not improved for    11 iterations
+2022-09-21 14:15:40,246 INFO [29,    20] tr_recon_loss : 0.025 | val_recon_loss : 0.028 | tr_total_loss : 0.042 | val_total_loss : 0.045 | tr_stimu_loss : 0.059 | val_stimu_loss : 0.063
+2022-09-21 14:15:40,247 INFO not improved for    12 iterations
+2022-09-21 14:15:42,492 INFO [29,    30] tr_recon_loss : 0.027 | val_recon_loss : 0.031 | tr_total_loss : 0.042 | val_total_loss : 0.047 | tr_stimu_loss : 0.056 | val_stimu_loss : 0.063
+2022-09-21 14:15:42,492 INFO not improved for    13 iterations
+2022-09-21 14:15:43,093 INFO Epoch 31
+2022-09-21 14:15:45,293 INFO [30,    10] tr_recon_loss : 0.025 | val_recon_loss : 0.032 | tr_total_loss : 0.041 | val_total_loss : 0.045 | tr_stimu_loss : 0.057 | val_stimu_loss : 0.058
+2022-09-21 14:15:45,293 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-21 14:15:45,297 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-21 14:15:47,702 INFO [30,    20] tr_recon_loss : 0.028 | val_recon_loss : 0.028 | tr_total_loss : 0.041 | val_total_loss : 0.047 | tr_stimu_loss : 0.055 | val_stimu_loss : 0.066
+2022-09-21 14:15:47,702 INFO not improved for     1 iterations
+2022-09-21 14:15:49,976 INFO [30,    30] tr_recon_loss : 0.024 | val_recon_loss : 0.032 | tr_total_loss : 0.043 | val_total_loss : 0.047 | tr_stimu_loss : 0.061 | val_stimu_loss : 0.061
+2022-09-21 14:15:49,976 INFO not improved for     2 iterations
+2022-09-21 14:15:50,620 INFO Epoch 32
+2022-09-21 14:15:52,847 INFO [31,    10] tr_recon_loss : 0.027 | val_recon_loss : 0.029 | tr_total_loss : 0.041 | val_total_loss : 0.045 | tr_stimu_loss : 0.056 | val_stimu_loss : 0.061
+2022-09-21 14:15:52,847 INFO not improved for     3 iterations
+2022-09-21 14:15:55,063 INFO [31,    20] tr_recon_loss : 0.026 | val_recon_loss : 0.031 | tr_total_loss : 0.041 | val_total_loss : 0.046 | tr_stimu_loss : 0.055 | val_stimu_loss : 0.060
+2022-09-21 14:15:55,063 INFO not improved for     4 iterations
+2022-09-21 14:15:57,439 INFO [31,    30] tr_recon_loss : 0.026 | val_recon_loss : 0.030 | tr_total_loss : 0.041 | val_total_loss : 0.045 | tr_stimu_loss : 0.056 | val_stimu_loss : 0.061
+2022-09-21 14:15:57,439 INFO not improved for     5 iterations
+2022-09-21 14:15:58,045 INFO Epoch 33
+2022-09-21 14:16:00,505 INFO [32,    10] tr_recon_loss : 0.028 | val_recon_loss : 0.036 | tr_total_loss : 0.042 | val_total_loss : 0.048 | tr_stimu_loss : 0.055 | val_stimu_loss : 0.061
+2022-09-21 14:16:00,506 INFO not improved for     6 iterations
+2022-09-21 14:16:02,769 INFO [32,    20] tr_recon_loss : 0.032 | val_recon_loss : 0.041 | tr_total_loss : 0.045 | val_total_loss : 0.051 | tr_stimu_loss : 0.058 | val_stimu_loss : 0.061
+2022-09-21 14:16:02,770 INFO not improved for     7 iterations
+2022-09-21 14:16:05,021 INFO [32,    30] tr_recon_loss : 0.033 | val_recon_loss : 0.044 | tr_total_loss : 0.046 | val_total_loss : 0.052 | tr_stimu_loss : 0.059 | val_stimu_loss : 0.059
+2022-09-21 14:16:05,021 INFO not improved for     8 iterations
+2022-09-21 14:16:05,684 INFO Epoch 34
+2022-09-21 14:16:08,054 INFO [33,    10] tr_recon_loss : 0.034 | val_recon_loss : 0.041 | tr_total_loss : 0.047 | val_total_loss : 0.053 | tr_stimu_loss : 0.061 | val_stimu_loss : 0.064
+2022-09-21 14:16:08,054 INFO not improved for     9 iterations
+2022-09-21 14:16:10,492 INFO [33,    20] tr_recon_loss : 0.031 | val_recon_loss : 0.040 | tr_total_loss : 0.048 | val_total_loss : 0.054 | tr_stimu_loss : 0.065 | val_stimu_loss : 0.069
+2022-09-21 14:16:10,493 INFO not improved for    10 iterations
+2022-09-21 14:16:13,048 INFO [33,    30] tr_recon_loss : 0.032 | val_recon_loss : 0.034 | tr_total_loss : 0.047 | val_total_loss : 0.052 | tr_stimu_loss : 0.062 | val_stimu_loss : 0.069
+2022-09-21 14:16:13,048 INFO not improved for    11 iterations
+2022-09-21 14:16:13,700 INFO Epoch 35
+2022-09-21 14:16:16,119 INFO [34,    10] tr_recon_loss : 0.031 | val_recon_loss : 0.050 | tr_total_loss : 0.047 | val_total_loss : 0.059 | tr_stimu_loss : 0.062 | val_stimu_loss : 0.068
+2022-09-21 14:16:16,120 INFO not improved for    12 iterations
+2022-09-21 14:16:18,530 INFO [34,    20] tr_recon_loss : 0.041 | val_recon_loss : 0.073 | tr_total_loss : 0.066 | val_total_loss : 0.070 | tr_stimu_loss : 0.091 | val_stimu_loss : 0.067
+2022-09-21 14:16:18,530 INFO not improved for    13 iterations
+2022-09-21 14:16:20,869 INFO [34,    30] tr_recon_loss : 0.043 | val_recon_loss : 0.054 | tr_total_loss : 0.084 | val_total_loss : 0.067 | tr_stimu_loss : 0.126 | val_stimu_loss : 0.081
+2022-09-21 14:16:20,870 INFO not improved for    14 iterations
+2022-09-21 14:16:21,478 INFO Epoch 36
+2022-09-21 14:16:23,731 INFO [35,    10] tr_recon_loss : 0.038 | val_recon_loss : 0.050 | tr_total_loss : 0.071 | val_total_loss : 0.076 | tr_stimu_loss : 0.104 | val_stimu_loss : 0.101
+2022-09-21 14:16:23,732 INFO not improved for    15 iterations
+2022-09-21 14:16:26,032 INFO [35,    20] tr_recon_loss : 0.036 | val_recon_loss : 0.039 | tr_total_loss : 0.072 | val_total_loss : 0.078 | tr_stimu_loss : 0.109 | val_stimu_loss : 0.118
+2022-09-21 14:16:26,032 INFO not improved for    16 iterations
+2022-09-21 14:16:28,505 INFO [35,    30] tr_recon_loss : 0.037 | val_recon_loss : 0.043 | tr_total_loss : 0.067 | val_total_loss : 0.073 | tr_stimu_loss : 0.097 | val_stimu_loss : 0.103
+2022-09-21 14:16:28,505 INFO not improved for    17 iterations
+2022-09-21 14:16:29,122 INFO Epoch 37
+2022-09-21 14:16:31,613 INFO [36,    10] tr_recon_loss : 0.034 | val_recon_loss : 0.043 | tr_total_loss : 0.066 | val_total_loss : 0.081 | tr_stimu_loss : 0.098 | val_stimu_loss : 0.119
+2022-09-21 14:16:31,613 INFO not improved for    18 iterations
+2022-09-21 14:16:33,986 INFO [36,    20] tr_recon_loss : 0.036 | val_recon_loss : 0.039 | tr_total_loss : 0.065 | val_total_loss : 0.071 | tr_stimu_loss : 0.093 | val_stimu_loss : 0.103
+2022-09-21 14:16:33,986 INFO not improved for    19 iterations
+2022-09-21 14:16:36,450 INFO [36,    30] tr_recon_loss : 0.037 | val_recon_loss : 0.040 | tr_total_loss : 0.064 | val_total_loss : 0.065 | tr_stimu_loss : 0.092 | val_stimu_loss : 0.090
+2022-09-21 14:16:36,451 INFO not improved for    20 iterations
+2022-09-21 14:16:37,140 INFO Epoch 38
+2022-09-21 14:16:39,595 INFO [37,    10] tr_recon_loss : 0.035 | val_recon_loss : 0.046 | tr_total_loss : 0.060 | val_total_loss : 0.060 | tr_stimu_loss : 0.086 | val_stimu_loss : 0.075
+2022-09-21 14:16:39,595 INFO not improved for    21 iterations
+2022-09-21 14:16:41,956 INFO [37,    20] tr_recon_loss : 0.040 | val_recon_loss : 0.055 | tr_total_loss : 0.064 | val_total_loss : 0.069 | tr_stimu_loss : 0.088 | val_stimu_loss : 0.082
+2022-09-21 14:16:41,957 INFO not improved for    22 iterations
+2022-09-21 14:16:44,234 INFO [37,    30] tr_recon_loss : 0.044 | val_recon_loss : 0.074 | tr_total_loss : 0.067 | val_total_loss : 0.083 | tr_stimu_loss : 0.090 | val_stimu_loss : 0.092
+2022-09-21 14:16:44,234 INFO not improved for    23 iterations
+2022-09-21 14:16:44,967 INFO Epoch 39
+2022-09-21 14:16:47,597 INFO [38,    10] tr_recon_loss : 0.056 | val_recon_loss : 0.075 | tr_total_loss : 0.079 | val_total_loss : 0.120 | tr_stimu_loss : 0.101 | val_stimu_loss : 0.165
+2022-09-21 14:16:47,597 INFO not improved for    24 iterations
+2022-09-21 14:16:50,210 INFO [38,    20] tr_recon_loss : 0.060 | val_recon_loss : 0.099 | tr_total_loss : 0.136 | val_total_loss : 0.151 | tr_stimu_loss : 0.213 | val_stimu_loss : 0.203
+2022-09-21 14:16:50,210 INFO not improved for    25 iterations
+2022-09-21 14:16:52,678 INFO [38,    30] tr_recon_loss : 0.055 | val_recon_loss : 0.057 | tr_total_loss : 0.138 | val_total_loss : 0.143 | tr_stimu_loss : 0.220 | val_stimu_loss : 0.229
+2022-09-21 14:16:52,678 INFO not improved for    26 iterations
+2022-09-21 14:16:53,364 INFO Epoch 40
+2022-09-21 14:16:55,949 INFO [39,    10] tr_recon_loss : 0.049 | val_recon_loss : 0.056 | tr_total_loss : 0.139 | val_total_loss : 0.135 | tr_stimu_loss : 0.229 | val_stimu_loss : 0.213
+2022-09-21 14:16:55,950 INFO not improved for    27 iterations
+2022-09-21 14:16:58,410 INFO [39,    20] tr_recon_loss : 0.042 | val_recon_loss : 0.085 | tr_total_loss : 0.143 | val_total_loss : 0.151 | tr_stimu_loss : 0.243 | val_stimu_loss : 0.218
+2022-09-21 14:16:58,410 INFO not improved for    28 iterations
+2022-09-21 14:17:00,830 INFO [39,    30] tr_recon_loss : 0.044 | val_recon_loss : 0.078 | tr_total_loss : 0.136 | val_total_loss : 0.141 | tr_stimu_loss : 0.229 | val_stimu_loss : 0.203
+2022-09-21 14:17:00,831 INFO not improved for    29 iterations
+2022-09-21 14:17:01,492 INFO Epoch 41
+2022-09-21 14:17:03,910 INFO [40,    10] tr_recon_loss : 0.046 | val_recon_loss : 0.045 | tr_total_loss : 0.131 | val_total_loss : 0.133 | tr_stimu_loss : 0.217 | val_stimu_loss : 0.222
+2022-09-21 14:17:03,911 INFO not improved for    30 iterations
+2022-09-21 14:17:06,243 INFO [40,    20] tr_recon_loss : 0.044 | val_recon_loss : 0.066 | tr_total_loss : 0.125 | val_total_loss : 0.139 | tr_stimu_loss : 0.205 | val_stimu_loss : 0.211
+2022-09-21 14:17:06,244 INFO not improved for    31 iterations
+2022-09-21 14:17:08,629 INFO [40,    30] tr_recon_loss : 0.045 | val_recon_loss : 0.062 | tr_total_loss : 0.120 | val_total_loss : 0.127 | tr_stimu_loss : 0.196 | val_stimu_loss : 0.192
+2022-09-21 14:17:08,629 INFO not improved for    32 iterations
+2022-09-21 14:17:09,360 INFO Epoch 42
+2022-09-21 14:17:11,701 INFO [41,    10] tr_recon_loss : 0.043 | val_recon_loss : 0.057 | tr_total_loss : 0.121 | val_total_loss : 0.124 | tr_stimu_loss : 0.200 | val_stimu_loss : 0.191
+2022-09-21 14:17:11,702 INFO not improved for    33 iterations
+2022-09-21 14:17:14,083 INFO [41,    20] tr_recon_loss : 0.043 | val_recon_loss : 0.060 | tr_total_loss : 0.124 | val_total_loss : 0.127 | tr_stimu_loss : 0.205 | val_stimu_loss : 0.195
+2022-09-21 14:17:14,083 INFO not improved for    34 iterations
+2022-09-21 14:17:16,663 INFO [41,    30] tr_recon_loss : 0.045 | val_recon_loss : 0.067 | tr_total_loss : 0.128 | val_total_loss : 0.135 | tr_stimu_loss : 0.210 | val_stimu_loss : 0.203
+2022-09-21 14:17:16,663 INFO not improved for    35 iterations
+2022-09-21 14:17:17,291 INFO Epoch 43
+2022-09-21 14:17:19,703 INFO [42,    10] tr_recon_loss : 0.044 | val_recon_loss : 0.057 | tr_total_loss : 0.133 | val_total_loss : 0.139 | tr_stimu_loss : 0.221 | val_stimu_loss : 0.221
+2022-09-21 14:17:19,703 INFO not improved for    36 iterations
+2022-09-21 14:17:22,137 INFO [42,    20] tr_recon_loss : 0.041 | val_recon_loss : 0.044 | tr_total_loss : 0.136 | val_total_loss : 0.137 | tr_stimu_loss : 0.231 | val_stimu_loss : 0.229
+2022-09-21 14:17:22,137 INFO not improved for    37 iterations
+2022-09-21 14:17:24,429 INFO [42,    30] tr_recon_loss : 0.039 | val_recon_loss : 0.039 | tr_total_loss : 0.137 | val_total_loss : 0.132 | tr_stimu_loss : 0.235 | val_stimu_loss : 0.226
+2022-09-21 14:17:24,429 INFO not improved for    38 iterations
+2022-09-21 14:17:25,033 INFO Epoch 44
+2022-09-21 14:17:27,615 INFO [43,    10] tr_recon_loss : 0.038 | val_recon_loss : 0.038 | tr_total_loss : 0.136 | val_total_loss : 0.135 | tr_stimu_loss : 0.235 | val_stimu_loss : 0.233
+2022-09-21 14:17:27,615 INFO not improved for    39 iterations
+2022-09-21 14:17:30,027 INFO [43,    20] tr_recon_loss : 0.036 | val_recon_loss : 0.049 | tr_total_loss : 0.140 | val_total_loss : 0.147 | tr_stimu_loss : 0.244 | val_stimu_loss : 0.244
+2022-09-21 14:17:30,027 INFO not improved for    40 iterations
+2022-09-21 14:17:32,384 INFO [43,    30] tr_recon_loss : 0.038 | val_recon_loss : 0.034 | tr_total_loss : 0.147 | val_total_loss : 0.142 | tr_stimu_loss : 0.256 | val_stimu_loss : 0.251
+2022-09-21 14:17:32,384 INFO not improved for    41 iterations
+2022-09-21 14:17:32,986 INFO Epoch 45
+2022-09-21 14:17:35,360 INFO [44,    10] tr_recon_loss : 0.039 | val_recon_loss : 0.044 | tr_total_loss : 0.143 | val_total_loss : 0.150 | tr_stimu_loss : 0.248 | val_stimu_loss : 0.256
+2022-09-21 14:17:35,360 INFO not improved for    42 iterations
+2022-09-21 14:17:37,790 INFO [44,    20] tr_recon_loss : 0.038 | val_recon_loss : 0.038 | tr_total_loss : 0.144 | val_total_loss : 0.145 | tr_stimu_loss : 0.250 | val_stimu_loss : 0.252
+2022-09-21 14:17:37,791 INFO not improved for    43 iterations
+2022-09-21 14:17:40,198 INFO [44,    30] tr_recon_loss : 0.035 | val_recon_loss : 0.053 | tr_total_loss : 0.148 | val_total_loss : 0.160 | tr_stimu_loss : 0.261 | val_stimu_loss : 0.267
+2022-09-21 14:17:40,198 INFO not improved for    44 iterations
+2022-09-21 14:17:40,808 INFO Epoch 46
+2022-09-21 14:17:43,033 INFO [45,    10] tr_recon_loss : 0.033 | val_recon_loss : 0.039 | tr_total_loss : 0.146 | val_total_loss : 0.153 | tr_stimu_loss : 0.259 | val_stimu_loss : 0.268
+2022-09-21 14:17:43,033 INFO not improved for    45 iterations
+2022-09-21 14:17:45,447 INFO [45,    20] tr_recon_loss : 0.035 | val_recon_loss : 0.032 | tr_total_loss : 0.143 | val_total_loss : 0.145 | tr_stimu_loss : 0.250 | val_stimu_loss : 0.258
+2022-09-21 14:17:45,447 INFO not improved for    46 iterations
+2022-09-21 14:17:47,803 INFO [45,    30] tr_recon_loss : 0.034 | val_recon_loss : 0.035 | tr_total_loss : 0.140 | val_total_loss : 0.144 | tr_stimu_loss : 0.245 | val_stimu_loss : 0.252
+2022-09-21 14:17:47,804 INFO not improved for    47 iterations
+2022-09-21 14:17:48,467 INFO Epoch 47
+2022-09-21 14:17:50,913 INFO [46,    10] tr_recon_loss : 0.034 | val_recon_loss : 0.032 | tr_total_loss : 0.138 | val_total_loss : 0.138 | tr_stimu_loss : 0.242 | val_stimu_loss : 0.244
+2022-09-21 14:17:50,914 INFO not improved for    48 iterations
+2022-09-21 14:17:53,224 INFO [46,    20] tr_recon_loss : 0.036 | val_recon_loss : 0.038 | tr_total_loss : 0.135 | val_total_loss : 0.138 | tr_stimu_loss : 0.235 | val_stimu_loss : 0.238
+2022-09-21 14:17:53,224 INFO not improved for    49 iterations
+2022-09-21 14:17:55,638 INFO [46,    30] tr_recon_loss : 0.032 | val_recon_loss : 0.034 | tr_total_loss : 0.135 | val_total_loss : 0.132 | tr_stimu_loss : 0.238 | val_stimu_loss : 0.230
+2022-09-21 14:17:55,639 INFO not improved for    50 iterations
+2022-09-21 14:17:56,325 INFO Epoch 48
+2022-09-21 14:17:58,709 INFO [47,    10] tr_recon_loss : 0.032 | val_recon_loss : 0.043 | tr_total_loss : 0.135 | val_total_loss : 0.140 | tr_stimu_loss : 0.239 | val_stimu_loss : 0.238
+2022-09-21 14:17:58,725 INFO not improved for    51 iterations
+2022-09-21 14:17:58,725 INFO Finished Training
+2022-09-28 12:34:05,476 INFO model_name                   demo_model
+savedir                        orig_NN/
+seed                                  0
+n_epochs                             80
+log_interval                         10
+convergence_crit                     50
+binary_stimulation                 True
+simulation_type                 regular
+input_channels                        1
+reconstruction_channels               1
+out_activation                  sigmoid
+dataset                      characters
+device                           cuda:0
+batch_size                           30
+optimizer                          adam
+learning_rate                    0.0001
+reconstruction_loss                 mse
+reconstruction_loss_param             0
+sparsity_loss                        L1
+kappa                               0.5
+dtype: object
+2022-09-28 12:34:05,476 INFO Epoch 1
+2022-09-28 12:34:09,748 INFO [0,    10] tr_recon_loss : 0.161 | val_recon_loss : 0.201 | tr_total_loss : 0.283 | val_total_loss : 0.346 | tr_stimu_loss : 0.405 | val_stimu_loss : 0.491
+2022-09-28 12:34:09,748 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-28 12:34:09,753 INFO Saving to orig_NN/demo_model_best_decoder.pth...
+2022-09-28 12:34:13,877 INFO [0,    20] tr_recon_loss : 0.185 | val_recon_loss : 0.196 | tr_total_loss : 0.268 | val_total_loss : 0.324 | tr_stimu_loss : 0.351 | val_stimu_loss : 0.453
+2022-09-28 12:34:13,878 INFO Saving to orig_NN/demo_model_best_encoder.pth...
+2022-09-28 12:34:13,882 INFO Saving to orig_NN/demo_model_best_decoder.pth...
