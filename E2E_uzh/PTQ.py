@@ -374,9 +374,9 @@ if __name__ == '__main__':
 
     
     ap = argparse.ArgumentParser()
-    ap.add_argument("-m", "--model_name", type=str, default="demo_model",
+    ap.add_argument("-m", "--model_name", type=str, default="demo_model_imc_sim_ptq",
                     help="model name")
-    ap.add_argument("-dir", "--savedir", type=str, default="nvp_NN_character/",
+    ap.add_argument("-dir", "--savedir", type=str, default="nvp_NN_character_imc_sim/",
                     help="directory for saving the model parameters and training statistics")
     ap.add_argument("-s", "--seed", type=int, default=0,
                     help="seed for random initialization")

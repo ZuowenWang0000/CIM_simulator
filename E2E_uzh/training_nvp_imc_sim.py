@@ -9,7 +9,7 @@ import math
 
 # Local dependencies
 import utils ,model
-import NVP_v1_model
+import NVP_v1_model_imc_sim
 import local_datasets
 from icecream import ic
 import shutil
@@ -123,14 +123,14 @@ def initialize_components(cfg):
 
     # Models
     models = dict()
-    models['encoder'] = NVP_v1_model.E2E_Encoder(in_channels=cfg.input_channels).to(cfg.device)
-    models['decoder'] = NVP_v1_model.E2E_Decoder(out_channels=cfg.reconstruction_channels,
+    models['encoder'] = NVP_v1_model_imc_sim.E2E_Encoder(in_channels=cfg.input_channels).to(cfg.device)
+    models['decoder'] = NVP_v1_model_imc_sim.E2E_Decoder(out_channels=cfg.reconstruction_channels,
                                         out_activation=cfg.out_activation).to(cfg.device)
     if cfg.simulation_type == 'regular':
         pMask = utils.get_pMask(jitter_amplitude=0,dropout=False, size=(input_image_size*2,input_image_size*2)) # phosphene mask with regular mapping
     elif cfg.simulation_type == 'personalized':
         pMask = utils.get_pMask(seed=1,jitter_amplitude=.5,dropout=True,perlin_noise_scale=.4, size=(input_image_size*2,input_image_size*2)) # pers. phosphene mask
-    models['simulator'] = NVP_v1_model.E2E_PhospheneSimulator(pMask=pMask.to(cfg.device),
+    models['simulator'] = NVP_v1_model_imc_sim.E2E_PhospheneSimulator(pMask=pMask.to(cfg.device),
                                                         scale_factor = 8, #use 16 when using an extra strided convolution. #default=8,
                                                         sigma=1.5,
                                                         intensity=15,
@@ -365,17 +365,17 @@ if __name__ == '__main__':
     import pandas as pd
     
     ap = argparse.ArgumentParser()
-    ap.add_argument("-m", "--model_name", type=str, default="demo_model",
+    ap.add_argument("-m", "--model_name", type=str, default="demo_model_imc_sim",
                     help="model name")
-    ap.add_argument("-dir", "--savedir", type=str, default="nvp_NN_character/",
+    ap.add_argument("-dir", "--savedir", type=str, default="nvp_NN_character_imc_sim/",
                     help="directory for saving the model parameters and training statistics")
     ap.add_argument("-s", "--seed", type=int, default=0,
                     help="seed for random initialization")
     ap.add_argument("-e", "--n_epochs", type=int, default=80, #80
                     help="number of training epochs")   
-    ap.add_argument("-l", "--log_interval", type=int, default=50,
+    ap.add_argument("-l", "--log_interval", type=int, default=10,
                     help="number of batches after which to evaluate model (and logged)")   
-    ap.add_argument("-crit", "--convergence_crit", type=int, default=100,
+    ap.add_argument("-crit", "--convergence_crit", type=int, default=50,
                     help="stop-criterion for convergence: number of evaluations after which model is not improved")   
     ap.add_argument("-bin", "--binary_stimulation", type=bool, default=True,
                     help="use quantized (binary) instead of continuous stimulation protocol")   
@@ -387,23 +387,23 @@ if __name__ == '__main__':
                     help="only grayscale (single channel) images are supported for now")     
     ap.add_argument("-act", "--out_activation", type=str, default="sigmoid",
                     help="use 'sigmoid' for grayscale reconstructions, 'softmax' for boundary segmentation task")   
-    ap.add_argument("-d", "--dataset", type=str, default="charaters",
+    ap.add_argument("-d", "--dataset", type=str, default="characters",
                     help="'charaters' dataset and 'ADE20K' are supported")   
     ap.add_argument("-dev", "--device", type=str, default="cuda:0",
                     help="e.g. use 'cpu' or 'cuda:0' ")   
-    ap.add_argument("-n", "--batch_size", type=int, default=32,
+    ap.add_argument("-n", "--batch_size", type=int, default=16,
                     help="'charaters' dataset and 'ADE20K' are supported")   
     ap.add_argument("-opt", "--optimizer", type=str, default="adam",
                     help="only 'adam' is supporte for now")   
-    ap.add_argument("-lr", "--learning_rate", type=float, default=0.0002,
+    ap.add_argument("-lr", "--learning_rate", type=float, default=0.001,
                     help="Use higher learning rates for VGG-loss (perceptual reconstruction task)")  
-    ap.add_argument("-rl", "--reconstruction_loss", type=str, default='vgg',
+    ap.add_argument("-rl", "--reconstruction_loss", type=str, default='mse',
                     help="'mse', 'vgg' or 'boundary' loss are supported ") 
-    ap.add_argument("-p", "--reconstruction_loss_param", type=float, default=2.0,
+    ap.add_argument("-p", "--reconstruction_loss_param", type=float, default=0.0,
                     help="In perceptual condition: the VGG layer depth, boundary segmentation: cross-entropy class weight") 
     ap.add_argument("-L", "--sparsity_loss", type=str, default='L1',
                     help="choose L1 or L2 type of sparsity loss (MSE or L1('taxidrivers') norm)") 
-    ap.add_argument("-k", "--kappa", type=float, default=0.03,
+    ap.add_argument("-k", "--kappa", type=float, default=0.3,
                     help="sparsity weight parameter kappa")
     cfg = pd.Series(vars(ap.parse_args()))
 
@@ -420,7 +420,7 @@ if __name__ == '__main__':
 
     path = os.path.abspath(os.getcwd())
 
-    shutil.copy("NVP_v1_model.py", cfg.savedir+"NVP_v1_model.py")
+    shutil.copy("NVP_v1_model_imc_sim.py", cfg.savedir+"NVP_v1_model_imc_sim.py")
 
     # run the training loop
     train(models, dataset, optimization, train_settings)
