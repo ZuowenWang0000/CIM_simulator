@@ -28,6 +28,12 @@ from skimage.metrics import structural_similarity
 from skimage.metrics import mean_squared_error
 from skimage.metrics import peak_signal_noise_ratio
 
+from pytorch_quantization import nn as quant_nn
+from pytorch_quantization import calib
+from pytorch_quantization.tensor_quant import QuantDescriptor
+from pytorch_quantization import quant_modules
+import tqdm
+
 
 class CustomLoss(object):
     def __init__(self, recon_loss_type='mse',recon_loss_param=None, stimu_loss_type=None, kappa=0, device='cpu'):
@@ -115,8 +121,8 @@ def initialize_components(cfg):
     # torch.manual_seed(seed)
     # np.random.seed(seed)
 
-    torch.manual_seed(cfg.seed)
-    np.random.seed(cfg.seed)
+    # torch.manual_seed(cfg.seed)
+    # np.random.seed(cfg.seed)
     
     # size
     input_image_size = 128 
@@ -136,7 +142,7 @@ def initialize_components(cfg):
                                                         intensity=15,
                                                         device=cfg.device, binary_stimulation=cfg.binary_stimulation).to(cfg.device)
 
-    print(models['encoder'])
+    # print(models['encoder'])
 
     # Dataset
     dataset = dict()
@@ -147,7 +153,7 @@ def initialize_components(cfg):
         trainset = local_datasets.ADE_Dataset(directory='/mnt/data/datasets/ade20/ADE20K',device=cfg.device)
         valset = local_datasets.ADE_Dataset(directory='/mnt/data/datasets/ade20/ADE20K',device=cfg.device,validation=True)
     dataset['trainloader'] = DataLoader(trainset,batch_size=int(cfg.batch_size),shuffle=True)
-    dataset['valloader'] = DataLoader(valset,batch_size=int(cfg.batch_size),shuffle=True)
+    dataset['valloader'] = DataLoader(valset,batch_size=int(cfg.batch_size),shuffle=False, drop_last=False)
 
     # Optimization
     optimization = dict()
@@ -177,6 +183,126 @@ def initialize_components(cfg):
     train_settings['convergence_criterion'] = cfg.convergence_crit
     return models, dataset, optimization, train_settings
     
+
+def collect_stats(model, data_loader, num_batches):
+    """Feed data to the network and collect statistic"""
+
+    # Enable calibrators
+    for name, module in model.named_modules():
+        if isinstance(module, quant_nn.TensorQuantizer):
+            if module._calibrator is not None:
+                module.disable_quant()
+                module.enable_calib()
+            else:
+                module.disable()
+
+    for i, (image, _) in enumerate(data_loader):
+        model(image.cuda())
+        if i >= num_batches:
+            break
+
+    # Disable calibrators
+    for name, module in model.named_modules():
+        if isinstance(module, quant_nn.TensorQuantizer):
+            if module._calibrator is not None:
+                module.enable_quant()
+                module.disable_calib()
+            else:
+                module.enable()
+    
+    return model
+
+def compute_amax(model, **kwargs):
+    # Load calib result
+    for name, module in model.named_modules():
+        if isinstance(module, quant_nn.TensorQuantizer):
+            if module._calibrator is not None:
+                if isinstance(module._calibrator, calib.MaxCalibrator):
+                    module.load_calib_amax()
+                else:
+                    module.load_calib_amax(**kwargs)
+            print(F"{name:40}: {module}")
+    model.cuda()
+    return model
+
+
+def evaluate_saved_model(models, dataset, optimization, visualize=None, savefig=False, bn_folding=False):
+    """ loads the saved model parametes for given configuration <cfg> and returns the performance
+    metrics on the validation dataset. The <visualize> argument can be set equal to any positive
+    integer that represents the amount of example figures to plot."""
+    # Load configurations
+    encoder = models['encoder']
+    decoder = models['decoder']
+    simulator = models['simulator']
+    valloader = dataset['valloader']
+    lossfunc = optimization['lossfunc']
+    
+    encoder.eval()
+    simulator.eval()
+    decoder.eval()
+
+    # Batch_norm folding
+    if(bn_folding):
+        fuse_bn_recursively(encoder)
+        print(encoder)
+
+    # Forward pass (validation set)
+    mse_total = 0
+    psnr_total = 0
+    total_samples = 0
+    for i, (image,label) in enumerate(valloader):
+        total_samples += image.shape[0]
+        with torch.no_grad():
+            stimulation = encoder(image)
+            phosphenes  = simulator(stimulation)
+            reconstruction = decoder(phosphenes)    
+
+        # Visualize results
+        if visualize is not None:
+            n_figs = 4 if cfg.reconstruction_loss == 'boundary' else 3
+            n_examples = visualize
+            plt.figure(figsize=(n_figs,n_examples),dpi=200)
+
+            for i in range(n_examples):
+                plt.subplot(n_examples,n_figs,n_figs*i+1)
+                plt.imshow(image[i].squeeze().cpu().numpy(),cmap='gray')
+                plt.axis('off')
+                plt.subplot(n_examples,n_figs,n_figs*i+2)
+                plt.imshow(phosphenes[i].squeeze().cpu().numpy(),cmap='gray')
+                plt.axis('off')
+                plt.subplot(n_examples,n_figs,n_figs*i+3)
+                plt.imshow(reconstruction[i][0].squeeze().cpu().numpy(),cmap='gray')
+                plt.axis('off')
+                if n_figs > 3:
+                    plt.subplot(n_examples,n_figs,n_figs*i+4)
+                    plt.imshow(label[i].squeeze().cpu().numpy(),cmap='gray')
+                    plt.axis('off')
+            if savefig:
+                if(bn_folding):
+                    plt.savefig(os.path.join(cfg.savedir,cfg.model_name+'eval_bn_folding.png'))
+                else:
+                    plt.savefig(os.path.join(cfg.savedir,cfg.model_name+'eval.png'))
+            plt.show()
+
+        # Calculate performance metrics
+        im_pairs = [[im.squeeze().cpu().numpy(),trg.squeeze().cpu().numpy()] for im,trg in zip(image,reconstruction)]
+        
+        if cfg.reconstruction_loss == 'boundary':
+            metrics=pd.Series() #TODO
+        else:
+            mse = [mean_squared_error(*pair) for pair in im_pairs]
+            # print(f"mse len:{len(mse)}")
+            # print(mse)
+            # ssim = [structural_similarity(*pair, gaussian_weigths=True) for pair in im_pairs]
+            psnr = [peak_signal_noise_ratio(*pair) for pair in im_pairs]
+
+        mse_total += np.sum(mse)
+        # ssim_total += np.sum(ssim)
+        psnr_total += np.sum(psnr)
+    metrics=pd.Series({'mse':mse_total/total_samples,
+                    #    'ssim':np.mean(ssim),
+                        'psnr':psnr_total/total_samples})
+    return metrics
 
 
 def train(models, dataset, optimization, train_settings):
@@ -365,9 +491,9 @@ if __name__ == '__main__':
     import pandas as pd
     
     ap = argparse.ArgumentParser()
-    ap.add_argument("-m", "--model_name", type=str, default="demo_model_imc_sim",
+    ap.add_argument("-m", "--model_name", type=str, default="demo_model_imc_sim_qat",
                     help="model name")
-    ap.add_argument("-dir", "--savedir", type=str, default="nvp_NN_character_imc_sim/",
+    ap.add_argument("-dir", "--savedir", type=str, default="nvp_NN_character_imc_sim_qat/",
                     help="directory for saving the model parameters and training statistics")
     ap.add_argument("-s", "--seed", type=int, default=0,
                     help="seed for random initialization")
@@ -379,7 +505,7 @@ if __name__ == '__main__':
                     help="stop-criterion for convergence: number of evaluations after which model is not improved")   
     ap.add_argument("-bin", "--binary_stimulation", type=bool, default=True,
                     help="use quantized (binary) instead of continuous stimulation protocol")   
-    ap.add_argument("-sim", "--simulation_type", type=str, default="personalized",
+    ap.add_argument("-sim", "--simulation_type", type=str, default="regular",
                     help="'regular' or 'personalized' phosphene mapping") 
     ap.add_argument("-in", "--input_channels", type=int, default=1,
                     help="only grayscale (single channel) images are supported for now")   
@@ -391,7 +517,7 @@ if __name__ == '__main__':
                     help="'charaters' dataset and 'ADE20K' are supported")   
     ap.add_argument("-dev", "--device", type=str, default="cuda:0",
                     help="e.g. use 'cpu' or 'cuda:0' ")   
-    ap.add_argument("-n", "--batch_size", type=int, default=16,
+    ap.add_argument("-n", "--batch_size", type=int, default=100,
                     help="'charaters' dataset and 'ADE20K' are supported")   
     ap.add_argument("-opt", "--optimizer", type=str, default="adam",
                     help="only 'adam' is supporte for now")   
@@ -405,10 +531,29 @@ if __name__ == '__main__':
                     help="choose L1 or L2 type of sparsity loss (MSE or L1('taxidrivers') norm)") 
     ap.add_argument("-k", "--kappa", type=float, default=0.3,
                     help="sparsity weight parameter kappa")
+    # add resume checkpoint
+    ap.add_argument("-resume", "--resume_checkpoint", type=str, default='nvp_NN_character_imc_sim/demo_model_imc_sim',
+                    help="resume training from checkpoint")
+
     cfg = pd.Series(vars(ap.parse_args()))
+
+
+    # set random seed for numpy, cuda, cudnn
+    def set_random_seeds(seed):
+        np.random.seed(seed)
+        torch.manual_seed(seed)
+        torch.cuda.manual_seed_all(seed)
+        torch.backends.cudnn.deterministic = True
+    set_random_seeds(cfg.seed)
 
     print(cfg)
     models, dataset, optimization, train_settings = initialize_components(cfg)
+    decoder = models["decoder"]
+    decoder.load_state_dict(torch.load(cfg.resume_checkpoint + "_best_decoder.pth"))
+    simulator = models["simulator"]
+
+    if cfg.resume_checkpoint is None:
+        raise ValueError("Please specify a checkpoint to resume quantization training from!")
 
     # # Print MACs and model size (using https://github.com/Lyken17/pytorch-OpCounter)
     # from thop import profile
@@ -418,14 +563,57 @@ if __name__ == '__main__':
     # print(macs, params)
     # exit()
 
+    quant_modules.initialize()
+
+    quant_desc_input = QuantDescriptor(calib_method='histogram')
+    quant_nn.QuantConv2d.set_default_quant_desc_input(quant_desc_input)
+    quant_nn.QuantLinear.set_default_quant_desc_input(quant_desc_input)
+
+    encoder = NVP_v1_model_imc_sim.E2E_Encoder(in_channels=cfg.input_channels).to(cfg.device)
+    encoder.load_state_dict(torch.load(cfg.resume_checkpoint + "_best_encoder.pth"))
+
+    print("****************************************")    
+    print(encoder)
+    print("****************************************")
+    print(decoder)
+    print("****************************************")
+
+    # metrics = evaluate_saved_model(models, dataset, optimization, visualize=None, savefig=False, bn_folding=False)
+    # print("Evaluation results for the original model")
+    # print(metrics)
+    # quit()
     path = os.path.abspath(os.getcwd())
 
     shutil.copy("NVP_v1_model_imc_sim.py", cfg.savedir+"NVP_v1_model_imc_sim.py")
 
-    # run the training loop
-    train(models, dataset, optimization, train_settings)
+
+
+    def post_training_quantization(encoder, dataset, optimization, train_settings):
+        # Dataset
+        trainloader = dataset['trainloader']
+        valloader   = dataset['valloader']
+
+        # It is a bit slow since we collect histograms on CPU
+        # with torch.no_grad():
+            
 
 
 
+        return encoder
     
+    # first post training quantization
+    encoder = post_training_quantization(encoder, dataset, optimization, train_settings)
+    models = {'encoder':encoder, 'decoder':decoder, 'simulator':simulator}
+    metrics = evaluate_saved_model(models, dataset, optimization, visualize=None, savefig=False, bn_folding=False)
+    print("Evaluation results for the quantized model (not retrained)")
+    print(metrics)
+
+
+
+    # run the training loop
+    # train(models, dataset, optimization, train_settings)
+
+
+
+
 
