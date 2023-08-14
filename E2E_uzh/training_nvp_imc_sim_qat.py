@@ -32,6 +32,7 @@ from pytorch_quantization import nn as quant_nn
 from pytorch_quantization import calib
 from pytorch_quantization.tensor_quant import QuantDescriptor
 from pytorch_quantization import quant_modules
+from quantization_utils import collect_stats, compute_amax
 import tqdm
 
 
@@ -183,47 +184,6 @@ def initialize_components(cfg):
     train_settings['convergence_criterion'] = cfg.convergence_crit
     return models, dataset, optimization, train_settings
     
-
-def collect_stats(model, data_loader, num_batches):
-    """Feed data to the network and collect statistic"""
-
-    # Enable calibrators
-    for name, module in model.named_modules():
-        if isinstance(module, quant_nn.TensorQuantizer):
-            if module._calibrator is not None:
-                module.disable_quant()
-                module.enable_calib()
-            else:
-                module.disable()
-
-    for i, (image, _) in enumerate(data_loader):
-        model(image.cuda())
-        if i >= num_batches:
-            break
-
-    # Disable calibrators
-    for name, module in model.named_modules():
-        if isinstance(module, quant_nn.TensorQuantizer):
-            if module._calibrator is not None:
-                module.enable_quant()
-                module.disable_calib()
-            else:
-                module.enable()
-    
-    return model
-
-def compute_amax(model, **kwargs):
-    # Load calib result
-    for name, module in model.named_modules():
-        if isinstance(module, quant_nn.TensorQuantizer):
-            if module._calibrator is not None:
-                if isinstance(module._calibrator, calib.MaxCalibrator):
-                    module.load_calib_amax()
-                else:
-                    module.load_calib_amax(**kwargs)
-            print(F"{name:40}: {module}")
-    model.cuda()
-    return model
 
 
 def evaluate_saved_model(models, dataset, optimization, visualize=None, savefig=False, bn_folding=False):
@@ -587,25 +547,26 @@ if __name__ == '__main__':
     shutil.copy("NVP_v1_model_imc_sim.py", cfg.savedir+"NVP_v1_model_imc_sim.py")
 
 
-
     def post_training_quantization(encoder, dataset, optimization, train_settings):
         # Dataset
         trainloader = dataset['trainloader']
         valloader   = dataset['valloader']
 
         # It is a bit slow since we collect histograms on CPU
-        # with torch.no_grad():
-            
-
-
-
+        with torch.no_grad():
+            collect_stats(encoder, trainloader, num_batches=6)
+            compute_amax(encoder, method="percentile", percentile=99.99)
         return encoder
     
+    # pre calibration evaluation
+    models = {'encoder':encoder, 'decoder':decoder, 'simulator':simulator}
+    metrics = evaluate_saved_model(models, dataset, optimization, visualize=None, savefig=False, bn_folding=False)
+    print("Evaluation results for the quantized model (not calibrated)")    
     # first post training quantization
     encoder = post_training_quantization(encoder, dataset, optimization, train_settings)
     models = {'encoder':encoder, 'decoder':decoder, 'simulator':simulator}
     metrics = evaluate_saved_model(models, dataset, optimization, visualize=None, savefig=False, bn_folding=False)
-    print("Evaluation results for the quantized model (not retrained)")
+    print("Evaluation results for the quantized model (calibrated)")
     print(metrics)
 
 

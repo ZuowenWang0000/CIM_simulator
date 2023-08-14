@@ -75,51 +75,60 @@ def evaluate_saved_model(cfg, visualize=None, savefig=False, bn_folding=False):
         print(encoder)
 
     # Forward pass (validation set)
-    image,label = next(iter(valloader))
-    with torch.no_grad():
-        stimulation = encoder(image)
-        phosphenes  = simulator(stimulation)
-        reconstruction = decoder(phosphenes)    
+    total_mse = 0
+    total_ssim = 0
+    total_psnr = 0
+    total_sample = 0
+    for i, (image,label) in enumerate(valloader):
+        total_sample += image.shape[0]
+        with torch.no_grad():
+            stimulation = encoder(image)
+            phosphenes  = simulator(stimulation)
+            reconstruction = decoder(phosphenes)    
 
-    # Visualize results
-    if visualize is not None:
-        n_figs = 4 if cfg.reconstruction_loss == 'boundary' else 3
-        n_examples = visualize
-        plt.figure(figsize=(n_figs,n_examples),dpi=200)
+        # Visualize results
+        if visualize is not None:
+            n_figs = 4 if cfg.reconstruction_loss == 'boundary' else 3
+            n_examples = visualize
+            plt.figure(figsize=(n_figs,n_examples),dpi=200)
 
-        for i in range(n_examples):
-            plt.subplot(n_examples,n_figs,n_figs*i+1)
-            plt.imshow(image[i].squeeze().cpu().numpy(),cmap='gray')
-            plt.axis('off')
-            plt.subplot(n_examples,n_figs,n_figs*i+2)
-            plt.imshow(phosphenes[i].squeeze().cpu().numpy(),cmap='gray')
-            plt.axis('off')
-            plt.subplot(n_examples,n_figs,n_figs*i+3)
-            plt.imshow(reconstruction[i][0].squeeze().cpu().numpy(),cmap='gray')
-            plt.axis('off')
-            if n_figs > 3:
-                plt.subplot(n_examples,n_figs,n_figs*i+4)
-                plt.imshow(label[i].squeeze().cpu().numpy(),cmap='gray')
+            for i in range(n_examples):
+                plt.subplot(n_examples,n_figs,n_figs*i+1)
+                plt.imshow(image[i].squeeze().cpu().numpy(),cmap='gray')
                 plt.axis('off')
-        if savefig:
-            if(bn_folding):
-                plt.savefig(os.path.join(cfg.savedir,cfg.model_name+'eval_bn_folding.png'))
-            else:
-                plt.savefig(os.path.join(cfg.savedir,cfg.model_name+'eval.png'))
-        plt.show()
+                plt.subplot(n_examples,n_figs,n_figs*i+2)
+                plt.imshow(phosphenes[i].squeeze().cpu().numpy(),cmap='gray')
+                plt.axis('off')
+                plt.subplot(n_examples,n_figs,n_figs*i+3)
+                plt.imshow(reconstruction[i][0].squeeze().cpu().numpy(),cmap='gray')
+                plt.axis('off')
+                if n_figs > 3:
+                    plt.subplot(n_examples,n_figs,n_figs*i+4)
+                    plt.imshow(label[i].squeeze().cpu().numpy(),cmap='gray')
+                    plt.axis('off')
+            if savefig:
+                if(bn_folding):
+                    plt.savefig(os.path.join(cfg.savedir,cfg.model_name+'eval_bn_folding.png'))
+                else:
+                    plt.savefig(os.path.join(cfg.savedir,cfg.model_name+'eval.png'))
+            plt.show()
 
-    # Calculate performance metrics
-    im_pairs = [[im.squeeze().cpu().numpy(),trg.squeeze().cpu().numpy()] for im,trg in zip(image,reconstruction)]
-    
-    if cfg.reconstruction_loss == 'boundary':
-        metrics=pd.Series() #TODO
-    else:
-        mse = [mean_squared_error(*pair) for pair in im_pairs]
-        ssim = [structural_similarity(*pair, gaussian_weigths=True) for pair in im_pairs]
-        psnr = [peak_signal_noise_ratio(*pair) for pair in im_pairs]
-        metrics=pd.Series({'mse':np.mean(mse),
-                           'ssim':np.mean(ssim),
-                           'psnr':np.mean(psnr)})
+        # Calculate performance metrics
+        im_pairs = [[im.squeeze().cpu().numpy(),trg.squeeze().cpu().numpy()] for im,trg in zip(image,reconstruction)]
+        
+        if cfg.reconstruction_loss == 'boundary':
+            metrics=pd.Series() #TODO
+        else:
+            mse = [mean_squared_error(*pair) for pair in im_pairs]
+            ssim = [structural_similarity(*pair, data_range = 1, gaussian_weigths=True) for pair in im_pairs]
+            psnr = [peak_signal_noise_ratio(*pair) for pair in im_pairs]
+
+        total_mse += np.sum(mse)
+        total_ssim += np.sum(ssim)
+        total_psnr += np.sum(psnr)
+    metrics=pd.Series({'mse':total_mse/total_sample,
+                    'ssim':total_ssim/total_sample,
+                    'psnr':total_psnr/total_sample})
     return metrics
 
 def plot_grad_flow(named_parameters):

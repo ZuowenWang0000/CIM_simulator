@@ -9,7 +9,82 @@ import torchvision
 import noise
 import pandas as pd
 import os 
+import model
 
+
+class CustomLoss(object):
+    def __init__(self, recon_loss_type='mse',recon_loss_param=None, stimu_loss_type=None, kappa=0, device='cpu'):
+        """Custom loss class for training end-to-end model with a combination of reconstruction loss and sparsity loss
+        reconstruction loss type can be either one of: 'mse' (pixel-intensity based), 'vgg' (i.e. perceptual loss/feature loss) 
+        or 'boundary' (weighted cross-entropy loss on the output<>semantic boundary labels).
+        stimulation loss type (i.e. sparsity loss) can be either 'L1', 'L2' or None.
+        """
+        
+        # Reconstruction loss
+        if recon_loss_type == 'mse':
+            self.recon_loss = torch.nn.MSELoss()
+            self.target = 'image'
+        elif recon_loss_type == 'vgg':
+            self.feature_extractor = model.VGG_Feature_Extractor(layer_depth=recon_loss_param,device=device)
+            self.recon_loss = lambda x,y: torch.nn.functional.mse_loss(self.feature_extractor(x),self.feature_extractor(y))
+            self.target = 'image'
+        elif recon_loss_type == 'boundary':
+            loss_weights = torch.tensor([1-recon_loss_param,recon_loss_param],device=device)
+            self.recon_loss = torch.nn.CrossEntropyLoss(weight=loss_weights)
+            self.target = 'label'
+        else:
+            raise NotImplementedError
+
+        # Stimulation loss 
+        if stimu_loss_type=='L1':
+            self.stimu_loss = lambda x: torch.mean(.5*(x+1)) #converts tanh to sigmoid first
+        elif stimu_loss_type == 'L2':
+            self.stimu_loss = lambda x: torch.mean((.5*(x+1))**2) #converts tanh to sigmoid first
+        elif stimu_loss_type is None:
+            self.stimu_loss = None
+        self.kappa = kappa if self.stimu_loss is not None else 0
+        
+        # Output statistics 
+        self.stats = {'tr_recon_loss':[],'val_recon_loss': [],'tr_total_loss':[],'val_total_loss':[]}
+        if self.stimu_loss is not None:   
+            self.stats['tr_stimu_loss']= []
+            self.stats['val_stimu_loss']= []
+        self.running_loss = {'recon':0,'stimu':0,'total':0}
+        self.n_iterations = 0
+        
+        
+    def __call__(self,image,label,stimulation,phosphenes,reconstruction,validation=False):    
+        
+        # Target
+        if self.target == 'image': # Flag for reconstructing input image or target label
+            target = image
+        elif self.target == 'label':
+            target = label
+        
+        # Calculate loss
+        loss_stimu = self.stimu_loss(stimulation) if self.stimu_loss is not None else torch.tensor(0)
+        loss_recon = self.recon_loss(reconstruction,target)
+        loss_total = (1-self.kappa)*loss_recon + self.kappa*loss_stimu
+        
+        if not validation:
+            # Save running loss and return total loss
+            self.running_loss['stimu'] += loss_stimu.item()
+            self.running_loss['recon'] += loss_recon.item()
+            self.running_loss['total'] += loss_total.item()
+            self.n_iterations += 1
+            return loss_total
+        else:
+            # Return train loss (from running loss) and validation loss
+            self.stats['val_recon_loss'].append(loss_recon.item())
+            self.stats['val_total_loss'].append(loss_total.item())
+            self.stats['tr_recon_loss'].append(self.running_loss['recon']/self.n_iterations)
+            self.stats['tr_total_loss'].append(self.running_loss['total']/self.n_iterations)
+            if self.stimu_loss is not None:
+                self.stats['val_stimu_loss'].append(loss_stimu.item())
+                self.stats['tr_stimu_loss'].append(self.running_loss['stimu']/self.n_iterations)  
+            self.running_loss = {key:0 for key in self.running_loss}
+            self.n_iterations = 0
+            return self.stats
 
 
 class Logger(object):
