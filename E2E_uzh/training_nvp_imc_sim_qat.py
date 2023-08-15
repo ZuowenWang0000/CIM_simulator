@@ -27,6 +27,7 @@ from torch.utils.data import Dataset, DataLoader
 from skimage.metrics import structural_similarity
 from skimage.metrics import mean_squared_error
 from skimage.metrics import peak_signal_noise_ratio
+# from skimage.metrics import r2_score
 
 from pytorch_quantization import nn as quant_nn
 from pytorch_quantization import calib
@@ -34,6 +35,23 @@ from pytorch_quantization.tensor_quant import QuantDescriptor
 from pytorch_quantization import quant_modules
 from quantization_utils import collect_stats, compute_amax
 import tqdm
+
+from torch.utils.data.sampler import Sampler
+from typing import Iterator, Sized
+
+class ConstantRandomSampler(Sampler[int]):
+    def __init__(self, data_source: Sized) -> None:
+        self.data_source = data_source
+        self.num_samples = len(self.data_source)
+        generator = torch.Generator()
+
+        self.shuffled_list = torch.randperm(self.num_samples, generator=generator).tolist()
+
+    def __iter__(self) -> Iterator[int]:
+        yield from self.shuffled_list
+
+    def __len__(self) -> int:
+        return self.num_samples
 
 
 class CustomLoss(object):
@@ -118,12 +136,12 @@ def initialize_components(cfg):
     """
 
     # Random seed
-    # seed = np.random.randint(1000)
-    # torch.manual_seed(seed)
-    # np.random.seed(seed)
+    seed = np.random.randint(1000)
+    torch.manual_seed(seed)
+    np.random.seed(seed)
 
-    # torch.manual_seed(cfg.seed)
-    # np.random.seed(cfg.seed)
+    torch.manual_seed(cfg.seed)
+    np.random.seed(cfg.seed)
     
     # size
     input_image_size = 128 
@@ -153,8 +171,10 @@ def initialize_components(cfg):
     elif cfg.dataset == 'ADE20K':
         trainset = local_datasets.ADE_Dataset(directory='/mnt/data/datasets/ade20/ADE20K',device=cfg.device)
         valset = local_datasets.ADE_Dataset(directory='/mnt/data/datasets/ade20/ADE20K',device=cfg.device,validation=True)
+    
     dataset['trainloader'] = DataLoader(trainset,batch_size=int(cfg.batch_size),shuffle=True)
-    dataset['valloader'] = DataLoader(valset,batch_size=int(cfg.batch_size),shuffle=False, drop_last=False)
+    sampler = ConstantRandomSampler(valset)
+    dataset['valloader'] = DataLoader(valset,batch_size=int(cfg.batch_size),shuffle=False,sampler=sampler, drop_last=False)
 
     # Optimization
     optimization = dict()
@@ -186,7 +206,7 @@ def initialize_components(cfg):
     
 
 
-def evaluate_saved_model(models, dataset, optimization, visualize=None, savefig=False, bn_folding=False):
+def evaluate_saved_model(models, dataset, optimization, visualize=None, savefig=False, fig_name='', bn_folding=False):
     """ loads the saved model parametes for given configuration <cfg> and returns the performance
     metrics on the validation dataset. The <visualize> argument can be set equal to any positive
     integer that represents the amount of example figures to plot."""
@@ -196,7 +216,7 @@ def evaluate_saved_model(models, dataset, optimization, visualize=None, savefig=
     simulator = models['simulator']
     valloader = dataset['valloader']
     lossfunc = optimization['lossfunc']
-    
+
     encoder.eval()
     simulator.eval()
     decoder.eval()
@@ -209,6 +229,7 @@ def evaluate_saved_model(models, dataset, optimization, visualize=None, savefig=
     # Forward pass (validation set)
     mse_total = 0
     psnr_total = 0
+    ssim_total = 0
     total_samples = 0
     for i, (image,label) in enumerate(valloader):
         total_samples += image.shape[0]
@@ -239,10 +260,11 @@ def evaluate_saved_model(models, dataset, optimization, visualize=None, savefig=
                     plt.axis('off')
             if savefig:
                 if(bn_folding):
-                    plt.savefig(os.path.join(cfg.savedir,cfg.model_name+'eval_bn_folding.png'))
+                    plt.savefig(os.path.join(cfg.savedir,cfg.model_name+fig_name+'eval_bn_folding.png'))
                 else:
-                    plt.savefig(os.path.join(cfg.savedir,cfg.model_name+'eval.png'))
-            plt.show()
+                    plt.savefig(os.path.join(cfg.savedir,cfg.model_name+fig_name+'_eval.png'))
+            else:
+                plt.show()
 
         # Calculate performance metrics
         im_pairs = [[im.squeeze().cpu().numpy(),trg.squeeze().cpu().numpy()] for im,trg in zip(image,reconstruction)]
@@ -251,16 +273,20 @@ def evaluate_saved_model(models, dataset, optimization, visualize=None, savefig=
             metrics=pd.Series() #TODO
         else:
             mse = [mean_squared_error(*pair) for pair in im_pairs]
+            # r2 = [r2_score(*pair) for pair in im_pairs]
             # print(f"mse len:{len(mse)}")
             # print(mse)
-            # ssim = [structural_similarity(*pair, gaussian_weigths=True) for pair in im_pairs]
+            ssim = [structural_similarity(*pair, data_range = 1,gaussian_weigths=True) for pair in im_pairs]
             psnr = [peak_signal_noise_ratio(*pair) for pair in im_pairs]
-
+            
+            # print(ssim)
         mse_total += np.sum(mse)
-        # ssim_total += np.sum(ssim)
+        # r2_total += np.sum(r2)
+        ssim_total += np.sum(ssim)
         psnr_total += np.sum(psnr)
     metrics=pd.Series({'mse':mse_total/total_samples,
-                    #    'ssim':np.mean(ssim),
+                        # 'r2':r2_total/total_samples,
+                       'ssim':np.mean(ssim),
                         'psnr':psnr_total/total_samples})
     return metrics
 
@@ -386,36 +412,6 @@ def train(models, dataset, optimization, train_settings):
                     writer = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
                     writer.writerow([epoch,i + 1]+[stats[key][-1] for key in stats])                
 
-                # # 4. Visualization
-                # plt.figure(figsize=(10,10),dpi=50)
-                # utils.plot_stats(stats)
-                # plt.figure(figsize=(10,10),dpi=50)
-                # utils.plot_images(image[:5])
-                # plt.figure(figsize=(10,10),dpi=50)
-                # utils.plot_images(phosphenes[:5])
-                # plt.figure(figsize=(10,10),dpi=50)
-                # utils.plot_images(reconstruction[:5])
-                # if len(label.shape)>1:
-                #     plt.figure(figsize=(10,10),dpi=50)
-                #     utils.plot_images(label[:5])    
-
-                # # Calculate performance metrics
-                # im_pairs = [[im.squeeze().cpu().numpy(),trg.squeeze().cpu().numpy()] for im,trg in zip(image,reconstruction)]
-                
-                # if cfg.reconstruction_loss == 'boundary':
-                #     metrics=pd.Series() #TODO
-                # else:
-                #     mse = [mean_squared_error(*pair) for pair in im_pairs]
-                #     ssim = [structural_similarity(*pair, gaussian_weigths=True) for pair in im_pairs]
-                #     psnr = [peak_signal_noise_ratio(*pair) for pair in im_pairs]
-                #     metrics=pd.Series({'mse':np.mean(mse),
-                #                     'ssim':np.mean(ssim),
-                #                     'psnr':np.mean(psnr)})
-                #     print(sum(mse) / len(mse))
-                
-                # 5. Save model (if best)
-                # ic(len(stats['val_total_loss']))
-                # ic(np.argmin(stats['val_total_loss'])+1)
                 if  np.argmin(stats['val_total_loss'])+1==len(stats['val_total_loss']):
                     savepath = os.path.join(savedir,model_name + '_best_encoder.pth' )#'_e%d_encoder.pth' %(epoch))#,i))
                     logger('Saving to ' + savepath + '...')
@@ -507,6 +503,21 @@ if __name__ == '__main__':
     set_random_seeds(cfg.seed)
 
     print(cfg)
+
+
+    models, dataset, optimization, train_settings = initialize_components(cfg)
+
+    encoder, decoder = models["encoder"], models["decoder"]
+    encoder.load_state_dict(torch.load(cfg.resume_checkpoint + "_best_encoder.pth"))
+    decoder.load_state_dict(torch.load(cfg.resume_checkpoint + "_best_decoder.pth"))
+    simulator = models["simulator"]
+    models = {'encoder':encoder, 'decoder':decoder, 'simulator':simulator}
+    metrics_checkpoint = evaluate_saved_model(models, dataset, \
+                                                        optimization, visualize=4, \
+                                                        savefig=True, fig_name='unquantized', bn_folding=False)
+
+
+
     models, dataset, optimization, train_settings = initialize_components(cfg)
     decoder = models["decoder"]
     decoder.load_state_dict(torch.load(cfg.resume_checkpoint + "_best_decoder.pth"))
@@ -525,9 +536,12 @@ if __name__ == '__main__':
 
     quant_modules.initialize()
 
-    quant_desc_input = QuantDescriptor(calib_method='histogram')
+    quant_desc_input = QuantDescriptor(num_bits=5, calib_method='histogram', unsigned=False)
+    quant_desc_weight = QuantDescriptor(num_bits=4, calib_method='histogram', unsigned=False)
     quant_nn.QuantConv2d.set_default_quant_desc_input(quant_desc_input)
+    quant_nn.QuantConv2d.set_default_quant_desc_weight(quant_desc_weight)
     quant_nn.QuantLinear.set_default_quant_desc_input(quant_desc_input)
+    quant_nn.QuantLinear.set_default_quant_desc_weight(quant_desc_weight)
 
     encoder = NVP_v1_model_imc_sim.E2E_Encoder(in_channels=cfg.input_channels).to(cfg.device)
     encoder.load_state_dict(torch.load(cfg.resume_checkpoint + "_best_encoder.pth"))
@@ -537,6 +551,15 @@ if __name__ == '__main__':
     print("****************************************")
     print(decoder)
     print("****************************************")
+
+    # print encoder.model attributes, print some weights
+    # for name, param in encoder.model.named_parameters():
+    #     print(name, param.shape)
+    #     if "conv1.weight" in name:
+    #         print(param[0][0][0])
+    #         print(param.dtype)
+
+    # print(encoder.model.0.conv1)
 
     # metrics = evaluate_saved_model(models, dataset, optimization, visualize=None, savefig=False, bn_folding=False)
     # print("Evaluation results for the original model")
@@ -551,25 +574,36 @@ if __name__ == '__main__':
         # Dataset
         trainloader = dataset['trainloader']
         valloader   = dataset['valloader']
-
+        encoder.eval()
         # It is a bit slow since we collect histograms on CPU
         with torch.no_grad():
-            collect_stats(encoder, trainloader, num_batches=6)
-            compute_amax(encoder, method="percentile", percentile=99.99)
+            collect_stats(encoder, trainloader, num_batches=60)
+            compute_amax(encoder, method="mse", percentile=99.99)
+            # compute_amax(encoder)
         return encoder
     
     # pre calibration evaluation
     models = {'encoder':encoder, 'decoder':decoder, 'simulator':simulator}
-    metrics = evaluate_saved_model(models, dataset, optimization, visualize=None, savefig=False, bn_folding=False)
-    print("Evaluation results for the quantized model (not calibrated)")    
+    metrics_quant_pre_calibration = evaluate_saved_model(models, dataset, \
+                                                        optimization, visualize=None, \
+                                                        savefig=False, bn_folding=False)
     # first post training quantization
     encoder = post_training_quantization(encoder, dataset, optimization, train_settings)
     models = {'encoder':encoder, 'decoder':decoder, 'simulator':simulator}
-    metrics = evaluate_saved_model(models, dataset, optimization, visualize=None, savefig=False, bn_folding=False)
+    metrics_quant_post_calibration = evaluate_saved_model(models, dataset, \
+                                                        optimization, visualize=4, \
+                                                        savefig=True, fig_name='quant_4bits_calib', bn_folding=False)
+    
+    print("Evaluation results for the checkpoint")    
+    print(metrics_checkpoint)
+    print("Evaluation results for the quantized model (not calibrated)")    
+    print(metrics_quant_pre_calibration)
     print("Evaluation results for the quantized model (calibrated)")
-    print(metrics)
+    print(metrics_quant_post_calibration)
 
-
+    print("****************************************")    
+    print(encoder)
+    print("****************************************")
 
     # run the training loop
     # train(models, dataset, optimization, train_settings)
