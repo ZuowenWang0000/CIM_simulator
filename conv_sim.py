@@ -12,77 +12,108 @@ from numpy import savetxt
 from functionals.functionals import Conv2D
 from functionals.util import format_large_number, format_small_number
 from models.simple_cnn import SimpleNVPCNN
+from local_datasets import ADE_Dataset, Character_Dataset
+from torch.utils.data import Dataset, DataLoader 
 
 
-
-config = yaml.load(open('kt_qy_imc.yaml', 'r'), Loader=yaml.FullLoader)
-print(config)
-
-
-bias = torch.load('bias.pt')
-stride = torch.load('stride.pt')
-padding = torch.load('padding.pt')
-groups = torch.load('groups.pt')
-dilation = torch.load('dilation.pt')
-
-I_NL = pd.read_excel('data_I-nonlinearity.xlsx').to_numpy()[:, 1]
-
-I_NL = dict(enumerate(I_NL.flatten(), 0))
+def main():
+    config = yaml.load(open('kt_qy_imc.yaml', 'r'), Loader=yaml.FullLoader)
+    print(config)
 
 
-x = torch.load('x.pt',map_location='cuda:0').cpu().numpy()
-weight =  torch.load('w.pt',map_location='cuda:0').cpu().numpy()
-stride = stride[0]
+    bias = torch.load('bias.pt')
+    stride = torch.load('stride.pt')
+    padding = torch.load('padding.pt')
+    groups = torch.load('groups.pt')
+    dilation = torch.load('dilation.pt')
 
-# todo : acc_length is what analog sum length? then it should be 8 
-acc_length = 64
+    I_NL = pd.read_excel('data_I-nonlinearity.xlsx').to_numpy()[:, 1]
 
-
-batch = x.shape[0]
-ch = x.shape[1]
-feature_size = int(x.shape[2]/stride)
-ks = weight.shape[2]
-kernel_num = weight.shape[0]
-round = int(np.ceil(ch/acc_length))
-print(f"shape of x:{x.shape} shape of weight:{weight.shape}")
-nl_err = 0
-if ch < acc_length:
-    ch = ch
-else:
-    ch = acc_length
-
-if ks ==1:
-    x = x
-elif ks ==3:
-    # x = F.pad(x, (1, 1, 1, 1), "constant", 0)
-    x = np.pad(x, pad_width = ((0,0), (0,0), (1,1), (1,1)), mode = "constant", constant_values=0)
-
-# vec_mac64 = np.vectorize((lambda x,y: mac_64(x, y, I_NL, NL_mode = False)), signature='(m,n),(m,n)->(m)')
-
-#  *********************** single thread ***********************
-output_features = np.zeros((batch, kernel_num, feature_size, feature_size))
+    I_NL = dict(enumerate(I_NL.flatten(), 0))
 
 
-input_shape = (1,3,128,128)
-model = SimpleNVPCNN(config)
-output_features, layer_total_latency, layer_total_energy, total_ops = model.forward(input_shape)
+    # x = torch.load('x.pt',map_location='cuda:0').cpu().numpy()
+    # load data with local_dataset.py
 
-print(f"input feature size:{input_shape}")
-print(f"output feature size:{output_features.shape}")
+    # Dataset
+    dataset = dict()
+    # trainset = local_datasets.Character_Dataset(device=cfg.device, imsize = (input_image_size,input_image_size))
+    valset = Character_Dataset(device='cpu',validation = True, imsize = (128, 128)) 
+
+    # dataset['trainloader'] = DataLoader(trainset,batch_size=int(cfg.batch_size),shuffle=True)
+    batch_size = 1
+    dataset['valloader'] = DataLoader(valset,batch_size=int(batch_size),shuffle=False)
+
+    weight =  torch.load('w.pt',map_location='cuda:0').cpu().numpy()
+    stride = stride[0]
+
+    # todo : acc_length is what analog sum length? then it should be 8 
+    acc_length = 64
+
+    for id, (x, y) in enumerate(dataset['valloader']):
+        print(f"processing {id}th image, shape of x:{x.shape}")
+        input_shape = (1,3,128,128)
+
+        batch = x.shape[0]
+        ch = x.shape[1]
+        feature_size = int(x.shape[2]/stride)
+        ks = weight.shape[2]
+        kernel_num = weight.shape[0]
+        round = int(np.ceil(ch/acc_length))
+        # print(f"shape of x:{x.shape} shape of weight:{weight.shape}")
+        nl_err = 0
+        if ch < acc_length:
+            ch = ch
+        else:
+            ch = acc_length
+
+        if ks ==1:
+            x = x
+        elif ks ==3:
+            # x = F.pad(x, (1, 1, 1, 1), "constant", 0)
+            x = np.pad(x, pad_width = ((0,0), (0,0), (1,1), (1,1)), mode = "constant", constant_values=0)
+
+        # vec_mac64 = np.vectorize((lambda x,y: mac_64(x, y, I_NL, NL_mode = False)), signature='(m,n),(m,n)->(m)')
+
+        #  *********************** single thread ***********************
+        output_features = np.zeros((batch, kernel_num, feature_size, feature_size))
+
+        model = SimpleNVPCNN(config, I_NL)
+
+        if config['logging_control']['consider_analog_value_dependency']:
+            output_features, layer_total_latency, layer_total_energy, total_ops = model.forward(x)
+        else:
+            output_features, layer_total_latency, layer_total_energy, total_ops = model.forward(input_shape)
+
+        print(f"input feature size:{input_shape}")
+        print(f"output feature size:{output_features.shape}")
 
 
-simple_column_eval = True
-if simple_column_eval:
-    total_latency = (model.total_latency/1.0e6)/config['basic_paras']['num_columns']
-    print(f"total latency :{format_large_number(total_latency)}s")
-    print(f"total ops :{format_large_number(model.total_ops)}")
+        simple_column_eval = True
+        if simple_column_eval:
+            num_banks = config['basic_paras']['num_banks']
+            column_per_bank = config['basic_paras']['num_columns']
+            total_columns = num_banks * column_per_bank
+            total_latency = (model.total_latency/1.0e6)/total_columns
+            print(f"total latency :{format_large_number(total_latency)}s")
+            print(f"total ops :{format_large_number(model.total_ops)}")
 
-    ops_per_second = model.total_ops/(model.total_latency*1e-6)*config['basic_paras']['num_columns']
-    print(f"ops per second:{format_large_number(ops_per_second)}")
-    # print(f"ops per second:{ops_per_second}")
+            ops_per_second = model.total_ops/(model.total_latency*1e-6)*total_columns
+            print(f"ops per second:{format_large_number(ops_per_second)}")
+            # print(f"ops per second:{ops_per_second}")
 
-    print(f"IMC power consumption:\
-          {format_small_number(ops_per_second/(config['energy']['peak_energy_efficient']*1.0e12))}W")
+            print(f"IMC power consumption:\
+                {format_small_number(ops_per_second/(config['energy']['peak_energy_efficient']*1.0e12))}W")
+
+        if config['logging_control']['consider_analog_value_dependency']:
+            break
+
+if __name__ == "__main__":
+    # add arguments with argparser
+    
+
+    main()
+
 
 
 # print(f"total energy:{model.total_energy}")
