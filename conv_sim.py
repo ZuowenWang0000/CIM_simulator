@@ -16,8 +16,13 @@ from local_datasets import ADE_Dataset, Character_Dataset
 from torch.utils.data import Dataset, DataLoader 
 
 
-def main():
+def main(args):
     config = yaml.load(open('kt_qy_imc.yaml', 'r'), Loader=yaml.FullLoader)
+
+    # add args to config dictionary
+    for key, value in vars(args).items():
+        config[key] = value
+
     print(config)
 
 
@@ -31,7 +36,67 @@ def main():
 
     I_NL = dict(enumerate(I_NL.flatten(), 0))
 
+    model = SimpleNVPCNN(config, I_NL)
+    setattr(model.conv7_a, "weight", np.zeros(10))
+    print(model.conv7_a.weight.shape)
+    # torch load checkpoint
+    checkpoint = torch.load(args.checkpoint, map_location='cpu')
+    # iterate through the checkpoint dictionary and load the model
+    # for key, value in checkpoint.items():
+    #     print(key)
+        # print(value.shape)
+        # if 'conv' in key:
+        #     if 'weight' in key:
+        #         # get the first numerical value in the key
+        #         layer_num = int(''.join(filter(str.isdigit, key)))
+        #         # set the corresponding weight
+        #         eval("model.conv{}")
+        #     if 'bias' in key:
+        #         setattr(model, key, value)
 
+    # print(checkpoint['model.0.conv1.weight'].shape)
+
+    for key, value in model.__dict__.items():
+        print(key)
+
+
+    # print the attributes of the model
+    for key, value in checkpoint.items():
+        print(key)
+        split_key = key.split('.')
+
+        if len(split_key) == 1:
+            continue
+        elif len(split_key) >3:
+            layer_num = int(split_key[1])
+            layer_type = split_key[2]
+            weight_or_bias = split_key[3]
+            wob = checkpoint[f'model.{layer_num}.{layer_type}.{weight_or_bias}']
+        else:
+            layer_num = int(split_key[1])
+            weight_or_bias = split_key[2]
+            wob = checkpoint[f'model.{layer_num}.{weight_or_bias}']
+
+        if layer_num < 4:
+            setattr(eval(f"model.{layer_type[:-1]}{layer_num+1}"), f"{weight_or_bias}", wob)
+            print(f"loaded: {key}")
+        elif (layer_num >= 4) and (layer_num < 8):
+            if layer_type == 'conv1':
+                setattr(eval(f"model.{layer_type[:-1]}{layer_num+1}_a"), f"{weight_or_bias}", wob)
+            elif layer_type == 'conv2':
+                setattr(eval(f"model.{layer_type[:-1]}{layer_num+1}_b"), f"{weight_or_bias}", wob)
+            print(f"loaded: {key}")
+        elif layer_num == 8:
+            # print(layer_type[:-1])
+            setattr(eval(f"model.{layer_type[:-1]}{layer_num+1}"), f"{weight_or_bias}", wob)
+            print(f"loaded: {key}")
+        elif layer_num == 9:
+            setattr(eval(f"model.{layer_num+1}"), f"{weight_or_bias}", wob)
+            print(f"loaded: {key}")
+
+
+
+    quit()
     # x = torch.load('x.pt',map_location='cuda:0').cpu().numpy()
     # load data with local_dataset.py
 
@@ -78,8 +143,6 @@ def main():
         #  *********************** single thread ***********************
         output_features = np.zeros((batch, kernel_num, feature_size, feature_size))
 
-        model = SimpleNVPCNN(config, I_NL)
-
         if config['logging_control']['consider_analog_value_dependency']:
             output_features, layer_total_latency, layer_total_energy, total_ops = model.forward(x)
         else:
@@ -109,10 +172,19 @@ def main():
             break
 
 if __name__ == "__main__":
-    # add arguments with argparser
+    import argparse
+    import pandas as pd
     
+    ap = argparse.ArgumentParser()
+    ap.add_argument("-m", "--model_name", type=str, default="demo_model_imc_sim",
+                    help="model name")
+    ap.add_argument("-ckp", "--checkpoint", type=str, default="/home/zuowen_temp/Desktop/e2e_uzh/E2E_model_lighten_uzh/viseon_SKU_new_repo/out/nov30/exp5_uzh_model/exp5_B_S4a_resnet_noskip_best_encoder.pth",
+                    help="checkpoint to resume from")
+    args = ap.parse_args()
 
-    main()
+    print(args)
+
+    main(args)
 
 
 
