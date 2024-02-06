@@ -8,38 +8,48 @@ def instantiate_x_weight_bias(x, weight, bias):
     # is no real input x, weight, bias given, then create a zero tensor
     if isinstance(x, tuple):
         x = np.zeros(x)
-    else:
-        x = x.cpu().numpy()
     
     if isinstance(weight, tuple):
         weight = np.zeros(weight)
     else:
-        weight = weight.cpu().numpy()
+        weight = weight.numpy()
     
     if isinstance(bias, tuple):
         bias = np.zeros(bias)
     else:
-        bias = bias.cpu().numpy()
+        bias = bias.numpy()
     
     return x, weight, bias
 
 
+def non_linear_latency_perc(aa):
+    # calculate the percentage latency according to KT's model
+    if (aa == 0) or (aa == 1):
+        return 1/7
+    else:
+        return aa/77
+
 class Conv2D():
+
+    I_NL = None
+
     def __init__(self, weight, bias, stride, padding, config):
         self.weight = weight
         self.bias = bias
-        self.stride = stride
+        self.stride = stride[0]
+        assert stride[0] == stride[1]
         self.padding = padding
         self.config = config
         self.acc_length = config['basic_paras']['num_row_per_chunk']
         self.allowed_max_analog_macs = config['basic_paras']['num_chunks'] * config['basic_paras']['num_row_per_chunk']
-        
+        self.I_NL = Conv2D.I_NL
+
     def forward(self, x):
         x, self.weight, self.bias = instantiate_x_weight_bias(x, self.weight, self.bias)
-
+        print(f"self.weight shape is {self.weight.shape}")
         # shape related parameters
         batch, ch = x.shape[0], x.shape[1]
-        feature_size = int(x.shape[2] / self.stride[0])
+        feature_size = int(x.shape[2] / self.stride)
         kernel_num, ks = self.weight.shape[0], self.weight.shape[2]
         ch = ch if ch < self.acc_length else self.acc_length
         round = int(np.ceil(x.shape[1] / self.acc_length))
@@ -72,10 +82,12 @@ class Conv2D():
                 layer_total_latency += weight_io_latency
                 layer_total_energy += weight_io_energy
 
-                for h in range(0, feature_size):
+                for h in range(0, feature_size): #output feature size
                     for w in range(0, feature_size):
                         psum = 0
                         num_of_macs_this_kernel = 0
+
+                        aa_max= 0
                         for kh in range(0, ks):
                             for kw in range(0, ks):
                                 for s in range(0, round):
@@ -83,13 +95,16 @@ class Conv2D():
 
                                     # if energy cost is modelled as dependent on the analog values
                                     if self.config['logging_control']['consider_analog_value_dependency']:
-                                        raise NotImplementedError
-                                        aa = x[i, (ch * s): (ch * s + ch), h * self.stride + kh, w * self.stride + kw]
+                                        # raise NotImplementedError
+                                        print(f"i:{i}, kn:{kn}, h:{h}, w:{w}, kh:{kh}, kw:{kw}, s:{s}")
+                                        aa = x[i, (ch * s): (ch * s + ch + 1), h * self.stride + kh, w * self.stride + kw]
                                         ww = self.weight[kn, (ch * s): (ch * s + ch), kh, kw]
+                                        # get the maximum magnitude activation value
+                                        aa_max= np.max(np.abs(aa), aa_max)
                                         if aa.size ==3:
                                             psum = psum + np.dot(aa, ww)
                                         else:
-                                            psum = psum + mac_64(aa, ww, I_NL, NL_mode = False)
+                                            psum = psum + mac_64(aa, ww, self.I_NL, NL_mode = False)
                                     
                                     num_of_macs_this_kernel += self.acc_length
 
@@ -100,29 +115,49 @@ class Conv2D():
                         # calculate the total ops 
                         layer_total_ops += (num_of_macs_this_kernel*2)
 
-                        layer_total_latency += self.config['latency']['per_bank_mac_latency']
-                        layer_total_energy += self.config['energy']['per_bank_mac_energy']
+                        if self.config['logging_control']['consider_analog_value_dependency']:
+                            print(f"aa_max is {aa_max}, percent is {non_linear_latency_perc(aa_max)}")
+                            non_linear_latency = non_linear_latency_perc(aa_max)*self.config['latency']['per_mac_latency']
+                            layer_total_latency += non_linear_latency
+
+                            layer_total_energy += 0 # ZW: TODO 
+                        else:
+                            layer_total_latency += self.config['latency']['per_bank_mac_latency']
+                        
+                            layer_total_energy += self.config['energy']['per_bank_mac_energy']
 
                         if self.config['logging_control']['consider_analog_value_dependency']:
                             output_features[i, kn, h, w] = psum
 
         output_features = torch.from_numpy(output_features).cuda()
         return output_features, layer_total_latency, layer_total_energy, layer_total_ops
-
+    
 
 class BatchNorm2D():
-    def __init__(self, weight, bias, stride, padding, config):
-        self.weight = weight
-        self.bias = bias
-        self.stride = stride
-        self.padding = padding
+    def __init__(self, running_mean, running_var, gamma, beta, config):
+        self.running_mean = running_mean
+        self.running_var = running_var
+        self.gamma = gamma
+        self.beta = beta
         self.config = config
-        self.acc_length = config['basic_paras']['num_row_per_chunk']
-        self.allowed_max_analog_macs = config['basic_paras']['num_chunks'] * config['basic_paras']['num_row_per_chunk']
-        
+
     def forward(self, x):
-        raise NotImplementedError
-    
+        assert x.shape[1] == self.running_mean.shape[0] # channel number should equal to the running mean channels
+        assert x.shape[1] == self.running_var.shape[0]
+        x = (x - self.running_mean)/(self.running_var + 1e-5).sqrt() * self.gamma + self.beta
+
+
+class I_NL_ReLU():
+    def __init__(self, I_NL, config):
+        self.I_NL = I_NL
+        self.config = config
+
+    def forward(self, x):
+        leq_zero = x <= 0
+        laq_zero = x > 0
+        x[laq_zero] = x[laq_zero] * self.I_NL
+        x[leq_zero] = 0
+        return x
 
 
 class FC():

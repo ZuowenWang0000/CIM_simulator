@@ -6,7 +6,7 @@ def format_large_number(number):
         number /= 1000
         unit_index += 1
 
-    return f"{number:.2f}{units[unit_index]}"
+    return f"{number:.4f}{units[unit_index]}"
 
 def format_small_number(number):
     units = [' ', 'm', 'u', 'n', 'p', 'f', 'a']  # Units in increasing order
@@ -16,4 +16,4 @@ def format_small_number(number):
         number *= 1000
         unit_index += 1
 
-    return f"{number:.2f}{units[unit_index]}"
+    return f"{number:.4f}{units[unit_index]}"

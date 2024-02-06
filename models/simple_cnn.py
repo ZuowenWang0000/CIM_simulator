@@ -1,4 +1,10 @@
-from functionals.functionals import Conv2D, BatchNorm2D, ReLU
+from functionals.functionals import Conv2D, BatchNorm2D, I_NL_ReLU
+import numpy as np
+
+class layer_block():
+    def __init__(self, layers: list):
+        for layer in layers:
+            setattr(self, f"{layer.__class__.__name__}", layer)
 
 # create a class of CNN model
 class SimpleNVPCNN():
@@ -18,68 +24,54 @@ class SimpleNVPCNN():
         # the initial 4 conv layers
         self.conv1 = Conv2D(weight=(8,3,3), bias=(3,), stride=(2,2), 
                             padding=(1,1), config=config)
-        self.bn1 = BatchNorm2D(weight=(8,), bias=(8,), config=config)
+        self.bn1 = BatchNorm2D(running_mean=np.zeros(8), running_var=np.ones(8), 
+                               gamma=1, beta=0, config=config)
         self.conv2 = Conv2D(weight=(16,3,3), bias=(16,), stride=(1,1),
                             padding=(1,1), config=config)
-        self.bn2 = BatchNorm2D(weight=(16,), bias=(16,), config=config)
+        self.bn2 = BatchNorm2D(running_mean=np.zeros(16), running_var=np.ones(16), 
+                               gamma=1, beta=0, config=config)
         self.conv3 = Conv2D(weight=(28,3,3), bias=(28,), stride=(2,2),
                             padding=(1,1), config=config)
-        self.bn3 = BatchNorm2D(weight=(28,), bias=(28,), config=config)
+        self.bn3 = BatchNorm2D(running_mean=np.zeros(28), running_var=np.ones(28), 
+                               gamma=1, beta=0, config=config)
         self.conv4 = Conv2D(weight=(28,3,3), bias=(28,), stride=(1,1),
                             padding=(1,1), config=config)
-        self.bn4 = BatchNorm2D(weight=(28,), bias=(28,), config=config)
-
+        self.bn4 = BatchNorm2D(running_mean=np.zeros(28), running_var=np.ones(28), 
+                               gamma=1, beta=0, config=config)
         #  the 4 residual blocks, each has 2 conv layers
-        self.conv5_a = Conv2D(weight=(28,3,3), bias=(28,), stride=(1,1),
-                            padding=(1,1), config=config)
-        self.bn5_a = BatchNorm2D(weight=(28,), bias=(28,), config=config)
-        self.conv5_b = Conv2D(weight=(28,3,3), bias=(28,), stride=(1,1),
-                    padding=(1,1), config=config)
-        self.bn5_b = BatchNorm2D(weight=(28,), bias=(28,), config=config)
-        
-        self.conv6_a = Conv2D(weight=(28,3,3), bias=(28,), stride=(1,1),
-                            padding=(1,1), config=config)
-        self.bn6_a = BatchNorm2D(weight=(28,), bias=(28,), config=config)
-        self.conv6_b = Conv2D(weight=(28,3,3), bias=(28,), stride=(1,1),
-                    padding=(1,1), config=config)
-        self.bn6_b = BatchNorm2D(weight=(28,), bias=(28,), config=config)
-        
-        self.conv7_a = Conv2D(weight=(28,3,3), bias=(28,), stride=(1,1),
-                            padding=(1,1), config=config)
-        self.bn7_a = BatchNorm2D(weight=(28,), bias=(28,), config=config)
-        self.conv7_b = Conv2D(weight=(28,3,3), bias=(28,), stride=(1,1),
-                    padding=(1,1), config=config)
-        self.bn7_b = BatchNorm2D(weight=(28,), bias=(28,), config=config)
-        
-        self.conv8_a = Conv2D(weight=(28,3,3), bias=(28,), stride=(1,1),
-                            padding=(1,1), config=config)
-        self.bn8_a = BatchNorm2D(weight=(28,), bias=(28,), config=config)
-        self.conv8_b = Conv2D(weight=(28,3,3), bias=(28,), stride=(1,1),
-                    padding=(1,1), config=config)
-        self.bn8_b = BatchNorm2D(weight=(28,), bias=(28,), config=config)
+        for i in range(5,9):
+            setattr(self, f"conv{i}_a", Conv2D(weight=(28,3,3), bias=(28,), stride=(1,1),
+                            padding=(1,1), config=config))
+            setattr(self, f"bn{i}_a", BatchNorm2D(running_mean=np.zeros(28), running_var=np.ones(16), 
+                               gamma=1, beta=0, config=config))
+            setattr(self, f"conv{i}_b", Conv2D(weight=(28,3,3), bias=(28,), stride=(1,1),
+                            padding=(1,1), config=config))
+            setattr(self, f"bn{i}_b", BatchNorm2D(running_mean=np.zeros(28), running_var=np.ones(16), 
+                               gamma=1, beta=0, config=config))
 
         # the final conv layers
         self.conv9 = Conv2D(weight=(16,3,3), bias=(16,), stride=(1,1),
                     padding=(1,1), config=config)
-        self.bn9 = BatchNorm2D(weight=(16,), bias=(16,), config=config)
+        self.bn9 = BatchNorm2D(running_mean=0, running_var=1, gamma=1, beta=0, config=config)
 
         self.conv10 = Conv2D(weight=(1,3,3), bias=(1,), stride=(1,1),
                     padding=(1,1), config=config)
+        
+        self.I_NL_ReLU = I_NL_ReLU
 
     def forward(self, x):
-        for first_stage_layer in [self.conv1, self.bn1, self.conv2, self.bn2, \
-                                  self.conv3, self.bn3, self.conv4, self.bn4]:
-            x, layer_latency, layer_energy, layer_ops = first_stage_layer.forward(x)
-            self.accumu_laten_energy(layer_latency, layer_energy, layer_ops)
+        for first_stage_block in [(getattr(self, f'conv{i}'), getattr(self, f'bn{i}'), self.I_NL_ReLU) for i in range(1,5)]:
+            for layer in first_stage_block:
+                x, layer_latency, layer_energy, layer_ops = layer.forward(x)
+                self.accumu_laten_energy(layer_latency, layer_energy, layer_ops)
 
-        for residual_layers in [self.conv5_a, self.bn5_a, self.conv5_b, self.bn5_b, \
-                                self.conv6_a, self.bn6_a, self.conv6_b, self.bn6_b, \
-                                self.conv7_a, self.bn7_a, self.conv7_b, self.bn7_b, \
-                                self.conv8_a, self.bn8_a, self.conv8_b, self.bn8_b]:
-            x, layer_latency, layer_energy, layer_ops = residual_layers.forward(x)
-            self.accumu_laten_energy(layer_latency, layer_energy, layer_ops)
+        for residual_layer_block in [(getattr(self, f'conv{i}_a'), getattr(self, f'bn{i}_a'), self.I_NL_ReLU,\
+                                      getattr(self, f'conv{i}_b'), getattr(self, f'bn{i}_b'), self.I_NL_ReLU) for i in range(5,9)]:
+            for layer in residual_layer_block:
+                x, layer_latency, layer_energy, layer_ops = layer.forward(x)
+                self.accumu_laten_energy(layer_latency, layer_energy, layer_ops)
 
-        for last_stage_layer in [self.conv9, self.bn9, self.conv10]:
+        for last_stage_layer in [self.conv9, self.bn9, self.I_NL_ReLU, self.conv10]:
             x, layer_latency, layer_energy, layer_ops = last_stage_layer.forward(x)
             self.accumu_laten_energy(layer_latency, layer_energy, layer_ops)
 
